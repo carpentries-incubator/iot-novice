@@ -17,7 +17,7 @@ title: An Introduction to the Internet of Things
 created: ~
 
 # Comma-separated list of keywords for the lesson
-keywords: software, data, lesson, The Carpentries
+keywords: IoT, Internet of Things, Arduino, ESP32
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
@@ -27,7 +27,7 @@ life_cycle: pre-alpha
 license: CC-BY 4.0
 
 # Link to the source repository for this lesson
-https://github.com/CarpentriesWorkshops/Internet_of_Things
+source: https://github.com/CarpentriesWorkshops/Internet_of_Things
 # Default branch of your lesson
 branch: main
 
