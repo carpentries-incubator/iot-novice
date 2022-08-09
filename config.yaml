@@ -11,7 +11,7 @@
 carpentry: incubator
 
 # Overall title for pages.
-title: Lesson Title
+title: An Introduction to the Internet of Things
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: ~
@@ -27,13 +27,12 @@ life_cycle: pre-alpha
 license: CC-BY 4.0
 
 # Link to the source repository for this lesson
-source: https://github.com/carpentries/workbench-template-md
-
+https://github.com/CarpentriesWorkshops/Internet_of_Things
 # Default branch of your lesson
 branch: main
 
 # Who to contact if there are any issues
-contact: team@carpentries.org
+contact: jannetta.steyn@newcastle.ac.uk
 
 # Navigation ------------------------------------------------
 # 
