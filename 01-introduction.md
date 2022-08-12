@@ -100,9 +100,9 @@ With the person next to you, discuss whether you think the following devices are
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Define the Internet of Things
+- Explain the difference between the terms: network, internet, intranet and The Internet
 - Identify devices that can be connected to the Internet of Things
-- Explain how things can be connected to the Internet of Thingssu
+- Explain how things can be connected to the Internet of Things.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
