@@ -30,7 +30,9 @@ Before we continue we should clarify some key terminology used in networking. Wh
  <b>Computers connected to form a network</b><br/>
  </figcaption>
  
+ 
  It is also worth mentioning that one should distinguish between the words "internet" (with a lower case i) and "Internet" (with an upper case I). With an upper case I, ***Internet*** refers to *the* Internet that we connect to view web pages such as Google, Amazon etc, or to which we connect to to make Zoom or Skype calls. The Internet is a worldwide collection of networks that we are able to connect to via our Internet Service Providers. The Internet is also sometimes referred to as ***The Cloud***. With a lower case i, ***internet*** refers to a collection of networks that are connected. If university A has a network on campus and university B has a network and they decide to connect the two networks then they would have an internet. However they might not necessarily be connected to The Internet. Another term that you might hear is ***intranet***. If and instution connects their network to the Internet, they will refer to their internal network as the intranet. So university A can refer to their network as their intranet. If university A connects their intranet to that of University B, they created an internet.
+
 
 ![When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.](fig/Internet.svg)
 <figcaption align = "center">
@@ -40,8 +42,10 @@ Before we continue we should clarify some key terminology used in networking. Wh
 
 "So what is this Arduino thing then?", you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet's sensing. The main component on an Arduino is a microcontroller which is an "integrated circuit" (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. It is, in actual fact, a very small computer and can also be programmed. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.
 
+
 ![The original and most basic Arduino - the Arduino Uno](fig/Arduino_Uno_-_R3.jpg)
 <figcaption align = "center"><b>The original and most basic Arduino - the Arduino Uno</b></br>SparkFun Electronics from Boulder, USA, CC BY 2.0 <https://creativecommons.org/licenses/by/2.0>, via Wikimedia Commons</figcaption>
+
 
 The main thing to notice about the Arduino in the image above is that it has no connectivity to the Internet. So even if we connect sensors to the Arduino  it cannot make part of the Internet of Things without being connected to the Internet. However, one can purchase (or build it yourself) a WiFi shield that fits on top of the Arduino and with the shield in place you can program the Arduino to connect to the Internet and publish all the data it retrieves, via the sensors that you connect to it, to the Internet.
 
@@ -55,6 +59,19 @@ Below is an image of the WiFi shield and you might be able to see how its pins a
 
  
 There are now several models of Arduinos available, some with onboard WiFi or BlueTooth to allow connectivity to a network. Follow this [link to the Arduino site](https://www.arduino.cc/en/hardware) if you would like to see the whole range of Arduino models that are available.
+ 
+ 
+For the purposes of this workshop your instructor might choose to not use an Arduino but rather one of the other options that are available. It doesn't really matter which one you use because for the projects covered in this lesson, any of them will do. Often, one of the ESP32 or ESP8266 series are chosen because they have onboard WiFi and are also significantly cheaper than Arduinos.
+ 
+![An ESP32 WROOM 32](fig/ESP32.jpg)
+ <figcaption align = "center">
+  <b>An ESP32 WROOM 32</b><br/>
+  Attribution: Ubahnverleih, CC0, via Wikimedia Commons
+ </figcaption>
+ 
+ 
+
+The two main requirements for the device selected would be that it is 1) WiFi enabled and 2) can be programmed using the Arduino Integrated Development Environment (IDE). An IDE is just a computer program that provides a programming environment that makes things easier for programmers.
 
 ::: instructor
 
