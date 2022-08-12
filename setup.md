@@ -5,7 +5,7 @@ title: Setup
 
 ## Software Setup
 
-::::::::::::::::::::::::::::::::::::::: discussion
+::: discussion
 
 ### Details
 
@@ -16,3 +16,4 @@ In the first instance there is an option for programming your microcontroller bo
 For the Windows operating system you can download the IDE as a zip file, an exe file or you can get it from the Windows app store. There are also installation packages to be downloaded if you are using Linux or MacOS. Follow the instructions on the Arduino website for the option you decide to select. Your instructor should be able to guide you in your decision.
 
 
+:::
