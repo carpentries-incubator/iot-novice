@@ -23,22 +23,35 @@ exercises: 2
 
 You might hear "Internet of Things" (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of "Things" that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet. "So what is this Arduino thing then?", you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet's sensing. The main component on an Arduino is a motorcontroller which is an "integrated circuit" (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.
 
-![The original and most basic Arduino](fig/Arduino_Uno_-_R3.jpg)
-<figcaption align = "center"><b>The original and most basic Arduino</b></figcaption>
+![The original and most basic Arduino - the Arduino Uno](fig/Arduino_Uno_-_R3.jpg)
+<figcaption align = "center"><b>The original and most basic Arduino - the Arduino Uno</b></br>SparkFun Electronics from Boulder, USA, CC BY 2.0 <https://creativecommons.org/licenses/by/2.0>, via Wikimedia Commons</figcaption>
+
+The main thing to notice about the Arduino in the image above is that it has no connectivity to the Internet. So even if we connect sensors to the Arduino  it cannot make part of the Internet of Things without being connected to the Internet. However, one can purchase (or build it yourself) a WiFi shield that fits on top of the Arduino and with the shield in place you can program the Arduino to connect to the Internet and publish all the data it retrieves, via the sensors that you connect to it, to the Internet.
+
+Below is an image of the WiFi shield and you might be able to see how its pins allows it to be fitted onto the Arduino Uno.
+
+![A WiFi shield for the Arduino Uno](fig/WiFi_Shield_for_Arduino.jpg)
+<figcaption align = "center"><b>A WiFi shield for the Arduino Uno</b></br>Attribution: oomlout, CC BY-SA 2.0 <https://creativecommons.org/licenses/by-sa/2.0>, via Wikimedia Commons</figcaption>
 
 Follow this [link to the Arduino site](https://www.arduino.cc/en/hardware) if you would like to see the whole range of Arduino models that are available.
 
-:: instructor
+::: instructor
 
 Notes for the instructor
 
-::
+:::
 
 ::: challenge 
 
-## Challenge 1: Can you do it?
+## Challenge 1: Which of the following are part of the Internet of things?
 
-Which of the following is part of the Internet of things
+With the person next to you, discuss whether you think the following devices are part of the Internet and why? What other devices do you think would make part of the Internet of Things.
+
+1. A computer
+2. An Arduino
+3. A traffic camera
+4. A device publishing current temperature to the Internet
+5. A smart phone
 
 :::: solution 
 
