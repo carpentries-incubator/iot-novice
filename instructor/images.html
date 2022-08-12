@@ -242,25 +242,48 @@
 <section id="01-introduction"><h2 class="section-heading"><a href="01-introduction.html">An Introduction to the Internet of Things</a></h2>
 <hr class="half-width">
 <h3 id="01-introduction-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 1: ‘The original and most basic Arduino’</p>
+<p aria-hidden="true">Image 1 of 2: ‘The original and most basic Arduino - the Arduino Uno’</p>
+<p aria-hidden="true">Image 2 of 2: ‘A WiFi shield for the Arduino Uno’</p>
 <figure id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
 <p>You might hear “Internet of Things” (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of “Things” that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet. “So what is this Arduino thing then?”, you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet’s sensing. The main component on an Arduino is a motorcontroller which is an “integrated circuit” (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.</p>
-<img src="../fig/Arduino_Uno_-_R3.jpg" title="fig:" alt="The original and most basic Arduino" class="figure mx-auto d-block"><figcaption align="center"><b>The original and most basic Arduino</b>
+<img src="../fig/Arduino_Uno_-_R3.jpg" title="fig:" alt="The original and most basic Arduino - the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>The original and most basic Arduino - the Arduino Uno</b>SparkFun Electronics from Boulder, USA, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0" class="external-link uri">https://creativecommons.org/licenses/by/2.0</a>, via Wikimedia Commons
+</figcaption><p>The main thing to notice about the Arduino in the image above is that it has no connectivity to the Internet. So even if we connect sensors to the Arduino it cannot make part of the Internet of Things without being connected to the Internet. However, one can purchase (or build it yourself) a WiFi shield that fits on top of the Arduino and with the shield in place you can program the Arduino to connect to the Internet and publish all the data it retrieves, via the sensors that you connect to it, to the Internet.</p>
+<p>Below is an image of the WiFi shield and you might be able to see how its pins allows it to be fitted onto the Arduino Uno.</p>
+<img src="../fig/WiFi_Shield_for_Arduino.jpg" title="fig:" alt="A WiFi shield for the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>A WiFi shield for the Arduino Uno</b>Attribution: oomlout, CC BY-SA 2.0 <a href="https://creativecommons.org/licenses/by-sa/2.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/2.0</a>, via Wikimedia Commons
 </figcaption><p>Follow this <a href="https://www.arduino.cc/en/hardware" class="external-link">link to the Arduino site</a> if you would like to see the whole range of Arduino models that are available.</p>
-<p>:: instructor</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div class="accordion-body">
 <p>Notes for the instructor</p>
-<p>::</p>
+</div>
+</div>
+</div>
+</div>
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?<a class="anchor" aria-label="anchor" href="#challenge-1-can-you-do-it"></a>
+<div id="challenge-1-which-of-the-following-are-part-of-the-internet-of-things" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Which of the following are part of the Internet of things?<a class="anchor" aria-label="anchor" href="#challenge-1-which-of-the-following-are-part-of-the-internet-of-things"></a>
 </h3>
 <div class="callout-content">
-<p>Which of the following is part of the Internet of things</p>
+<p>With the person next to you, discuss whether you think the following devices are part of the Internet and why? What other devices do you think would make part of the Internet of Things.</p>
+<ol style="list-style-type: decimal">
+<li>A computer</li>
+<li>An Arduino</li>
+<li>A traffic camera</li>
+<li>A device publishing current temperature to the Internet</li>
+<li>A smart phone</li>
+</ol>
 </div>
 </div>
 </div>
@@ -271,7 +294,7 @@
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
