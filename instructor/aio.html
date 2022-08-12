@@ -277,11 +277,12 @@
 <figure id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>You might hear “Internet of Things” (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of “Things” that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet. “So what is this Arduino thing then?”, you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet’s sensing. The main component on an Arduino is a motorcontroller which is an “integrated circuit” (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.</p>
+<p>You might hear “Internet of Things” (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of “Things” that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet.</p>
+<p>“So what is this Arduino thing then?”, you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet’s sensing. The main component on an Arduino is a microcontroller which is an “integrated circuit” (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. It is, in actual fact, a very small computer and can also be programmed. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.</p>
 <img src="../fig/Arduino_Uno_-_R3.jpg" title="fig:" alt="The original and most basic Arduino - the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>The original and most basic Arduino - the Arduino Uno</b>SparkFun Electronics from Boulder, USA, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0" class="external-link uri">https://creativecommons.org/licenses/by/2.0</a>, via Wikimedia Commons
 </figcaption><p>The main thing to notice about the Arduino in the image above is that it has no connectivity to the Internet. So even if we connect sensors to the Arduino it cannot make part of the Internet of Things without being connected to the Internet. However, one can purchase (or build it yourself) a WiFi shield that fits on top of the Arduino and with the shield in place you can program the Arduino to connect to the Internet and publish all the data it retrieves, via the sensors that you connect to it, to the Internet.</p>
 <p>Below is an image of the WiFi shield and you might be able to see how its pins allows it to be fitted onto the Arduino Uno.</p>
-<img src="../fig/WiFi_Shield_for_Arduino.jpg" title="fig:" alt="A WiFi shield for the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>A WiFi shield for the Arduino Uno</b>Attribution: oomlout, CC BY-SA 2.0 <a href="https://creativecommons.org/licenses/by-sa/2.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/2.0</a>, via Wikimedia Commons
+<img src="../fig/WiFi_Shield_for_Arduino.jpg" title="fig:" alt="A WiFi shield for the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>A WiFi shield for the Arduino Uno</b><br> Attribution: oomlout, CC BY-SA 2.0 <a href="https://creativecommons.org/licenses/by-sa/2.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/2.0</a>, via Wikimedia Commons
 </figcaption><p>Follow this <a href="https://www.arduino.cc/en/hardware" class="external-link">link to the Arduino site</a> if you would like to see the whole range of Arduino models that are available.</p>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
@@ -291,7 +292,7 @@
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Notes for the instructor</p>
 </div>
@@ -324,7 +325,7 @@
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -335,6 +336,7 @@
 </div>
 </div>
 </div>
+<p><a href="https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html" class="external-link">Microcontrollers vs Microprocessors</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -374,7 +376,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.9.2" class="external-link">sandpaper (0.9.2)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper" class="external-link">sandpaper (0.9.3)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.3.0)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.4" class="external-link">varnish (0.2.4)</a>.</p>
 			</div>
