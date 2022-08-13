@@ -8,14 +8,16 @@ exercises: 2
 
 - What is the Internet of Things?
 - How does one connect something to the Internet of Things?
+- What is a microcontroller?
+- What is an Arduino?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Explain what the Internet of Things is.
-- Explain what can kind of things can be found on the Internet of Things.
-- How are things connected to the Internet of Things.
+- Explain what kind of things can be found on the Internet of Things.
+- Explain how things are connected to the Internet of Things.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -103,6 +105,8 @@ With the person next to you, discuss whether you think the following devices are
 - Explain the difference between the terms: network, internet, intranet and The Internet
 - Identify devices that can be connected to the Internet of Things
 - Explain how things can be connected to the Internet of Things.
+- Explain what a microcontroller is.
+- Explain what an Arduino or and ESP32/8266 is.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
