@@ -8,6 +8,9 @@ exercises: 2
 
 - What is MQTT?
 - How does MQTT work?
+- What is an MQTT publisher?
+- What is an MQTT broker?
+- What is an MQTT subscriber?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
