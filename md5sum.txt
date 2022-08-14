@@ -11,6 +11,7 @@
 "episodes/05-connecting_sensor2.md" "72eb6e2b706e15b119d9dd84465f301e" "site/built/05-connecting_sensor2.md" "2022-08-14"
 "episodes/06-mqtt.md" "eb90c689bc37fa5471713d01c45bc595" "site/built/06-mqtt.md" "2022-08-14"
 "episodes/07-mqtt-code.md" "327365c3a5c8ec69f9a464abea496cd1" "site/built/07-mqtt-code.md" "2022-08-14"
+"episodes/08-subscribe.md" "28bc4d1fff1214f41edceceab9538c44" "site/built/08-subscribe.md" "2022-08-14"
 "instructors/instructor-notes.md" "60b93493cf1da06dfd63255d73854461" "site/built/instructor-notes.md" "2022-08-09"
 "learners/setup.md" "c359ec33904dc39667b5da88b5e95c91" "site/built/setup.md" "2022-08-12"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2022-08-09"
