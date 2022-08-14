@@ -340,71 +340,35 @@ any links that you are not going to use.
 <h3 id="02-ArduinoIDE-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 2: ‘Arduino Splash Window’</p>
 <p aria-hidden="true">Image 2 of 2: ‘Arduino IDE’</p>
-<figure><div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>What is an IDE?</li>
-<li>What is the purpose of the Arduino IDE?</li>
-<li>Which microcontrollers can be programmed with the Arduino IDE?</li>
-<li>How is the Arduino IDE used to program a microcontroller?</li>
-<li>How are microcontroller boards connected to the computer?</li>
-<li>How does the Arduino IDE connect to the microcontroller?</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>Explain what an IDE is.</li>
-<li>Explain what the Arduino IDE is used for.</li>
-<li>Identify microcontrollers that can be programmed with the Arduino IDE.</li>
-<li>Run the Arduino IDE.</li>
-<li>Connect the microcontroller board to the computer.</li>
-<li>Connect the microcontroller to the Arduino IDE.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
+<figure id="running-the-arduino-ide"><h2 class="section-heading">Running the Arduino IDE<a class="anchor" aria-label="anchor" href="#running-the-arduino-ide"></a>
+</h2>
+<hr class="half-width">
 <p>For this episode we have to assume that you were able to successfully install the Arduino IDE and that you are able to start the software from the start menu or the desktop of your computer. When you run the software you will first see the splash window:</p>
 <img src="../fig/ArduinoIDE_startup.png" title="fig:" alt="Arduino Splash Window" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
-</figcaption><p>After a while the IDE will open. It is actually quite a simple interface. At the top you should see the File, Edit, Sketch, Tools and Help menu items. Just below the menu there are five icons to the left and one on the far right. Below the icons you should see a tab with a filename and a white editing area. Below the editing is a black terminal:</p>
+</figcaption><p>After a while the IDE will open. It is actually quite a simple interface. At the top you should see the File, Edit, Sketch, Tools and Help menu items. Just below the menu there are five icons to the left and one on the far right. Below the icons you should see a tab with a filename and a white editing area. Below the editor is a black terminal:</p>
 <img src="../fig/ArduinoIDE.png" title="fig:" alt="Arduino IDE" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino IDE main window</b>
-</figcaption><p>The white are is where you will be typing the code that will be uploaded to the microcontroller. In the black are you will see messages about the compilation of the code and the uploading process.</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#NA"></a>
+</figcaption><p>The white area is where you will be typing the code that will be uploaded to the microcontroller. In the black area you will see messages about the compilation of the code and the uploading process. Right at the bottom is a status bar where you will eventually be able to see whether the IDE could connect to your motorcontroller.</p>
+<p>The first time you run the IDE the status bar will show the string <code>Arduino Uno on /dev/ttyAM0</code> and in the editor you will see some skeleton code:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<div class="callout-content">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson locally</li>
-</ul>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
 </div>
-</div>
-</div>
-<!-- 
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
- -->
-<ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-</ul></figure><hr></section>
+</figure><hr>
+<h3 id="02-ArduinoIDE-figure-2">Figure 2</h3>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="../fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><hr>
+<h3 id="02-ArduinoIDE-figure-3">Figure 3</h3>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="../fig/addURL.png" alt="" class="figure mx-auto d-block"><figcaption>Enter additional boards manager URLs</figcaption></figure><hr></section>
 </div>
     </main>
 </div>
@@ -446,9 +410,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/images.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/images.html",
-  "dateCreated": "2022-08-13",
-  "dateModified": "2022-08-13",
-  "datePublished": "2022-08-13"
+  "dateCreated": "2022-08-14",
+  "dateModified": "2022-08-14",
+  "datePublished": "2022-08-14"
 }
 
   </script><script>

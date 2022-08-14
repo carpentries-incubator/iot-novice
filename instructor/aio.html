@@ -366,12 +366,12 @@ any links that you are not going to use.
 <li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
 </ul></figure></section><section id="aio-02-ArduinoIDE"><p>Content from <a href="02-ArduinoIDE.html">The Arduino IDE</a></p>
 <hr>
-<p> Last updated on 2022-08-13 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/02-ArduinoIDE.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-08-14 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/02-ArduinoIDE.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<figure><div class="overview card">
+<div class="overview card">
 <h2 class="card-header">Overview</h2>
 <div class="row g-0">
 <div class="col-md-4">
@@ -406,11 +406,49 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
+<figure id="running-the-arduino-ide"><h2 class="section-heading">Running the Arduino IDE<a class="anchor" aria-label="anchor" href="#running-the-arduino-ide"></a>
+</h2>
+<hr class="half-width">
 <p>For this episode we have to assume that you were able to successfully install the Arduino IDE and that you are able to start the software from the start menu or the desktop of your computer. When you run the software you will first see the splash window:</p>
 <img src="../fig/ArduinoIDE_startup.png" title="fig:" alt="Arduino Splash Window" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
-</figcaption><p>After a while the IDE will open. It is actually quite a simple interface. At the top you should see the File, Edit, Sketch, Tools and Help menu items. Just below the menu there are five icons to the left and one on the far right. Below the icons you should see a tab with a filename and a white editing area. Below the editing is a black terminal:</p>
+</figcaption><p>After a while the IDE will open. It is actually quite a simple interface. At the top you should see the File, Edit, Sketch, Tools and Help menu items. Just below the menu there are five icons to the left and one on the far right. Below the icons you should see a tab with a filename and a white editing area. Below the editor is a black terminal:</p>
 <img src="../fig/ArduinoIDE.png" title="fig:" alt="Arduino IDE" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino IDE main window</b>
-</figcaption><p>The white are is where you will be typing the code that will be uploaded to the microcontroller. In the black are you will see messages about the compilation of the code and the uploading process.</p>
+</figcaption><p>The white area is where you will be typing the code that will be uploaded to the microcontroller. In the black area you will see messages about the compilation of the code and the uploading process. Right at the bottom is a status bar where you will eventually be able to see whether the IDE could connect to your motorcontroller.</p>
+<p>The first time you run the IDE the status bar will show the string <code>Arduino Uno on /dev/ttyAM0</code> and in the editor you will see some skeleton code:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+</div>
+</figure><section id="configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"><h2 class="section-heading">Configuring the IDE for use with boards other than an Arduino Uno<a class="anchor" aria-label="anchor" href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"></a>
+</h2>
+<hr class="half-width">
+<p>By default the IDE is configured to program an Arduino Uno but we will be using an ESP32 WROOM 32 board so we first need to configure the IDE before we can start coding. Start by clicking on the <code>File</code> menu item and then on <code>Preferences</code>. Towards the bottom of the Preferences window you should find a text area with the label <code>Additional Boards Manager URLs:</code>:</p>
+<figure><img src="../fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><p>To find the appropriate URL you need to open a web browser and navigate to: <code>https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls</code>. For the ESP32-WROOM-32 you have to find the line that reads:</p>
+<p><strong>Espressif ESP32:</strong> <a href="https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json" class="external-link uri">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</a></p>
+<p>Copy and paste the address into the text area of the preferences window:</p>
+<figure><img src="../fig/addURL.png" alt="" class="figure mx-auto d-block"><figcaption>Enter additional boards manager URLs</figcaption></figure><p>Click on <code>OK</code></p>
+<p>What we have just done is to tell the IDE where to find more information about the ESP32 boards. Because the ESP32 series use a different microcontrollers to the Arduino Uno our programs have to be compiled differently. By default all the Arduino boards are immediately available for selection in the IDE but for other boards we have to give the IDE a place where it can find the information for compiling the code for those other boards.</p>
+</section><section id="what-is-compiling"><h2 class="section-heading">What is “compiling”?<a class="anchor" aria-label="anchor" href="#what-is-compiling"></a>
+</h2>
+<hr class="half-width">
+<p>We have used the term “compiling” a few times now. But what is that? You’ll notice, that once we start programming, the programming language uses English words. But, computers do not understand English. Computers understand only 0 and 1. A compiler takes the human readable programming language that we entered into the editor and “translates” it into instructions consisting of 0 and 1 that makes complete sense to the microcontroller. Although all microcontrollers understand 0 and 1, the instructions for different microcontrollers differ. The 0s and 1s are like sounds are to us. But different human languages combine the sounds differently. Similarly the 0s and 1s need to be arranged differently for microcontrollers designed by different manufacturers or even different models of microcontrollers manufactured by the same manufacturer. For this reason we have to tell the IDE which microcontroller board we are using so that the compiler can translate our English code into the correct <code>dialect</code> of microcontroller language.</p>
+</section><section id="selecting-the-correct-board"><h2 class="section-heading">Selecting the correct board<a class="anchor" aria-label="anchor" href="#selecting-the-correct-board"></a>
+</h2>
+<hr class="half-width"></section><section id="connecting-the-board-to-the-computer"><h2 class="section-heading">Connecting the board to the computer<a class="anchor" aria-label="anchor" href="#connecting-the-board-to-the-computer"></a>
+</h2>
+<hr class="half-width"></section><section id="selecting-the-correct-serial-port-in-the-ide"><h2 class="section-heading">Selecting the correct serial port in the IDE<a class="anchor" aria-label="anchor" href="#selecting-the-correct-serial-port-in-the-ide"></a>
+</h2>
+<hr class="half-width">
+<p>We should now be connected.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -420,10 +458,12 @@ any links that you are not going to use.
 </h3>
 <div class="callout-content">
 <ul>
-<li>Use <code>.md</code> files for episodes when you want static content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson locally</li>
+<li>Explain what an IDE is.</li>
+<li>Explain what the Arduino IDE is used for.</li>
+<li>Identify microcontrollers that can be programmed with the Arduino IDE.</li>
+<li>Run the Arduino IDE.</li>
+<li>Connect the microcontroller board to the computer.</li>
+<li>Connect the microcontroller to the Arduino IDE.</li>
 </ul>
 </div>
 </div>
@@ -435,7 +475,7 @@ any links that you are not going to use.
 <ul>
 <li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
 <li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-</ul></figure></section>
+</ul></section></section>
 </div>
     </main>
 </div>
@@ -477,9 +517,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/aio.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/aio.html",
-  "dateCreated": "2022-08-13",
-  "dateModified": "2022-08-13",
-  "datePublished": "2022-08-13"
+  "dateCreated": "2022-08-14",
+  "dateModified": "2022-08-14",
+  "datePublished": "2022-08-14"
 }
 
   </script><script>
