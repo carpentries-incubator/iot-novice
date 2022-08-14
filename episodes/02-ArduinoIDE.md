@@ -12,6 +12,7 @@ exercises: 2
 - How is the Arduino IDE used to program a microcontroller?
 - How are microcontroller boards connected to the computer?
 - How does the Arduino IDE connect to the microcontroller?
+- How would you upload a program?
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -23,6 +24,7 @@ exercises: 2
 - Run the Arduino IDE.
 - Connect the microcontroller board to the computer.
 - Connect the microcontroller to the Arduino IDE.
+- Enter, compile and upload code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -115,10 +117,30 @@ You should now be able to get your Arduino IDE to recognise your motorcontroller
 
  ## Upload our first sketch
  
- If all went well you should now be able to upload program to the motorcontroller board.
+ If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:
+ 
+ ```c
+ void setup() {
+  Serial.begin(9600);
+ }
+ 
+ void loop() {
+  Serial.println("Hello");
+  delay(5000);
+ }
+ ```
+ 
+We'll go into more detail about programming the motorcontroller in the next episode. This little program is just for testing. All it is going to do is to print the word `Hello` in the ***monitor***, which we will open after compiling and uploading the program. To compile and upload press the second button from the left with the arrow pointing to the right. See the image below:
+ 
+![Click the `compile and run` button](compileCode.png)
+ 
+If all goes well you should see messages displayed in the terminal section below the editor. The messages should be similar to what is shown in the image. The progress counter should say `(100%)`, indicating the all of the compiled code has been uploaded successfully:
+ 
+ ![Code compiled and uploaded](uploaded.png)
 
-
-
+You can now open the serial monitor by clicking first on `Tools` and then on `Serial Monitor`. The word `Hello` should now be printed to the monitor every five seconds.
+ 
+![Serial Monitor](monitor.png)
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
@@ -129,6 +151,9 @@ You should now be able to get your Arduino IDE to recognise your motorcontroller
 - Run the Arduino IDE.
 - Connect the microcontroller board to the computer.
 - Connect the microcontroller to the Arduino IDE.
+- Enter code in the editor
+- Compile and upload the 
+- Open the serial monitor
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
