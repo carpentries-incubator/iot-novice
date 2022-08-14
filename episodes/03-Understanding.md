@@ -6,7 +6,11 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Question
+- In what language do we program in the Arduino IDE?
+- What do the keywords, void, setup and loop do?
+- How can we add explanatory comments to the code?
+- What is a variable?
+- What is a constant?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
