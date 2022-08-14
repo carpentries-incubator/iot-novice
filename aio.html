@@ -369,6 +369,7 @@ any links that you are not going to use.
 <li>How is the Arduino IDE used to program a microcontroller?</li>
 <li>How are microcontroller boards connected to the computer?</li>
 <li>How does the Arduino IDE connect to the microcontroller?</li>
+<li>How would you upload a program?</li>
 </ul>
 </div>
 </div>
@@ -384,6 +385,7 @@ any links that you are not going to use.
 <li>Run the Arduino IDE.</li>
 <li>Connect the microcontroller board to the computer.</li>
 <li>Connect the microcontroller to the Arduino IDE.</li>
+<li>Enter, compile and upload code.</li>
 </ul>
 </div>
 </div>
@@ -446,8 +448,23 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 <hr class="half-width">
 <p>You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on <code>Tools</code> and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc.</p>
 <p>## Upload our first sketch</p>
-<p>If all went well you should now be able to upload program to the motorcontroller board.</p>
-<div id="keypoints1" class="callout keypoints">
+<p>If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> Serial.begin(<span class="dv">9600</span>);</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> Serial.println(<span class="st">"Hello"</span>);</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> delay(<span class="dv">5000</span>);</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+</div>
+<p>We’ll go into more detail about programming the motorcontroller in the next episode. This little program is just for testing. All it is going to do is to print the word <code>Hello</code> in the <strong><em>monitor</em></strong>, which we will open after compiling and uploading the program. To compile and upload press the second button from the left with the arrow pointing to the right. See the image below:</p>
+<figure><img src="compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><p>If all goes well you should see messages displayed in the terminal section below the editor. The messages should be similar to what is shown in the image. The progress counter should say <code>(100%)</code>, indicating the all of the compiled code has been uploaded successfully:</p>
+<figure><img src="uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>You can now open the serial monitor by clicking first on <code>Tools</code> and then on <code>Serial Monitor</code>. The word <code>Hello</code> should now be printed to the monitor every five seconds.</p>
+<figure><img src="monitor.png" alt="" class="figure mx-auto d-block"><figcaption>Serial Monitor</figcaption></figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -462,6 +479,9 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 <li>Run the Arduino IDE.</li>
 <li>Connect the microcontroller board to the computer.</li>
 <li>Connect the microcontroller to the Arduino IDE.</li>
+<li>Enter code in the editor</li>
+<li>Compile and upload the</li>
+<li>Open the serial monitor</li>
 </ul>
 </div>
 </div>
