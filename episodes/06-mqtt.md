@@ -11,6 +11,8 @@ exercises: 2
 - What is an MQTT publisher?
 - What is an MQTT broker?
 - What is an MQTT subscriber?
+- What is a client?
+- What is a server?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
