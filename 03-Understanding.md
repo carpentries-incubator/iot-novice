@@ -46,7 +46,7 @@ There are more structural components which you can find on the language referenc
 
 ## Challenge 2: Functions
 
-Looking at the `loop` and `setup` functions of the code snippet, can you identify the above features:
+Looking at the following code snippet, can you identify the above features:
 
 ```c
 void setup() {
