@@ -72,7 +72,10 @@ int getMagicNumber() {
 3. The names of the functions are followed by parenthesis. We will see later on how they are used.
 4. The curly bracket indicate the beginning and end of the function. The left curly bracket should appear after the parenthesis. The following lines are instructions that the motorcontroller has to execute. The right curly bracket indicates closes the function and indicates that the end has been reached. If the function does not have a return type of `void`, i.e. it has any of the other data type, then the last line in the function has to contain the keyword `return` followed by a value (or a variable containing a value) of the specified return type.
 
+:::::
+
 ::::
+
 
 Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time.
 
