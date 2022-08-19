@@ -325,7 +325,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">An Introduction to the Internet of Things</a></p>
 <hr>
-<p> Last updated on 2022-08-13 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-08-19 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -360,13 +360,16 @@
 </div>
 </div>
 </div>
-<figure id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+<figure id="the-internet-of-things"><h2 class="section-heading">The Internet of Things<a class="anchor" aria-label="anchor" href="#the-internet-of-things"></a>
 </h2>
 <hr class="half-width">
 <p>You might hear “Internet of Things” (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of “Things” that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet.</p>
 <p>Before we continue we should clarify some key terminology used in networking. When two or more computers are connected such that they can communicate it is called a <strong>network</strong>.</p>
 <img src="../fig/Network.svg" title="fig:" alt="Computers connected to form a network" class="figure mx-auto d-block"><figcaption align="center"><b>Computers connected to form a network</b><br></figcaption><p>It is also worth mentioning that one should distinguish between the words “internet” (with a lower case i) and “Internet” (with an upper case I). With an upper case I, <strong><em>Internet</em></strong> refers to <em>the</em> Internet that we connect to view web pages such as Google, Amazon etc, or to which we connect to to make Zoom or Skype calls. The Internet is a worldwide collection of networks that we are able to connect to via our Internet Service Providers. The Internet is also sometimes referred to as <strong><em>The Cloud</em></strong>. With a lower case i, <strong><em>internet</em></strong> refers to a collection of networks that are connected. If university A has a network on campus and university B has a network and they decide to connect the two networks then they would have an internet. However they might not necessarily be connected to The Internet. Another term that you might hear is <strong><em>intranet</em></strong>. If and instution connects their network to the Internet, they will refer to their internal network as the intranet. So university A can refer to their network as their intranet. If university A connects their intranet to that of University B, they created an internet.</p>
-<img src="../fig/Internet.svg" title="fig:" alt="When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet." class="figure mx-auto d-block"><figcaption align="center"><b>When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.</b><br></figcaption><p>“So what is this Arduino thing then?”, you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet’s sensing. The main component on an Arduino is a microcontroller which is an “integrated circuit” (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. It is, in actual fact, a very small computer and can also be programmed. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.</p>
+<img src="../fig/Internet.svg" title="fig:" alt="When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet." class="figure mx-auto d-block"><figcaption align="center"><b>When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.</b><br></figcaption></figure><figure id="microcontrollers"><h2 class="section-heading">Microcontrollers<a class="anchor" aria-label="anchor" href="#microcontrollers"></a>
+</h2>
+<hr class="half-width">
+<p>“So what is this Arduino thing then?”, you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet’s sensing. The main component on an Arduino is a microcontroller which is an “integrated circuit” (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. It is, in actual fact, a very small computer and can also be programmed. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.</p>
 <img src="../fig/Arduino_Uno_-_R3.jpg" title="fig:" alt="The original and most basic Arduino - the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>The original and most basic Arduino - the Arduino Uno</b>SparkFun Electronics from Boulder, USA, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0" class="external-link uri">https://creativecommons.org/licenses/by/2.0</a>, via Wikimedia Commons
 </figcaption><p>The main thing to notice about the Arduino in the image above is that it has no connectivity to the Internet. So even if we connect sensors to the Arduino it cannot make part of the Internet of Things without being connected to the Internet. However, one can purchase (or build it yourself) a WiFi shield that fits on top of the Arduino and with the shield in place you can program the Arduino to connect to the Internet and publish all the data it retrieves, via the sensors that you connect to it, to the Internet.</p>
 <p>Below is an image of the WiFi shield and you might be able to see how its pins allows it to be fitted onto the Arduino Uno.</p>
@@ -383,7 +386,7 @@
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Notes for the instructor</p>
 </div>
@@ -667,7 +670,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>The keywords <code>void</code> and <code>int</code> are the return types. If a function does not have a value to return, the keyword <code>void</code> is used. <code>int</code> means that the function returns a value that is an integer. You can find a list of all the <code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference website</a>
@@ -1029,9 +1032,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/aio.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/aio.html",
-  "dateCreated": "2022-08-18",
-  "dateModified": "2022-08-18",
-  "datePublished": "2022-08-18"
+  "dateCreated": "2022-08-19",
+  "dateModified": "2022-08-19",
+  "datePublished": "2022-08-19"
 }
 
   </script><script>
