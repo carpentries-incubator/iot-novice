@@ -28,6 +28,10 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Introduction
+
+Just like computers, microcontrollers have memory into which we can load programs. To make things easier and to be more productive, programmers have developed software called Integrated Development Environments (IDE). The IDEs provide an editor into which one can type the programming instructions and they usually also make provision for ***syntax highlighting***. Syntax highlight just means that certain keywords are coloured and that makes it much easier to read. The IDEs also provide ways of uploading code to devices and running the programs. The Arduino IDE was specifically developed for writing programs that uploaded and run on motorcontrollers. Originally it was aimed just at the Arduino but because it is such a convenient environment to work in, it has now been extended to also workwith other microcontrollers.
+
 ## Running the Arduino IDE
 
 For this episode we have to assume that you were able to successfully install the Arduino IDE and that you are able to start the software from the start menu or the desktop of your computer. When you run the software you will first see the splash window:
@@ -49,7 +53,7 @@ After a while the IDE will open. It is actually quite a simple interface. At the
  
 The white area is where you will be typing the code that will be uploaded to the microcontroller. In the black area you will see messages about the *compilation* of the code and the uploading process. Right at the bottom is a status bar where you will eventually be able to see whether the IDE could connect to your motorcontroller.
 
-The first time you run the IDE the status bar will show the string `Arduino Uno on /dev/ttyAM0` and in the editor you will see some skeleton code:
+The first time you run the IDE the status bar will show the string `Arduino Uno on /dev/ttyAM0` and in the editor you will see some skeleton code. Note the syntax highlighting:
 
 ```c
 void setup() {
