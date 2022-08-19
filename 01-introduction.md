@@ -21,7 +21,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## The Internet of Things
 
 You might hear "Internet of Things" (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of "Things" that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet. 
 
@@ -41,6 +41,7 @@ Before we continue we should clarify some key terminology used in networking. Wh
  <b>When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.</b><br/>
  </figcaption>
 
+## Microcontrollers
 
 "So what is this Arduino thing then?", you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet's sensing. The main component on an Arduino is a microcontroller which is an "integrated circuit" (or you might know it as a chip) that can be used in conjunction other electronic components to control things such as motors and sensors. It is, in actual fact, a very small computer and can also be programmed. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.
 
@@ -95,6 +96,8 @@ With the person next to you, discuss whether you think the following devices are
 
 :::
 
+
+ 
  Links:
  
  -[Microcontrollers vs Microprocessors](https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html)
