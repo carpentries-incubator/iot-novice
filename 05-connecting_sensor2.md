@@ -17,7 +17,7 @@ exercises: 2
 
 ## Connecting a light level sensor
 
-![Light Level with a Light Dependent Resistor (LDR)](LDR.jpeg)
+![Light Level with a Light Dependent Resistor (LDR)](fig/LDR.jpeg)
 
 ```c
 #include <DHT.h>
