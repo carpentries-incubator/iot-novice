@@ -17,10 +17,10 @@ exercises: 2
 
 ## Connecting a light level sensor
 
-![Light Level with a Light Dependent Resistor (LDR)](fig/KY-018.png)
+![Light Level with a Light Dependent Resistor (LDR)](fig/LDR.png)
 
 ```c
-#define LIGHT_SENSOR_PIN 36 // ESP32 pin GIOP36 (ADC0)
+#define LIGHT_SENSOR_PIN 32 // ESP32 pin GIOP36 (ADC0)
 
 const int readingdelay = 3000;
 
