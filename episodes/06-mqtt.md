@@ -26,7 +26,9 @@ exercises: 2
 
 [Message Queuing Telemetry Transport](https://en.wikipedia.org/wiki/MQTT)
 
-QTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth. I
+MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth. 
+
+![Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity](fig/DHT22_KY-018_MQTT.png)
 
 ```c
 #include <DHT.h>
