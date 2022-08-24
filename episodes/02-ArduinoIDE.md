@@ -102,7 +102,7 @@ There will be several options available. If you will be using the ESP32 scroll d
 
 When the installation is completed click the `Close` button. 
 
-If your Arduino is on the list to start with and you don't need to install other boards, then just select the board you are using. If you had to install the `esp32` boards, you will have to now click on the `Tools` menu option again and then select `Boards`. There should now be options for `Arduino AVR boards` and `ESP Arduino`. Select the ESP option and then select the board you are using which, if you are using the `ESP32 WROOM 32`, should be `ESP32 Dev Kit`
+If your Arduino is on the list to start with and you don't need to install other boards, then just select the board you are using. If you had to install the `esp32` boards, you will have to now click on the `Tools` menu option again and then select `Boards`. There should now be options for `Arduino AVR boards` and `ESP Arduino`. Select the ESP option and then select the board you are using which, if you are using the `ESP32 WROOM 32`, should be `DOIT ESP32 DevKit V1`
 
 ## Connecting the board to the computer
 
@@ -117,7 +117,7 @@ You can now use the cable to connect the motorcontroller board to the computer. 
  
 ## Selecting the correct serial port in the IDE
 
-You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on `Tools` and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc.
+You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on `Tools` and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc. Figuring out which port is being used is sometimes a bit messy. Your instructor or workshop helpers might be able to assist you with this.
 
  ## Upload our first sketch
  
@@ -141,6 +141,17 @@ We'll go into more detail about programming the motorcontroller in the next epis
 If all goes well you should see messages displayed in the terminal section below the editor. The messages should be similar to what is shown in the image. The progress counter should say `(100%)`, indicating the all of the compiled code has been uploaded successfully:
  
  ![Code compiled and uploaded](fig/uploaded.png)
+ 
+ If you are getting an error message similar to this,
+ ```
+ Connecting.....................................An error occurred while uploading the sketch
+.
+
+A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+```
+ 
+ then you might have to download the `BOOT` button on your microcontroller board. If you wait for the message to say `Connecting ..` and start holding down the button when the dots appear, the code will suddenly start uploading.
 
 You can now open the serial monitor by clicking first on `Tools` and then on `Serial Monitor`. The word `Hello` should now be printed to the monitor every five seconds.
  
