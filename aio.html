@@ -237,7 +237,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="06-mqtt.html">6. MQTT</a>
+        <a href="06-combine-sensors.html">6. MQTT</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -867,9 +867,9 @@ any links that you are not going to use.
 <li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
 <li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
 <li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
-</ul></section></section><section id="aio-06-mqtt"><p>Content from <a href="06-mqtt.html">MQTT</a></p>
+</ul></section></section><section id="aio-06-combine-sensors"><p>Content from <a href="06-combine-sensors.html">MQTT</a></p>
 <hr>
-<p> Last updated on 2022-08-24 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/06-mqtt.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-08-24 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/06-combine-sensors.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -909,7 +909,7 @@ any links that you are not going to use.
 <hr class="half-width">
 <p><a href="https://en.wikipedia.org/wiki/MQTT" class="external-link">Message Queuing Telemetry Transport</a></p>
 <p>MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth.</p>
-<figure><img src="fig/DHT22_KY-018_MQTT.png" alt="" class="figure mx-auto d-block"><figcaption>Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity</figcaption></figure><div class="codewrapper sourceCode" id="cb1">
+<figure><img src="fig/DHT22_LDR_MQTT.png" alt="" class="figure mx-auto d-block"><figcaption>Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity</figcaption></figure><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;DHT.h&gt;</span></span>
