@@ -279,7 +279,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The Arduino IDE</h1>
-        <p> Last updated on 2022-08-21 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/02-ArduinoIDE.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-08-24 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/02-ArduinoIDE.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
         
         <div class="text-end">
@@ -362,7 +362,7 @@
 <hr class="half-width"><p>To select the board you want to compile for click on the <code>Tools</code> menu item, and then on <code>Board:</code>. On the dropdown menu, select the microcontroller board that you will be using. If it is not in the list, click on <code>Boards Manager</code> which is right at the top. The <code>Boards Manager</code> should pop up.</p>
 <figure><img src="../fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><p>There will be several options available. If you will be using the ESP32 scroll down to find <strong>esp32</strong>. You can also type esp32 in the the text area right at the top of the window and then press enter. This will then perform a search and you should be able to find the esp32 option a little quicker. If you hover your mouse over the <strong>esp32</strong> secion, a box with a version and an <code>Install</code> button should appear. Leave the version, which should be the latest, as is and click on the <code>Install</code> button.</p>
 <figure><img src="../fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><p>When the installation is completed click the <code>Close</code> button.</p>
-<p>If your Arduino is on the list to start with and you don’t need to install other boards, then just select the board you are using. If you had to install the <code>esp32</code> boards, you will have to now click on the <code>Tools</code> menu option again and then select <code>Boards</code>. There should now be options for <code>Arduino AVR boards</code> and <code>ESP Arduino</code>. Select the ESP option and then select the board you are using which, if you are using the <code>ESP32 WROOM 32</code>, should be <code>ESP32 Dev Kit</code></p>
+<p>If your Arduino is on the list to start with and you don’t need to install other boards, then just select the board you are using. If you had to install the <code>esp32</code> boards, you will have to now click on the <code>Tools</code> menu option again and then select <code>Boards</code>. There should now be options for <code>Arduino AVR boards</code> and <code>ESP Arduino</code>. Select the ESP option and then select the board you are using which, if you are using the <code>ESP32 WROOM 32</code>, should be <code>DOIT ESP32 DevKit V1</code></p>
 </section><figure id="connecting-the-board-to-the-computer"><h2 class="section-heading">Connecting the board to the computer<a class="anchor" aria-label="anchor" href="#connecting-the-board-to-the-computer"></a>
 </h2>
 <hr class="half-width"><p>To connect the motorcontroller board to the computer we need a USB cable. USB cables come in different flavours. You might know this from experience with your mobile/cell phone. The image below shows the names and shapes of the different types of USB connectors:</p>
@@ -372,7 +372,7 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 <p>You can now use the cable to connect the motorcontroller board to the computer. Windows computers usually play a sound when you connect a USB device.</p>
 </figure><section id="selecting-the-correct-serial-port-in-the-ide"><h2 class="section-heading">Selecting the correct serial port in the IDE<a class="anchor" aria-label="anchor" href="#selecting-the-correct-serial-port-in-the-ide"></a>
 </h2>
-<hr class="half-width"><p>You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on <code>Tools</code> and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc.</p>
+<hr class="half-width"><p>You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on <code>Tools</code> and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc. Figuring out which port is being used is sometimes a bit messy. Your instructor or workshop helpers might be able to assist you with this.</p>
 <p>## Upload our first sketch</p>
 <p>If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -389,7 +389,10 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 </div>
 <p>We’ll go into more detail about programming the motorcontroller in the next episode. This little program is just for testing. All it is going to do is to print the word <code>Hello</code> in the <strong><em>monitor</em></strong>, which we will open after compiling and uploading the program. To compile and upload press the second button from the left with the arrow pointing to the right. See the image below:</p>
 <figure><img src="../fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><p>If all goes well you should see messages displayed in the terminal section below the editor. The messages should be similar to what is shown in the image. The progress counter should say <code>(100%)</code>, indicating the all of the compiled code has been uploaded successfully:</p>
-<figure><img src="../fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>You can now open the serial monitor by clicking first on <code>Tools</code> and then on <code>Serial Monitor</code>. The word <code>Hello</code> should now be printed to the monitor every five seconds.</p>
+<figure><img src="../fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>If you are getting an error message similar to this, ``` Connecting……………………………….An error occurred while uploading the sketch .</p>
+<p>A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode. For troubleshooting steps visit: <a href="https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html" class="external-link uri">https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html</a> ```</p>
+<p>then you might have to download the <code>BOOT</code> button on your microcontroller board. If you wait for the message to say <code>Connecting ..</code> and start holding down the button when the dots appear, the code will suddenly start uploading.</p>
+<p>You can now open the serial monitor by clicking first on <code>Tools</code> and then on <code>Serial Monitor</code>. The word <code>Hello</code> should now be printed to the monitor every five seconds.</p>
 <figure><img src="../fig/monitor.png" alt="" class="figure mx-auto d-block"><figcaption>Serial Monitor</figcaption></figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -463,7 +466,7 @@ any links that you are not going to use.
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/02-ArduinoIDE.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/02-ArduinoIDE.html",
   "dateCreated": "2022-08-24",
-  "dateModified": "2022-08-21",
+  "dateModified": "2022-08-24",
   "datePublished": "2022-08-24"
 }
 
