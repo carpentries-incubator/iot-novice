@@ -716,7 +716,7 @@ any links that you are not going to use.
 <li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
 </ul></section><section id="aio-04-connecting_sensor1"><p>Content from <a href="04-connecting_sensor1.html">Connecting the first sensor</a></p>
 <hr>
-<p> Last updated on 2022-08-22 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/04-connecting_sensor1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-08-25 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/04-connecting_sensor1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -749,7 +749,10 @@ any links that you are not going to use.
 <section id="connecting-the-temperature-sensor"><h2 class="section-heading">Connecting the temperature sensor<a class="anchor" aria-label="anchor" href="#connecting-the-temperature-sensor"></a>
 </h2>
 <hr class="half-width">
-<figure><img src="../fig/DHT22.png" alt="" class="figure mx-auto d-block"><figcaption>Temperature Sensor (DHT22)</figcaption></figure><div class="codewrapper sourceCode" id="cb1">
+<figure><img src="../fig/DHT22.png" alt="" class="figure mx-auto d-block"><figcaption>Temperature Sensor (DHT22)</figcaption></figure><p>Before entering our code we need to install a special library that is required for the temperature sensor. Without the library the code that we will need to write to get the sensor to work will be much more complicated. Fortunately there are many people around the world the write the difficult code and make it available as libraries for us to make our lives easier.</p>
+<p>To install the library click on the <code>Tools</code> menu item and then select <code>Manage libraries...</code>. The Library Manager window should pop up. In the text field type <code>dht sensor library</code> and press enter to search for the library. Look for the entry “<strong>DHT sensor library</strong> by <strong>Adafruit</strong>” and then click on the Install button.</p>
+<figure><img src="../fig/librarymanager.png" alt="" class="figure mx-auto d-block"><figcaption>Library Manager</figcaption></figure><p>Close the library manager by clicking on the <code>Close</code> button. Next we want to create a new sketch. Click on <code>File</code> and then <code>New</code>. A new instance of the Arduino IDE should open. You can now enter the code below in the editor</p>
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;DHT.h&gt;</span></span>
@@ -785,6 +788,7 @@ any links that you are not going to use.
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  delay(readingdelay);</span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
 </div>
+<p>Once you have entered the code you can press the <code>Upload</code> button again. The code should compile and then upload to the microcontroller board. Don’t forget to press and hold down the <code>BOOT</code> button until the uploading starts.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
