@@ -19,6 +19,16 @@ exercises: 2
 
 ![Temperature Sensor (DHT22)](fig/DHT22.png)
 
+
+Before entering our code we need to install a special library that is required for the temperature sensor. Without the library the code that we will need to write to get the sensor to work will be much more complicated. Fortunately there are many people around the world the write the difficult code and make it available as libraries for us to make our lives easier.
+
+To install the library click on the `Tools` menu item and then select `Manage libraries...`. The Library Manager window should pop up. In the text field type `dht sensor library` and press enter to search for the library. Look for the entry "**DHT sensor library** by **Adafruit**" and then click on the Install button.
+
+![Library Manager](fig/librarymanager.png)
+
+Close the library manager by clicking on the `Close` button. Next we want to create a new sketch. Click on `File` and then `New`. A new instance of the Arduino IDE should open. You can now enter the code below in the editor
+
+
 ```c
 #include <DHT.h>
 
@@ -54,6 +64,8 @@ void loop() {
 }
 
 ```
+
+Once you have entered the code you can press the `Upload` button again. The code should compile and then upload to the microcontroller board. Don't forget to press and hold down the `BOOT` button until the uploading starts.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
