@@ -16,7 +16,8 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Objective
+- Identify the different parts of a sketch
+- Explain the purposes of the different parts of a sketch
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 The language that we use in the Arduino IDE is called `The Arduino Programming Language` which is based on a another programming language called C++. It would have been easy if we could abbreviate The Arduino Programming Language as APL, but we can't because APL refers to a completely different language. The programs written in the Arduino IDE are also not called programs but rather sketches.
