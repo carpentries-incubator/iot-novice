@@ -28,6 +28,12 @@ exercises: 2
 
 MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth. 
 
+There are three components to the MQTT architecture, publishers, subscribers and a broker. Publishers are devices on the Internet of Things that publish messages with a specific topic to a broker. Subscribers subscribe to specific topics on the broker. When a new value for a specific topic is published by a publisher, then all the subscribers to that topic will receive it. 
+
+![MQTT Architecture](fig/mqtt_architecture.png)
+
+
+
 ![Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity](fig/DHT22_LDR_MQTT.png)
 
 ```c
