@@ -680,7 +680,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>The keywords <code>void</code> and <code>int</code> are the return types. If a function does not have a value to return, the keyword <code>void</code> is used. <code>int</code> means that the function returns a value that is an integer. You can find a list of all the <code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference website</a>
@@ -885,7 +885,7 @@ any links that you are not going to use.
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel = analogRead(LIGHT_SENSOR_PIN);     <span class="co">// read light level</span></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  Serial.print(<span class="st">"Light: "</span>);</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  Serial.println(lightlevel);}</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  Serial.println(lightlevel)};</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// wait a 3 seconds between readings</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  delay(readingdelay);</span>
