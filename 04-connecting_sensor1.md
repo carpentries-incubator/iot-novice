@@ -17,6 +17,10 @@ exercises: 2
 
 ## Connecting the temperature sensor
 
+### ToDo
+Explain how to connect the DHT11/22 sensor according to image below
+
+
 ![Temperature Sensor (DHT22)](fig/DHT22.png)
 
 
@@ -66,6 +70,12 @@ void loop() {
 ```
 
 Once you have entered the code you can press the `Upload` button again. The code should compile and then upload to the microcontroller board. Don't forget to press and hold down the `BOOT` button until the uploading starts.
+
+:::: discussion
+
+Explanation of the code
+
+::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
