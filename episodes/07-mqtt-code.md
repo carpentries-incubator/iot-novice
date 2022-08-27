@@ -23,6 +23,8 @@ exercises: 2
 
 ## Add MQTT
 
+### What is MQTT?
+
 [Message Queuing Telemetry Transport](https://en.wikipedia.org/wiki/MQTT)
 
 MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth. 
@@ -39,6 +41,13 @@ Discuss, with the person next to you the following:
 3. Who would typically subscribe to the data?
 
 ::::
+
+### Importing the MQTT library into the Arduino IDE
+
+To be able to enable MQTT functionality we need to add yet another library to our Arduino IDE. As before select `Tools` on the menu and then `Manage Libraries`. Enter `PubSubClient` into the text box for searching. Scroll down until you find `PubSubClient by Nick O'Leary` and click the Install button:
+
+![Installing the PubSubClient library for MQTT messaging](fig/PubSubClient.png)
+
 
 
 ```c
