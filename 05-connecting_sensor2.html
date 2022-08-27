@@ -275,7 +275,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Connecting the second sensor</h1>
-        <p> Last updated on 2022-08-24 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/05-connecting_sensor2.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-08-27 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/05-connecting_sensor2.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -305,7 +305,10 @@
 </div>
 <section id="connecting-a-light-level-sensor"><h2 class="section-heading">Connecting a light level sensor<a class="anchor" aria-label="anchor" href="#connecting-a-light-level-sensor"></a>
 </h2>
-<hr class="half-width"><figure><img src="fig/LDR.png" alt="" class="figure mx-auto d-block"><figcaption>Light Level with a Light Dependent Resistor (LDR)</figcaption></figure><div class="codewrapper sourceCode" id="cb1">
+<hr class="half-width"><div class="section level3">
+<h3 id="todo">ToDo<a class="anchor" aria-label="anchor" href="#todo"></a></h3>
+<p>Explain how to connect the resistors according to image below</p>
+<figure><img src="fig/LDR.png" alt="" class="figure mx-auto d-block"><figcaption>Light Level with a Light Dependent Resistor (LDR)</figcaption></figure><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN 32 </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
@@ -327,6 +330,9 @@
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  delay(readingdelay);</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
 </div>
+<div class="Discussion">
+<p>Explanation of the code</p>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -346,7 +352,8 @@ any links that you are not going to use.
 <ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
 <li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
 <li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
-</ul></section></div> <!-- / div.lesson-content -->
+</ul></div>
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="04-connecting_sensor1.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="06-combine-sensors.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -393,7 +400,7 @@ any links that you are not going to use.
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/05-connecting_sensor2.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/05-connecting_sensor2.html",
   "dateCreated": "2022-08-27",
-  "dateModified": "2022-08-24",
+  "dateModified": "2022-08-27",
   "datePublished": "2022-08-27"
 }
 
