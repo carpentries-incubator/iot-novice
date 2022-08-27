@@ -17,6 +17,10 @@ exercises: 2
 
 ## Connecting a light level sensor
 
+### ToDo
+
+Explain how to connect the resistors according to image below
+
 ![Light Level with a Light Dependent Resistor (LDR)](fig/LDR.png)
 
 ```c
@@ -40,6 +44,14 @@ void loop() {
 }
 
 ```
+
+:::: Discussion
+
+Explanation of the code
+
+:::
+
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
