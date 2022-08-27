@@ -37,7 +37,7 @@ void loop() {
 
   int lightlevel = analogRead(LIGHT_SENSOR_PIN);     // read light level
   Serial.print("Light: ");
-  Serial.println(lightlevel);}
+  Serial.println(lightlevel)};
 
   // wait a 3 seconds between readings
   delay(readingdelay);
