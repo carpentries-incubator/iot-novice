@@ -33,7 +33,6 @@ Explain how to combine the two circuits according to the image below
 ```c
 #include <DHT.h>
 #include <WiFi.h>
-#include <PubSubClient.h>
 
 #define DHT_SENSOR_TYPE DHT22
 #define DHT_SENSOR_PIN 32 // ESP32 pin connected to DHT sensor
