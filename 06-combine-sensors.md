@@ -19,10 +19,16 @@ exercises: 2
 
 ## Combine the two circuits on one breadboard
 
+### ToDo
+
+Explain how to combine the two circuits according to the image below
+
+
 ![Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity](fig/DHT22_LDR.png)
 
 
 ## Combine the code for the two circuits
+
 
 ```c
 #include <DHT.h>
@@ -78,6 +84,12 @@ void loop() {
 
 
 ```
+
+:::: Discussion
+
+Explain the code
+
+::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
