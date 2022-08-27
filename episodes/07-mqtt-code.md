@@ -32,9 +32,15 @@ There are three components to the MQTT architecture, publishers, subscribers and
 
 ![MQTT Architecture](fig/mqtt_architecture.png)
 
+:::: Discussion
 
+Discuss, with the person next to you the following:
+1. What kind of devices we are likely to find on the Internet of things?
+2. Who would typically publish information from such devices?
+3. Who would typically subscribe to the data?
 
-![Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity](fig/DHT22_LDR_MQTT.png)
+::::
+
 
 ```c
 #include <DHT.h>
@@ -183,6 +189,12 @@ String byteArrayToString(byte * byteArray, unsigned int length) {
   return messageTemp;
 }
 ```
+
+:::: Discussion
+
+Explanation of the code
+
+::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
