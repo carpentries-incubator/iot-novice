@@ -3,8 +3,7 @@ title: "MQTT"
 teaching: 10
 exercises: 2
 ---
-
-:::::::::::::::::::::::::::::::::::::: questions 
+:::: questions 
 
 - What is MQTT?
 - How does MQTT work?
@@ -14,13 +13,13 @@ exercises: 2
 - What is a client?
 - What is a server?
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::
 
-::::::::::::::::::::::::::::::::::::: objectives
+:::: objectives
 
 - Explain how MQTT works
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::
 
 ## Add MQTT
 
@@ -196,10 +195,10 @@ Explanation of the code
 
 ::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+:::: keypoints 
 
 - Keypoint
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+:::::
 
 [r-markdown]: https://rmarkdown.rstudio.com/
