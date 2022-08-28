@@ -62,7 +62,7 @@ To be able to enable MQTT functionality we need to add yet another library to ou
 const int readingdelay = 3000;
 const char* ssid = "raspi-webgui";
 const char* password = "w0rksh0p";
-const char* mqtt_server = "10.3.141.1";
+const char* mqtt_server = "192.168.0.1";
 
 DHT dht_sensor(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);
 WiFiClient espClient;
