@@ -33,7 +33,7 @@ There are three components to the MQTT architecture, publishers, subscribers and
 
 ![MQTT Architecture](fig/mqtt_architecture.png)
 
-:::: Discussion
+:::: discussion
 
 Discuss, with the person next to you the following:
 1. What kind of devices we are likely to find on the Internet of things?
@@ -198,7 +198,7 @@ String byteArrayToString(byte * byteArray, unsigned int length) {
 }
 ```
 
-:::: Discussion
+:::: discussion
 
 Explanation of the code
 
