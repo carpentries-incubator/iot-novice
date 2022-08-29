@@ -55,7 +55,12 @@ There are three pieces of information that we will need before we enter the code
 2. The password for the access point
 3. The IP address or hostname of your MQTT broker
 
-There are several free MQTT servers available for use
+There are several free MQTT servers available for use. Alternatively one can set up your server running an MQTT broker. In the sketch below you will have to replace the values assigned to the variables `ssid`, `password` and `mqtt_server`. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.
+
+:::: instructor
+
+
+::::
 
 ```c
 #include <DHT.h>
