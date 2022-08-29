@@ -31,7 +31,7 @@ MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, p
 
 There are three components to the MQTT architecture, publishers, subscribers and a broker. Publishers are devices on the Internet of Things that publish messages with a specific topic to a broker. Subscribers subscribe to specific topics on the broker. When a new value for a specific topic is published by a publisher, then all the subscribers to that topic will receive it. 
 
-![MQTT Architecture](fig/mqtt_architecture.png)
+<img src="fig/mqtt_architecture.png" alt="MQTT Architecture" title="MQTT Architecture" width="50%"/>
 
 :::: challenge
 
@@ -57,10 +57,9 @@ There are three pieces of information that we will need before we enter the code
 
 There are several free MQTT servers available on the Internet. Alternatively one can set up one's own server running an MQTT broker. In the diagrams below two alternative setups are shown. In the first case there is an MQTT server on the Internet that devices can publish or subscribe to. In the second case a local MQTT broker is used which has the advantages that all network traffic can be private, it doesn't have to be shared to the Internet. For the purposes of this workshop for instance we might want to set up our own server so that we are not dependent on the Internet.
 
-![An MQTT broker on the Internet](fig/mqtt_internet.png)
+<img src="fig/mqtt_internet.png" alt="An MQTT broker on the Internet" title="image Title" width="50%"/>
 
-![An MQTT broker on a private network](fig/mqtt_local_network.png)
-
+<img src="fig/mqtt_local_network.png" alt="An MQTT broker on a private network" title="image Title" width="50%"/>
 
 
 In the sketch below you will have to replace the values assigned to the variables `ssid`, `password` and `mqtt_server`. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.
