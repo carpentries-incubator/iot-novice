@@ -1086,7 +1086,7 @@ any links that you are not going to use.
 <p><a href="https://en.wikipedia.org/wiki/MQTT" class="external-link">Message Queuing Telemetry Transport</a></p>
 <p>MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth.</p>
 <p>There are three components to the MQTT architecture, publishers, subscribers and a broker. Publishers are devices on the Internet of Things that publish messages with a specific topic to a broker. Subscribers subscribe to specific topics on the broker. When a new value for a specific topic is published by a publisher, then all the subscribers to that topic will receive it.</p>
-<figure><img src="../fig/mqtt_architecture.png" alt="" class="figure mx-auto d-block"><figcaption>MQTT Architecture</figcaption></figure><div id="discussion1" class="callout discussion">
+<figure><img src="../fig/mqtt_architecture.png" alt="MQTT Architecture" title="MQTT Architecture" width="50%" class="figure mx-auto d-block"></figure><div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -1115,7 +1115,7 @@ any links that you are not going to use.
 <li>The IP address or hostname of your MQTT broker</li>
 </ol>
 <p>There are several free MQTT servers available on the Internet. Alternatively one can set up one’s own server running an MQTT broker. In the diagrams below two alternative setups are shown. In the first case there is an MQTT server on the Internet that devices can publish or subscribe to. In the second case a local MQTT broker is used which has the advantages that all network traffic can be private, it doesn’t have to be shared to the Internet. For the purposes of this workshop for instance we might want to set up our own server so that we are not dependent on the Internet.</p>
-<figure><img src="../fig/mqtt_internet.png" alt="" class="figure mx-auto d-block"><figcaption>An MQTT broker on the Internet</figcaption></figure><figure><img src="../fig/mqtt_local_network.png" alt="" class="figure mx-auto d-block"><figcaption>An MQTT broker on a private network</figcaption></figure><p>In the sketch below you will have to replace the values assigned to the variables <code>ssid</code>, <code>password</code> and <code>mqtt_server</code>. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.</p>
+<figure><img src="../fig/mqtt_internet.png" alt="An MQTT broker on the Internet" title="image Title" width="50%" class="figure mx-auto d-block"></figure><figure><img src="../fig/mqtt_local_network.png" alt="An MQTT broker on a private network" title="image Title" width="50%" class="figure mx-auto d-block"></figure><p>In the sketch below you will have to replace the values assigned to the variables <code>ssid</code>, <code>password</code> and <code>mqtt_server</code>. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.</p>
 <div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
@@ -1124,7 +1124,7 @@ any links that you are not going to use.
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Include instructions on setting up a Raspberry Pi with RaspAP and Mosquitto</p>
 </div>
