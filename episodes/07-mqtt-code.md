@@ -49,7 +49,13 @@ To be able to enable MQTT functionality we need to add yet another library to ou
 
 ![Installing the PubSubClient library for MQTT messaging](fig/PubSubClient.png)
 
+There are three pieces of information that we will need before we enter the code for sending and messages via MQTT:
 
+1. The `ssid` of your Internet access point
+2. The password for the access point
+3. The IP address or hostname of your MQTT broker
+
+There are several free MQTT servers available for use
 
 ```c
 #include <DHT.h>
