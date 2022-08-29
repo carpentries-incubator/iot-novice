@@ -33,7 +33,7 @@ There are three components to the MQTT architecture, publishers, subscribers and
 
 ![MQTT Architecture](fig/mqtt_architecture.png)
 
-:::: discussion
+:::: challenge
 
 Discuss, with the person next to you the following:
 1. What kind of devices we are likely to find on the Internet of things?
