@@ -57,9 +57,9 @@ There are three pieces of information that we will need before we enter the code
 
 There are several free MQTT servers available on the Internet. Alternatively one can set up one's own server running an MQTT broker. In the diagrams below two alternative setups are shown. In the first case there is an MQTT server on the Internet that devices can publish or subscribe to. In the second case a local MQTT broker is used which has the advantages that all network traffic can be private, it doesn't have to be shared to the Internet. For the purposes of this workshop for instance we might want to set up our own server so that we are not dependent on the Internet.
 
-![An MQTT broker on the Internet](fig/mqtt_internet.svg)
+![An MQTT broker on the Internet](fig/mqtt_internet.png)
 
-![An MQTT broker on a private network](fig/mqtt_local_network.svg)
+![An MQTT broker on a private network](fig/mqtt_local_network.png)
 
 
 
