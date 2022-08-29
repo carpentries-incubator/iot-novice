@@ -313,11 +313,14 @@
 </div>
 <section id="add-mqtt"><h2 class="section-heading">Add MQTT<a class="anchor" aria-label="anchor" href="#add-mqtt"></a>
 </h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="what-is-mqtt">What is MQTT?<a class="anchor" aria-label="anchor" href="#what-is-mqtt"></a></h3>
-<figure><img src="https://en.wikipedia.org/wiki/MQTT" alt="" class="figure mx-auto d-block"><figcaption>Message Queuing Telemetry Transport</figcaption></figure><p>MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth.</p>
+<hr class="half-width"><figure id="what-is-mqtt"><h3>What is MQTT?</h3>
+<p><a href="https://en.wikipedia.org/wiki/MQTT" class="external-link">Message Queuing Telemetry Transport</a></p>
+<p>MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth.</p>
 <p>There are three components to the MQTT architecture, publishers, subscribers and a broker. Publishers are devices on the Internet of Things that publish messages with a specific topic to a broker. Subscribers subscribe to specific topics on the broker. When a new value for a specific topic is published by a publisher, then all the subscribers to that topic will receive it.</p>
-<figure><img src="../fig/mqtt_architecture.png" alt="MQTT Architecture" title="MQTT Architecture" width="50%" class="figure mx-auto d-block"></figure><div id="discussion1" class="callout discussion">
+<img src="../fig/mqtt_architecture.png" alt="MQTT Architecture" title="MQTT Architecture" width="50%" class="figure mx-auto d-block"><caption>
+MQTT Architecture
+</caption>
+<div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -332,8 +335,7 @@
 </ol></div>
 </div>
 </div>
-</div>
-<div class="section level3">
+</figure><div class="section level3">
 <h3 id="importing-the-mqtt-library-into-the-arduino-ide">Importing the MQTT library into the Arduino IDE<a class="anchor" aria-label="anchor" href="#importing-the-mqtt-library-into-the-arduino-ide"></a></h3>
 <p>To be able to enable MQTT functionality we need to add yet another library to our Arduino IDE. As before select <code>Tools</code> on the menu and then <code>Manage Libraries</code>. Enter <code>PubSubClient</code> into the text box for searching. Scroll down until you find <code>PubSubClient by Nick O'Leary</code> and click the Install button:</p>
 <figure><img src="../fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT messaging</figcaption></figure><p>There are three pieces of information that we will need before we enter the code for sending and messages via MQTT:</p>
