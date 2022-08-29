@@ -36,6 +36,7 @@ There are three components to the MQTT architecture, publishers, subscribers and
 :::: challenge
 
 Discuss, with the person next to you the following:
+
 1. What kind of devices we are likely to find on the Internet of things?
 2. Who would typically publish information from such devices?
 3. Who would typically subscribe to the data?
@@ -198,11 +199,11 @@ String byteArrayToString(byte * byteArray, unsigned int length) {
 }
 ```
 
-:::: discussion
+:::::::::::::::::::::::::::: discussion
 
 Explanation of the code
 
-::::
+::::::::::::::::::::::::::::
 
 :::: keypoints 
 
