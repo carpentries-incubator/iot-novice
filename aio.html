@@ -663,7 +663,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>The keywords <code>void</code> and <code>int</code> are the return types. If a function does not have a value to return, the keyword <code>void</code> is used. <code>int</code> means that the function returns a value that is an integer. You can find a list of all the <code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference website</a>
@@ -1087,7 +1087,14 @@ any links that you are not going to use.
 <h3 id="importing-the-mqtt-library-into-the-arduino-ide">Importing the MQTT library into the Arduino IDE<a class="anchor" aria-label="anchor" href="#importing-the-mqtt-library-into-the-arduino-ide"></a>
 </h3>
 <p>To be able to enable MQTT functionality we need to add yet another library to our Arduino IDE. As before select <code>Tools</code> on the menu and then <code>Manage Libraries</code>. Enter <code>PubSubClient</code> into the text box for searching. Scroll down until you find <code>PubSubClient by Nick O'Leary</code> and click the Install button:</p>
-<figure><img src="fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT messaging</figcaption></figure><div class="codewrapper sourceCode" id="cb1">
+<figure><img src="fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT messaging</figcaption></figure><p>There are three pieces of information that we will need before we enter the code for sending and messages via MQTT:</p>
+<ol style="list-style-type: decimal">
+<li>The <code>ssid</code> of your Internet access point</li>
+<li>The password for the access point</li>
+<li>The IP address or hostname of your MQTT broker</li>
+</ol>
+<p>There are several free MQTT servers available for use</p>
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;DHT.h&gt;</span></span>
