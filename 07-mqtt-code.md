@@ -55,12 +55,25 @@ There are three pieces of information that we will need before we enter the code
 2. The password for the access point
 3. The IP address or hostname of your MQTT broker
 
-There are several free MQTT servers available for use. Alternatively one can set up your server running an MQTT broker. In the sketch below you will have to replace the values assigned to the variables `ssid`, `password` and `mqtt_server`. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.
+There are several free MQTT servers available on the Internet. Alternatively one can set up one's own server running an MQTT broker. In the diagrams below two alternative setups are shown. In the first case there is an MQTT server on the Internet that devices can publish or subscribe to. In the second case a local MQTT broker is used which has the advantages that all network traffic can be private, it doesn't have to be shared to the Internet. For the purposes of this workshop for instance we might want to set up our own server so that we are not dependent on the Internet.
+
+![An MQTT broker on the Internet](fig/mqtt_internet.svg)
+
+![An MQTT broker on a private network](fig/mqtt_local_network.svg)
+
+
+
+In the sketch below you will have to replace the values assigned to the variables `ssid`, `password` and `mqtt_server`. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.
 
 :::: instructor
 
+Include instructions on setting up a Raspberry Pi with RaspAP and Mosquitto
 
 ::::
+
+For now we will continue as if your instructor has set up a local network that includes an access point to which your computer has to connect and an MQTT broker. You might, or might not, be connected to the Internet once you connect to the access point, but that won't matter.
+
+
 
 ```c
 #include <DHT.h>
