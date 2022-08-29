@@ -663,7 +663,7 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>The keywords <code>void</code> and <code>int</code> are the return types. If a function does not have a value to return, the keyword <code>void</code> is used. <code>int</code> means that the function returns a value that is an integer. You can find a list of all the <code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference website</a>
@@ -1093,7 +1093,8 @@ any links that you are not going to use.
 <li>The password for the access point</li>
 <li>The IP address or hostname of your MQTT broker</li>
 </ol>
-<p>There are several free MQTT servers available for use</p>
+<p>There are several free MQTT servers available for use. Alternatively one can set up your server running an MQTT broker. In the sketch below you will have to replace the values assigned to the variables <code>ssid</code>, <code>password</code> and <code>mqtt_server</code>. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.</p>
+
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
