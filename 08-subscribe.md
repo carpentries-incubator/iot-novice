@@ -36,7 +36,7 @@ In the previous episodes we have:
 
 At this point your ESP microcontroller board should have a temperature and a light level sensor on it. It should have connected to your local network and to an MQTT broker and it is publishing the readings to a topic to the MQTT broker.
 
-We now need client software to connect to the MQTT broker and subscribe to the topic to which your sensor readings are published. There are quite a few clients available as well as libraries for several programming languages including Python. For this lesson we are going to use MQTTX, a cross platform, open source application. Hopefully you were able to install MQTTX as descripted on the [setup](leaners/setup.md) page.
+We now need client software to connect to the MQTT broker and subscribe to the topic to which your sensor readings are published. There are quite a few clients available as well as libraries for several programming languages including Python. For this lesson we are going to use MQTTX, a cross platform, open source application. Hopefully you were able to install MQTTX as descripted on the [setup](learners/setup.md) page.
 
 Let's start by running MQTTX. If it is the first time you are running it, a window similar to the image below should open:
 
