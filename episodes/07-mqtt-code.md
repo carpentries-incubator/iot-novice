@@ -21,7 +21,7 @@ exercises: 2
 
 :::::
 
-## Add MQTT
+## Adding MQTT to our sketch
 
 ### What is MQTT?
 
@@ -67,7 +67,42 @@ In the sketch below you will have to replace the values assigned to the variable
 
 :::: instructor
 
-Include instructions on setting up a Raspberry Pi with RaspAP and Mosquitto
+To avoid the requirement of Internet access for this lesson it is possible to set up and access point and MQTT broker using a Raspberry Pi. It could be done with any available computer, really, but the RPi makes for a simple solution that one can prepare beforehand and keep just for this purpose. It is small and easy to take along to a workshop.
+
+This has only been tested with a RPi 4 with 2GB of RAM. Older RPis should work.
+
+1. Using the Raspberry Pi Imager, select the Raspberry Pi OS Lite version of the operating system.
+2. Using the settinngs menu, enable SSH and configure the wireless LAN. The settings are very much determined by your Internet connectivity and network setup so it might be worth looking at documentation on the Internet for your specific circumstances. Make sure you set the Wireless LAN coutry and the locale settings.
+3. Write the operating system to a micro-SD card and start up the RPi. You should be able to ssh into the RPi at this point
+4. To create an access point we will use the software developed by the open-source project RaspAP (https://raspap.com/)
+5. To install RaspAP:
+```bash
+sudo apt-get update
+sudo apt-get full-upgrade
+sudo reboot
+```
+After the reboot log into the RPi again
+```bash
+curl -sL https://install.raspap.com | bash
+```
+6. You should now be able to connect to the Access point with the following information:
+```
+    IP address: 10.3.141.1
+    Username: admin
+    Password: secret
+    DHCP range: 10.3.141.50 — 10.3.141.255
+    SSID: raspi-webgui
+    Password: ChangeMe
+```
+7. Using a browser navigate to 10.3.141.1 and log in using as user `admin` with password `secret`.  Change the IP address to `192.168.0.1` and the DHCP range to `192.168.0.50 - 192.168.0.255`. You don't have to do this but if you don't you'll have to adapt the IP address for the MQTT server in the lesson.
+8. Reboot the RPi
+9. Log into the RPi again. We now have to install Mosquitto which is the MQTT broker and client
+10. In the terminal type the following command:
+```bash
+sudo apt install -y mosquitto mosquitto-clients
+```
+11. Reboot again just to be sure
+12. Your RPi should now be running RaspAP for students to connect to for an Access Point and it should be running the Mosquitto broker.
 
 ::::
 
