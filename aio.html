@@ -261,7 +261,7 @@
 <div class="accordion accordion-flush" id="accordionFlush9">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading9">
-        <a href="08-subscribe.html">8. Subscribing to a topic</a>
+        <a href="08-subscribe.html">8. Subscribing to an MQTT topic</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -1282,9 +1282,9 @@ any links that you are not going to use.
 <li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
 </ul>
 </div>
-</section></section><section id="aio-08-subscribe"><p>Content from <a href="08-subscribe.html">Subscribing to a topic</a></p>
+</section></section><section id="aio-08-subscribe"><p>Content from <a href="08-subscribe.html">Subscribing to an MQTT topic</a></p>
 <hr>
-<p> Last updated on 2022-08-14 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/08-subscribe.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-08-30 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/08-subscribe.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -1296,7 +1296,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>Question</li>
+<li>What does one need to get the information published by sensors on the IoT?</li>
+<li>What is meant by “topic” in terms of MQTT?</li>
 </ul>
 </div>
 </div>
@@ -1306,16 +1307,31 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Objective</li>
+<li>Subscribing to an MQTT broker</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section id="title"><h2 class="section-heading">Title<a class="anchor" aria-label="anchor" href="#title"></a>
+<section id="our-current-status"><h2 class="section-heading">Our current status<a class="anchor" aria-label="anchor" href="#our-current-status"></a>
 </h2>
 <hr class="half-width">
+<p>In the previous episodes we have:</p>
+<ol style="list-style-type: decimal">
+<li>Installed the Arduino IDE on our computers</li>
+<li>Added the URL in the IDE’s preferences to detect the configurations for the ESP32 board</li>
+<li>Installed the library required for the DHT sensors</li>
+<li>Connected a DHT11 or DHT22 sensor to an ESP32 microcontroller board</li>
+<li>Entered the code in a sketch to get temperature readings from the DHT sesions</li>
+<li>Connected a Light Dependent Resistor to the same ESP32 microcontroller board</li>
+<li>Entered the code in a sketch to get light level readings from the LDR</li>
+<li>Entered the code in the sketch to connect to our local network and publish the sensor readings to an MQTT broker</li>
+</ol></section><section id="subscribing-to-an-mqtt-topic"><h2 class="section-heading">Subscribing to an MQTT topic<a class="anchor" aria-label="anchor" href="#subscribing-to-an-mqtt-topic"></a>
+</h2>
+<hr class="half-width">
+<p>At this point your ESP microcontroller board should have a temperature and a light level sensor on it. It should have connected to your local network and to an MQTT broker and it is publishing the readings to a topic to the MQTT broker.</p>
+<p>We now need client software to connect to the MQTT broker and subscribe to the topic to which your sensor readings are published.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1325,7 +1341,7 @@ any links that you are not going to use.
 </h3>
 <div class="callout-content">
 <ul>
-<li>Keypoint</li>
+<li>Subscribing to an MQTT topic</li>
 </ul>
 </div>
 </div>
