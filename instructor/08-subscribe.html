@@ -219,6 +219,7 @@
       <div class="accordion-body">
         <ul><li><a href="#our-current-status">Our current status</a></li>
 <li><a href="#subscribing-to-an-mqtt-topic">Subscribing to an MQTT topic</a></li>
+<li><a href="#exporting-data">Exporting data</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -301,7 +302,8 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Subscribing to an MQTT broker</li>
+<ul><li>Connecting to an MQTT broker</li>
+<li>Subscribing to topics</li>
 </ul></div>
 </div>
 </div>
@@ -310,8 +312,7 @@
 <section id="our-current-status"><h2 class="section-heading">Our current status<a class="anchor" aria-label="anchor" href="#our-current-status"></a>
 </h2>
 <hr class="half-width"><p>In the previous episodes we have:</p>
-<ol style="list-style-type: decimal"><li>Installed the Arduino IDE on our computers</li>
-<li>Added the URL in the IDE’s preferences to detect the configurations for the ESP32 board</li>
+<ol style="list-style-type: decimal"><li>Added the URL in the IDE’s preferences to detect the configurations for the ESP32 board</li>
 <li>Installed the library required for the DHT sensors</li>
 <li>Connected a DHT11 or DHT22 sensor to an ESP32 microcontroller board</li>
 <li>Entered the code in a sketch to get temperature readings from the DHT sesions</li>
@@ -321,8 +322,33 @@
 </ol></section><section id="subscribing-to-an-mqtt-topic"><h2 class="section-heading">Subscribing to an MQTT topic<a class="anchor" aria-label="anchor" href="#subscribing-to-an-mqtt-topic"></a>
 </h2>
 <hr class="half-width"><p>At this point your ESP microcontroller board should have a temperature and a light level sensor on it. It should have connected to your local network and to an MQTT broker and it is publishing the readings to a topic to the MQTT broker.</p>
-<p>We now need client software to connect to the MQTT broker and subscribe to the topic to which your sensor readings are published. There are quite a few clients available as well as libraries for several programming languages including Python. For this lesson we are going to use MQTTX, a cross platform, open source application.</p>
-<p>MQTTX can be downloaded from <a href="https://mqttx.app/" class="external-link">https://mqttx.app/</a>.</p>
+<p>We now need client software to connect to the MQTT broker and subscribe to the topic to which your sensor readings are published. There are quite a few clients available as well as libraries for several programming languages including Python. For this lesson we are going to use MQTTX, a cross platform, open source application. Hopefully you were able to install MQTTX as descripted on the <a href="leaners/setup.html">setup</a> page.</p>
+<p>Let’s start by running MQTTX. If it is the first time you are running it, a window similar to the image below should open:</p>
+<figure><img src="../fig/mqttx.png" alt="" class="figure mx-auto d-block"><figcaption>Running MQTTX</figcaption></figure><p>Click on the green <code>+ New Connection</code> button and then following window should appear:</p>
+<figure><img src="../fig/new_connection.png" alt="" class="figure mx-auto d-block"><figcaption>New connection in MQTTX</figcaption></figure><p>You now need the information of the MQTT broker that you want to subscribe to. Your instructor should provide you with the correct information. If you are using a local MQTT broker and Raspberry Pi access point your information will be something along the following lines:</p>
+<ol style="list-style-type: decimal"><li>Name: raspi-webgui (this can be any name of your choosing)</li>
+<li>Client ID: mqttx_46a41312 (this will be different for everyone. You can leave it as is, or change it if you want.)</li>
+<li>Host mqtt:// raspap.local</li>
+<li>Port: 1883</li>
+</ol><p>Click on <code>Connect</code> in the top right hand corner of the window. A small box should appear for a short while, saying <code>CONNECTED</code>, after which the screen should look as follows:</p>
+<figure><img src="../fig/connected.png" alt="" class="figure mx-auto d-block"><figcaption>MQTTX connected to broker</figcaption></figure><p>We are now connected to the MQTT broker and we can now subscribe to a topic.</p>
+<p>Click on th <code>+New Subscription</code> button. Enter <code>/JohnSmith/dht22/temperature</code> (replacing JohnSmith with your name as you entered it into the sketch) in the <code>*Topic</code> field and click the <code>Confirm button</code>.</p>
+<figure><img src="../fig/new_subscription.png" alt="" class="figure mx-auto d-block"><figcaption>New Subscription</figcaption></figure><p>You should now see messages pop up showing the top and a value.</p>
+<figure><img src="../fig/subscribed.png" alt="" class="figure mx-auto d-block"><figcaption>Subscribed</figcaption></figure><div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#NA"></a>
+</h3>
+<div class="callout-content">
+<p>Can you add a new subscription to subscribe to the light level that is being published from your ESP32?</p>
+</div>
+</div>
+</div>
+</section><section id="exporting-data"><h2 class="section-heading">Exporting data<a class="anchor" aria-label="anchor" href="#exporting-data"></a>
+</h2>
+<hr class="half-width"><p>MQTTX allows us to export the data that it receives to various formats. Allow MQTTX to run for a while to accumulate some data and then export the data to a JSON file. It is possible to export the data to a CSV but the format appears to be in a somewhat obscure format. It is possible to use convert the JSON to CSV using a converter such as the online converter that is available at [www.convertcsv.com/json-to-csv.htm</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
