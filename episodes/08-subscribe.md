@@ -8,6 +8,7 @@ exercises: 2
 
 - What does one need to get the information published by sensors on the IoT?
 - What is meant by "topic" in terms of MQTT?
+- How can I save the published data to file?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -15,6 +16,7 @@ exercises: 2
 
 - Connecting to an MQTT broker
 - Subscribing to topics 
+- Export data to a file
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -78,7 +80,9 @@ MQTTX allows us to export the data that it receives to various formats. Allow MQ
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Subscribing to an MQTT topic
+- Use MQTTX to connect to a broker
+- Subscribed to an MQTT topic
+- Exported data to a file in JSON format
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
