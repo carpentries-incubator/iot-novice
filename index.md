@@ -6,11 +6,12 @@ This lesson introduces learners to the Internet of Things. A few things are requ
 
 - A laptop or a desktop computer with Linux, MacOS or Windows as an operating system. You can also use a Raspberry Pi with any of its available operating systems as a workstation - as long as the operating system can run the Arduino IDE.
 - The Arduino IDE
+- MQTTX - an MQTT 5.0 desktop client
 - A microcontroller board such as an Arduino, an ESP32 or an ESP8266. Each of these microcontroller boards come in quite a few flavours. Ideally the whole class will have the same version to work with. However, this will be determined by the way the workshop is organised. If the instructor provides all the hardware then it is likely that everyone will have the same devices. If learners bring their own devices there are likely to be differences and the instructor will have to deal with the slight differences that that might require when it comes to wiring the circuits and writing the code.
 - A USB cable that connects the microcontroller board to the PC/laptop
 - If you are using DHT11/12 and LDR modules you only need female to female connectors. However, if you are using the individual components it would be better to use a breadboard and some male to female connectors.
 
-
+More information about the installation of the Arduino IDE and MQTTX can be found on the [setup](learners/setup.md) page.
 
 
 [workbench]: https://carpentries.github.io/sandpaper-docs
