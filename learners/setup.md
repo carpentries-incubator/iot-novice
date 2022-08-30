@@ -7,7 +7,7 @@ title: Setup
 
 ::: discussion
 
-### Details
+### The Arduino IDE
 
 For this workshop we need to download and install the Arduino Integrated Development Environment (IDE). There are now quite few different options for doing this which are all available on the [Arduino website](https://www.arduino.cc/en/software).
 
@@ -15,5 +15,11 @@ In the first instance there is an option for programming your microcontroller bo
 
 For the Windows operating system you can download the IDE as a zip file, an exe file or you can get it from the Windows app store. There are also installation packages to be downloaded if you are using Linux or MacOS. Follow the instructions on the Arduino website for the option you decide to select. Your instructor should be able to guide you in your decision.
 
+### MQTTX 
+
+We will also need to install an MQTT client and for this we'll use MQTTX. You can download MQTTX from [https://mqttx.app/](https://mqttx.app/). 
+
+#### Windows
+Download the approprate .exe file and then double click on the downloaded file to install the program.
 
 :::
