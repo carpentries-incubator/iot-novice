@@ -73,7 +73,7 @@ Can you add a new subscription to subscribe to the light level that is being pub
 
 ## Exporting data
 
-MQTTX allows us to export the data that it receives to various formats. Allow MQTTX to run for a while to accumulate some data and then export the data to a JSON file. It is possible to export the data to a CSV but the format appears to be in a somewhat obscure format. It is possible to use convert the JSON to CSV using a converter such as the online converter that is available at [www.convertcsv.com/json-to-csv.htm
+MQTTX allows us to export the data that it receives to various formats. Allow MQTTX to run for a while to accumulate some data and then export the data to a JSON file. It is possible to export the data to a CSV but the format appears to be in a somewhat obscure format. It is possible to use convert the JSON to CSV using a converter such as the online converter that is available at [www.convertcsv.com/json-to-csv.htm](www.convertcsv.com/json-to-csv.htm)
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
