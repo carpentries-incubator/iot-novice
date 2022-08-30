@@ -1,5 +1,5 @@
 ---
-title: "MQTT"
+title: "Using MQTT for the Internet of Things"
 teaching: 10
 exercises: 2
 ---
