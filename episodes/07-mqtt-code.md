@@ -121,15 +121,16 @@ For now we will continue as if your instructor has set up a local network that i
 
 const int readingdelay = 3000;
 const char* ssid = "raspi-webgui";
-const char* password = "w0rksh0p";
+const char* password = "ChangeMe";
 const char* mqtt_server = "192.168.0.1";
+const String your_name = "/JohnSmith";
 
 DHT dht_sensor(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-String topic_temperature = "/dht22/temperature";
-String topic_light = "/ldr/light/";
+String topic_temperature = your_name + "/dht22/temperature";
+String topic_light = your_name + "/ldr/light/";
 
 void setup() {
   Serial.begin(9600); // initialize serial
