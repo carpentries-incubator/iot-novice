@@ -21,8 +21,7 @@ The sensor that we will be using is a DHT11 or a DHT12. The easiest is to use a 
 
 ![Temperature Sensor module (DHT22) ](fig/DHT22.png)
 
-![Wiring the DHT11 Temperature Sensor when it is not part of a module](fig/DHT_parts.png)
-
+![Wiring the DHT11 Temperature Sensor when it is not part of a module](fig/DHT_parts.svg
 
 Before entering our code we need to install a special library that is required for the temperature sensor. Without the library the code that we will need to write to get the sensor to work will be much more complicated. Fortunately there are many people around the world the write the difficult code and make it available as libraries for us to make our lives easier.
 
