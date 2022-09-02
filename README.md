@@ -5,4 +5,4 @@
 3. We will program the board, using the Arduino IDE, to publish data from the sensors to an MQTT broker. 
 4. We will then subscribe to the MQTT broker using the MQTTX desktop app 
 
-The aim of the lesson is to introduce learners to the Internet of Things. The emphasis of the lesson is not on electronics or on programming microcontrollers but rather how deviced connect and communicate on the Internet of Things to produce data that we can then analise for research purposes.
+The aim of the lesson is to introduce learners to the Internet of Things. The emphasis of the lesson is not on electronics or on programming microcontrollers but rather how devices connect and communicate on the Internet of Things to produce data that we can then analyse for research purposes.
