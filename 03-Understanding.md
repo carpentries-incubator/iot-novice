@@ -84,7 +84,7 @@ All sketches **must** have a setup and a loop function. Any instructions that we
 ## Variables and Constants
 Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a vlue can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what `type` of value will be stored in the variable. 
 
-Let's start by creating a new sketch to experiment with the things we have mentioned so far. On the menu click `File` and then 'New'. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions just two comments. Comment lines start with `//` and are ignored by the compiler but allows the programmer to enter comments to document what the program does:
+Let's start by creating a new sketch to experiment with the things we have mentioned so far. On the menu click `File` and then `New`. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions, just two comments. Comment lines start with `//` and are ignored by the compiler but allows the programmer to enter comments to document what the program does. Do use the comment feature. It makes it much easier when you come back to the code or when you have to pass the code onto someone else:
 
 ```c
 // This program will print numbers starting at the value allocated to the
