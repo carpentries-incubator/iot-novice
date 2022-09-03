@@ -141,7 +141,7 @@ void loop() {
 }
 ```
 
-:::: challenge
+:::: Challenge
 
 With the person next to you, can you do the following?
 
@@ -179,7 +179,9 @@ delay()
 10. When `i` reaches the value `maximum`, the loop will terminate and the program will pause for 5000 milliseconds.
 11. Because this happens in the `loop()` function the whole process will start all over again and this will go on indefinitely
 
+::::::
 ::::
+
 
 https://www.arduino.cc/reference/en/
 
