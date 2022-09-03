@@ -579,7 +579,7 @@ any links that you are not going to use.
 <li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
 </ul></section></section><section id="aio-03-Understanding"><p>Content from <a href="03-Understanding.html">Understanding the code</a></p>
 <hr>
-<p> Last updated on 2022-08-26 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/03-Understanding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-09-03 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/03-Understanding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -614,7 +614,7 @@ any links that you are not going to use.
 </div>
 </div>
 <p>The language that we use in the Arduino IDE is called <code>The Arduino Programming Language</code> which is based on a another programming language called C++. It would have been easy if we could abbreviate The Arduino Programming Language as APL, but we can’t because APL refers to a completely different language. The programs written in the Arduino IDE are also not called programs but rather sketches.</p>
-<p>The language consists of three parts: functions, values (variables and constants), and structure. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised the structure. All sketches require a setup and a loop as in the following code snippet:</p>
+<p>The language consists of three parts: <strong>functions</strong>, <strong>values</strong> (variables and constants), and <strong>structure</strong>. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised the structure. All sketches require a setup and a loop as in the following code snippet:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -635,10 +635,10 @@ any links that you are not going to use.
 <li>parenthesis</li>
 <li>curly brackets</li>
 </ol>
-<div class="section level2 Challenge">
-<h2 id="challenge-2-functions">Challenge 2: Functions<a class="anchor" aria-label="anchor" href="#challenge-2-functions"></a>
-</h2>
-<p>Looking at the following code snippet, can you identify the above features:</p>
+<div class="section level3 Challenge">
+<h3 id="challenge-the-part-of-a-sketch-program">Challenge: The Part of a Sketch (Program)<a class="anchor" aria-label="anchor" href="#challenge-the-part-of-a-sketch-program"></a>
+</h3>
+<p>Looking at the following code snippet, can you identify the above mentioned features?</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -663,22 +663,80 @@ any links that you are not going to use.
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>The keywords <code>void</code> and <code>int</code> are the return types. If a function does not have a value to return, the keyword <code>void</code> is used. <code>int</code> means that the function returns a value that is an integer. You can find a list of all the <code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference website</a>
 </li>
 <li>The words <code>setup</code>, <code>loop</code> and <code>getMagicNumber</code> are the names of the functions.</li>
 <li>The names of the functions are followed by parenthesis. We will see later on how they are used.</li>
-<li>The curly bracket indicate the beginning and end of the function. The left curly bracket should appear after the parenthesis. The following lines are instructions that the motorcontroller has to execute. The right curly bracket indicates closes the function and indicates that the end has been reached. If the function does not have a return type of <code>void</code>, i.e. it has any of the other data type, then the last line in the function has to contain the keyword <code>return</code> followed by a value (or a variable containing a value) of the specified return type.</li>
+<li>The curly brackets indicate the beginning and end of the function. The left curly bracket should appear after the parenthesis. The following lines are instructions that the micocontroller has to execute. The right curly bracket closes the function and indicates that the end has been reached. If the function does not have a return type of <code>void</code>, i.e. it has any of the other data type, then the last line in the function has to contain the keyword <code>return</code> followed by a value (or a variable containing a value) of the specified return type.</li>
 </ol>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p>Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time.</p>
-<p>Any instructions that we put in the <code>setup</code> will be executed when the program starts.</p>
+<section id="functions"><h2 class="section-heading">Functions<a class="anchor" aria-label="anchor" href="#functions"></a>
+</h2>
+<hr class="half-width">
+<p>All sketches <strong>must</strong> have a setup and a loop function. Any instructions that we put in the <code>setup</code> will be executed when the program starts. After completing the instructions in setup the microcontroller continues to the <code>loop</code> function where the microcontroller will execute all the instruction over and over again - in an infinite loop. As in the example, there can be other functions. Such functions are created as needed and can be called from any other function. Functions can even call themselves. There are many built-in functions, some of which we will be using. It is also possible to load <code>libraries</code> that will give us even more functions for more functionality. We will also be using some of those in this lesson.</p>
+</section><section id="variables-and-constants"><h2 class="section-heading">Variables and Constants<a class="anchor" aria-label="anchor" href="#variables-and-constants"></a>
+</h2>
+<hr class="half-width">
+<p>Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a vlue can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what <code>type</code> of value will be stored in the variable.</p>
+<p>Let’s start by creating a new sketch to experiment with the things we have mentioned so far. On the menu click <code>File</code> and then ‘New’. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions just two comments. Comment lines start with <code>//</code> and are ignored by the compiler but allows the programmer to enter comments to document what the program does:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// This program will print numbers starting at the value allocated to the</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">// variable `minimum` up to the variable called `maximum`</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// declare a constant of type integer called minimum</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> minimum = <span class="dv">0</span>;</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">// declare a constant of type integer called maximum</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> maximum = <span class="dv">100</span>;</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">// delcare a variable of type float called pi</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">// a float type is a number that a decimal point.</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> pi = <span class="fl">3.14159265358979</span>;</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Initialise the `Serial` library and tell it what speed to </span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// use for communication with the computer via the USB port</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// The Serial library is included in the language by default</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">// so we don't have to import it.</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  Serial.begin(<span class="dv">9600</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Use a loop structure to count from minimum to maximum</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Notice the `int i` variable that is used as the counter</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="co">// To understand the for-loop structure, read it as:</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="co">// For i equals minimum to i less-than-or-equal-to maximum, </span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">// increment i by one (the ++ means increment by 1)</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="dt">int</span> i = minimum; i &lt;= maximum; i++) {</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// create a new value called multiply_pi and allocate</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// the value of `i * pi` to it</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> multiply_pi = i * pi;</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Use the print function in the Serial library to </span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">// print `i` to the Serial Monitor</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    Serial.println(i);</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="co">// create a delay of 5000 milliseconds (5 seconds)</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  delay(<span class="dv">5000</span>);</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">// After the delay the microcontroller will start at the </span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="co">// beginning of loop() and run all the code inside it again.</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+</div>
 <p><a href="https://www.arduino.cc/reference/en/" class="external-link uri">https://www.arduino.cc/reference/en/</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -694,11 +752,15 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
 <ul>
 <li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
 <li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
 <li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
-</ul></section><section id="aio-04-connecting_sensor1"><p>Content from <a href="04-connecting_sensor1.html">Connecting the first sensor</a></p>
+</ul></section></section><section id="aio-04-connecting_sensor1"><p>Content from <a href="04-connecting_sensor1.html">Connecting the first sensor</a></p>
 <hr>
 <p> Last updated on 2022-09-01 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/04-connecting_sensor1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1425,9 +1487,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/aio.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/aio.html",
-  "dateCreated": "2022-09-02",
-  "dateModified": "2022-09-02",
-  "datePublished": "2022-09-02"
+  "dateCreated": "2022-09-03",
+  "dateModified": "2022-09-03",
+  "datePublished": "2022-09-03"
 }
 
   </script><script>
