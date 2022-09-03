@@ -39,7 +39,7 @@ void loop() {
 
 You can find more information about functions, values and structures in the online reference manual at [https://www.arduino.cc/reference/en/](https://www.arduino.cc/reference/en/). 
 
-:::: Challenge
+:::: challenge
 
 ### Challenge: The Parts of a Sketch (Program)
 
@@ -141,7 +141,7 @@ void loop() {
 }
 ```
 
-:::: Challenge
+:::: challenge
 
 With the person next to you, can you do the following?
 
