@@ -153,6 +153,8 @@ With the person next to you, can you do the following?
 
 :::::: solution
 
+### Show me the solution
+
 #### Constants
 minimum - of type integer
 maximum - of type integer
