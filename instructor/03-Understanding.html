@@ -297,6 +297,7 @@
 <li>How can we add explanatory comments to the code?</li>
 <li>What is a variable?</li>
 <li>What is a constant?</li>
+<li>What is a function?</li>
 </ul></div>
 </div>
 </div>
@@ -312,7 +313,7 @@
 </div>
 </div>
 <p>The language that we use in the Arduino IDE is called <code>The Arduino Programming Language</code> which is based on a another programming language called C++. It would have been easy if we could abbreviate The Arduino Programming Language as APL, but we can’t because APL refers to a completely different language. The programs written in the Arduino IDE are also not called programs but rather sketches.</p>
-<p>The language consists of three parts: <strong>functions</strong>, <strong>values</strong> (variables and constants), and <strong>structure</strong>. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised the structure. All sketches require a setup and a loop as in the following code snippet:</p>
+<p>The language consists of three parts: <strong>functions</strong>, <strong>values</strong> (variables and constants), and <strong>structures</strong>. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised some of these parts. All sketches require a setup and a loop as in the following code snippet:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -326,12 +327,8 @@
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
 </div>
-<p>There are more structural components which you can find on the language reference page at <a href="https://www.arduino.cc/reference/en/" class="external-link">https://www.arduino.cc/reference/en/</a> but while <code>setup</code> and <code>loop</code> are compulsary, the other components are only used when needed. <code>setup</code> and <code>loop</code> are also <code>functions</code>. <code>functions</code> can be thought of as named groups of instructions. The structure of a function always includes the following features:</p>
-<ol style="list-style-type: decimal"><li>a return value type</li>
-<li>a unique name</li>
-<li>parenthesis</li>
-<li>curly brackets</li>
-</ol><div class="section level3 Challenge">
+<p>You can find more information about functions, values and structures in the online reference manual at <a href="https://www.arduino.cc/reference/en/" class="external-link">https://www.arduino.cc/reference/en/</a>.</p>
+<div class="section level3 Challenge">
 <h3 id="challenge-the-part-of-a-sketch-program">Challenge: The Part of a Sketch (Program)<a class="anchor" aria-label="anchor" href="#challenge-the-part-of-a-sketch-program"></a></h3>
 <p>Looking at the following code snippet, can you identify the above mentioned features?</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -372,11 +369,18 @@
 </div>
 <section id="functions"><h2 class="section-heading">Functions<a class="anchor" aria-label="anchor" href="#functions"></a>
 </h2>
-<hr class="half-width"><p>All sketches <strong>must</strong> have a setup and a loop function. Any instructions that we put in the <code>setup</code> will be executed when the program starts. After completing the instructions in setup the microcontroller continues to the <code>loop</code> function where the microcontroller will execute all the instruction over and over again - in an infinite loop. As in the example, there can be other functions. Such functions are created as needed and can be called from any other function. Functions can even call themselves. There are many built-in functions, some of which we will be using. It is also possible to load <code>libraries</code> that will give us even more functions for more functionality. We will also be using some of those in this lesson.</p>
+<hr class="half-width"><p>All functions have the following:</p>
+<ol style="list-style-type: decimal"><li>a return value type</li>
+<li>a unique name</li>
+<li>parenthesis</li>
+<li>curly brackets</li>
+</ol><p>All sketches <strong>must</strong> have a setup and a loop function. Any instructions that we put in the <code>setup</code> will be executed when the program starts. After completing the instructions in setup the microcontroller continues to the <code>loop</code> function where the microcontroller will execute all the instruction over and over again - in an infinite loop. As in the example, there can be other functions. Such functions are created as needed and can be called from any other function. Functions can even call themselves. There are many built-in functions, some of which we will be using. It is also possible to load <code>libraries</code> that will give us even more functions for more functionality. We will also be using some of those in this lesson.</p>
 </section><section id="variables-and-constants"><h2 class="section-heading">Variables and Constants<a class="anchor" aria-label="anchor" href="#variables-and-constants"></a>
 </h2>
 <hr class="half-width"><p>Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a vlue can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what <code>type</code> of value will be stored in the variable.</p>
-<p>Let’s start by creating a new sketch to experiment with the things we have mentioned so far. On the menu click <code>File</code> and then <code>New</code>. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions, just two comments. Comment lines start with <code>//</code> and are ignored by the compiler but allows the programmer to enter comments to document what the program does. Do use the comment feature. It makes it much easier when you come back to the code or when you have to pass the code onto someone else:</p>
+<div class="section level3">
+<h3 id="an-example-sketch">An example sketch<a class="anchor" aria-label="anchor" href="#an-example-sketch"></a></h3>
+<p>Let’s start by creating a new sketch to experiment with the things we have mentioned so far. We will also introduce one <strong>structure</strong>, the for-loop. On the menu click <code>File</code> and then <code>New</code>. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions, just two comments. Comment lines start with <code>//</code> and are ignored by the compiler but allows the programmer to enter comments to document what the program does. Do use the comment feature. It makes it much easier when you come back to the code or when you have to pass the code onto someone else:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -428,6 +432,20 @@
 <span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
 </div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#NA"></a>
+</h3>
+<div class="callout-content">
+<p>With the person next to you, can you do the following:</p>
+<ol style="list-style-type: decimal"><li>Identify variables, constants, functions and structures</li>
+<li>Explain what the code is doing</li>
+</ol></div>
+</div>
+</div>
 <p><a href="https://www.arduino.cc/reference/en/" class="external-link uri">https://www.arduino.cc/reference/en/</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -437,7 +455,10 @@
 <h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#NA"></a>
 </h3>
 <div class="callout-content">
-<ul><li>Keypoint</li>
+<ul><li>Identify variables, constants, functions and structures</li>
+<li>Know how to identify a function</li>
+<li>Recognise the different types of values that variables and constants can have and what type of information each of these can hold.</li>
+<li>Know where to find the Arduino Programming Language reference</li>
 </ul></div>
 </div>
 </div>
@@ -448,7 +469,8 @@ any links that you are not going to use.
 <ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
 <li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
 <li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
-</ul></section></div> <!-- / div.lesson-content -->
+</ul></div>
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/02-ArduinoIDE.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/04-connecting_sensor1.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
