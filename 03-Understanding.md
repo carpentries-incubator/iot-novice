@@ -11,6 +11,7 @@ exercises: 2
 - How can we add explanatory comments to the code?
 - What is a variable?
 - What is a constant?
+- What is a function?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -22,7 +23,7 @@ exercises: 2
 
 The language that we use in the Arduino IDE is called `The Arduino Programming Language` which is based on a another programming language called C++. It would have been easy if we could abbreviate The Arduino Programming Language as APL, but we can't because APL refers to a completely different language. The programs written in the Arduino IDE are also not called programs but rather sketches.
 
-The language consists of three parts: **functions**, **values** (variables and constants), and **structure**. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised the structure. All sketches require a setup and a loop as in the following code snippet:
+The language consists of three parts: **functions**, **values** (variables and constants), and **structures**. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised some of these parts. All sketches require a setup and a loop as in the following code snippet:
 
 ```c
 void setup() {
@@ -35,13 +36,8 @@ void loop() {
 
 }
 ```
-  
-There are more structural components which you can find on the language reference page at [https://www.arduino.cc/reference/en/](https://www.arduino.cc/reference/en/) but while `setup` and `loop` are compulsary, the other components are only used when needed. `setup` and `loop` are also `functions`.  `functions` can be thought of as named groups of instructions. The structure of a function always includes the following features:
 
-1. a return value type
-2. a unique name
-3. parenthesis
-4. curly brackets
+You can find more information about functions, values and structures in the online reference manual at [https://www.arduino.cc/reference/en/](https://www.arduino.cc/reference/en/). 
 
 :::: Challenge
 
@@ -79,12 +75,21 @@ int getMagicNumber() {
 
 ## Functions
 
+All functions have the following:
+
+1. a return value type
+2. a unique name
+3. parenthesis
+4. curly brackets
+
 All sketches **must** have a setup and a loop function. Any instructions that we put in the `setup` will be executed when the program starts. After completing the instructions in setup the microcontroller continues to the `loop` function where the microcontroller will execute all the instruction over and over again - in an infinite loop. As in the example, there can be other functions. Such functions are created as needed and can be called from any other function. Functions can even call themselves. There are many built-in functions, some of which we will be using. It is also possible to load `libraries` that will give us even more functions for more functionality. We will also be using some of those in this lesson.
 
 ## Variables and Constants
 Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a vlue can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what `type` of value will be stored in the variable. 
 
-Let's start by creating a new sketch to experiment with the things we have mentioned so far. On the menu click `File` and then `New`. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions, just two comments. Comment lines start with `//` and are ignored by the compiler but allows the programmer to enter comments to document what the program does. Do use the comment feature. It makes it much easier when you come back to the code or when you have to pass the code onto someone else:
+### An example sketch
+
+Let's start by creating a new sketch to experiment with the things we have mentioned so far. We will also introduce one **structure**, the for-loop. On the menu click `File` and then `New`. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions, just two comments. Comment lines start with `//` and are ignored by the compiler but allows the programmer to enter comments to document what the program does. Do use the comment feature. It makes it much easier when you come back to the code or when you have to pass the code onto someone else:
 
 ```c
 // This program will print numbers starting at the value allocated to the
@@ -136,13 +141,23 @@ void loop() {
 }
 ```
 
+:::: challenge
 
+With the person next to you, can you do the following:
+
+1. Identify variables, constants, functions and structures
+2. Explain what the code is doing
+
+::::
 
 https://www.arduino.cc/reference/en/
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Keypoint
+- Identify variables, constants, functions and structures
+- Know how to identify a function
+- Recognise the different types of values that variables and constants can have and what type of information each of these can hold.
+- Know where to find the Arduino Programming Language reference
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
