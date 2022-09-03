@@ -129,7 +129,7 @@ void loop() {
     
     // Use the print function in the Serial library to 
     // print `i` to the Serial Monitor
-    Serial.println(i);
+    Serial.println(multiply_pi);
   }
   
   // create a delay of 5000 milliseconds (5 seconds)
@@ -141,14 +141,47 @@ void loop() {
 }
 ```
 
-:::: challenge
+:::: Challenge
 
-With the person next to you, can you do the following:
+With the person next to you, can you do the following?
 
 1. Identify variables, constants, functions and structures
-2. Explain what the code is doing
+2. Of what types are the variables and constants?
+3. Explain what the code is doing
 
+:::::: solution
+
+#### Constants
+minimum - of type integer
+maximum - of type integer
+
+#### Variables
+i - of type integer
+pi - of type float
+multiply_pi - of type float
+
+#### Functions
+setup()
+loop()
+Serial.println()
+delay()
+
+#### What does the code do?
+1. Firstly we declare two constants of type integer, `minimum` and `maximum` and we give them values of 0 and 100.
+2. We declare on variable of type float called `pi` and we give it a value of 3.14159265358979.
+3. The code will first enter the `setup()` function and,
+4. initialise the serial communications from the ESP to the computer at a speed of 9600 [baud](https://en.wikipedia.org/wiki/Baud). Baud is the data transmission rate in bits per second. 
+5. Next the code will enter the loop function.
+6. Inside the loop function we create another loop with the for-loop structure. This loop will use the variable `i` which will be of type `integer` and it will start with `i` equal to `minimum`. It will then increment `i` by one for each iteration of the loop while `i` is less than `maximum`, until it becomes equal to `maximum`. 
+7. On each iteration of loop a variable of type float is declared that is called `multiply_pi`. 
+8. `multiply_pi' is given the value of whatever `i` is at the time multiplied by `pi`.
+9. The current value of `multiply_pi` is then sent and printed in the serial monitor
+10. When `i` reaches the value `maximum`, the loop will terminate and the program will pause for 5000 milliseconds.
+11. Because this happens in the `loop()` function the whole process will start all over again and this will go on indefinitely
+
+::::::
 ::::
+
 
 https://www.arduino.cc/reference/en/
 
