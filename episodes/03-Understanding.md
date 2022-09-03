@@ -41,7 +41,7 @@ You can find more information about functions, values and structures in the onli
 
 :::: Challenge
 
-### Challenge: The Part of a Sketch (Program)
+### Challenge: The Parts of a Sketch (Program)
 
 Looking at the following code snippet, can you identify the above mentioned features?
 
