@@ -17,7 +17,7 @@ exercises: 2
 
 ## Connecting the temperature sensor
 
-The sensor that we will be using is a DHT11 or a DHT22. The easiest is to use a "module" which is the sensor soldered to a little circuit board. The circuit board includes a resistor which is a tiny component that you might be able to see on the board. If you don't have the module, but you have the sensor, then you need to obtain a 10K Ohm resister. The first diagram below show how to wire up the module. The second diagram shows how to wire up the sensor using a resistor.
+The sensor that we will be using is a DHT11 or a DHT12. The easiest is to use a "module" which is the sensor soldered to a little circuit board. The circuit board includes a resistor which is a tiny component that you might be able to see on the board. If you don't have the module, but you have the sensor, then you need to obtain a 10K Ohm resister. The first diagram below show how to wire up the module. The second diagram shows how to wire up the sensor using a resistor.
 
 ![Temperature Sensor module (DHT22) ](fig/DHT22.png)
 
