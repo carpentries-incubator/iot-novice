@@ -386,7 +386,7 @@
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Notes for the instructor</p>
 </div>
@@ -859,7 +859,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-connecting_sensor1"><p>Content from <a href="04-connecting_sensor1.html">Connecting the first sensor</a></p>
 <hr>
-<p> Last updated on 2022-09-04 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/04-connecting_sensor1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p> Last updated on 2022-09-06 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/04-connecting_sensor1.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -892,7 +892,7 @@ any links that you are not going to use.
 <section id="connecting-the-temperature-sensor"><h2 class="section-heading">Connecting the temperature sensor<a class="anchor" aria-label="anchor" href="#connecting-the-temperature-sensor"></a>
 </h2>
 <hr class="half-width">
-<p>The sensor that we will be using is a DHT11 or a DHT12. The easiest is to use a “module” which is the sensor soldered to a little circuit board. The circuit board includes a resistor which is a tiny component that you might be able to see on the board. If you don’t have the module, but you have the sensor, then you need to obtain a 10K Ohm resister. The first diagram below show how to wire up the module. The second diagram shows how to wire up the sensor using a resistor.</p>
+<p>The sensor that we will be using is a DHT11 or a DHT22. The easiest is to use a “module” which is the sensor soldered to a little circuit board. The circuit board includes a resistor which is a tiny component that you might be able to see on the board. If you don’t have the module, but you have the sensor, then you need to obtain a 10K Ohm resister. The first diagram below show how to wire up the module. The second diagram shows how to wire up the sensor using a resistor.</p>
 <figure><img src="../fig/DHT22.png" alt="" class="figure mx-auto d-block"><figcaption>Temperature Sensor module (DHT22)</figcaption></figure><figure><img src="../fig/DHT22_parts.svg" alt="" class="figure mx-auto d-block"><figcaption>Wiring the DHT11 Temperature Sensor when it is not part of a module</figcaption></figure><p>Before entering our code we need to install a special library that is required for the temperature sensor. Without the library the code that we will need to write to get the sensor to work will be much more complicated. Fortunately there are many people around the world the write the difficult code and make it available as libraries for us to make our lives easier.</p>
 <p>To install the library click on the <code>Tools</code> menu item and then select <code>Manage libraries...</code>. The Library Manager window should pop up. In the text field type <code>dht sensor library</code> and press enter to search for the library. Look for the entry “<strong>DHT sensor library</strong> by <strong>Adafruit</strong>” and then click on the Install button.</p>
 <figure><img src="../fig/librarymanager.png" alt="" class="figure mx-auto d-block"><figcaption>Library Manager</figcaption></figure><p>Close the library manager by clicking on the <code>Close</code> button. Next we want to create a new sketch. Click on <code>File</code> and then <code>New</code>. A new instance of the Arduino IDE should open. You can now enter the code below in the editor</p>
@@ -1649,8 +1649,8 @@ any links that you are not going to use.
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/aio.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/aio.html",
   "dateCreated": "2022-09-04",
-  "dateModified": "2022-09-04",
-  "datePublished": "2022-09-04"
+  "dateModified": "2022-09-06",
+  "datePublished": "2022-09-06"
 }
 
   </script><script>
