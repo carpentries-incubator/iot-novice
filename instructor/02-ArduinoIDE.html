@@ -168,6 +168,7 @@
 <li><a href="#what-is-compiling">What is “compiling”?</a></li>
 <li><a href="#selecting-the-correct-board">Selecting the correct board</a></li>
 <li><a href="#selecting-the-correct-serial-port-in-the-ide">Selecting the correct serial port in the IDE</a></li>
+<li><a href="#upload-our-first-sketch">Upload our first sketch</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -279,7 +280,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>The Arduino IDE</h1>
-        <p> Last updated on 2022-08-24 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/02-ArduinoIDE.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <p> Last updated on 2022-09-11 | <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/02-ArduinoIDE.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
         
         <div class="text-end">
@@ -373,8 +374,13 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 </figure><section id="selecting-the-correct-serial-port-in-the-ide"><h2 class="section-heading">Selecting the correct serial port in the IDE<a class="anchor" aria-label="anchor" href="#selecting-the-correct-serial-port-in-the-ide"></a>
 </h2>
 <hr class="half-width"><p>You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on <code>Tools</code> and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc. Figuring out which port is being used is sometimes a bit messy. Your instructor or workshop helpers might be able to assist you with this.</p>
-<p>## Upload our first sketch</p>
-<p>If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:</p>
+<p>On Windows it might also be necessary for you to install the serial drivers required for the ESP32. If you notice the <code>Port</code> item on the <code>Tools</code> menu is greyed out then this is probably required. To download the drivers go to:</p>
+<p><a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads" class="external-link">CP210x USB to UART Bridge</a></p>
+<p>Select: <code>CP210x Windows Drivers v6.7.6 9/3/2020</code></p>
+<p>When you click on the link it should download a file called <code>CP210x_Windows_Drivers.zip</code>, to your computer. Right click and extract the contents from the zip file. There should be two <code>.exe</code> files extracted. Depending on your computer you have to double click on one of these to install the driver. If you are not sure which one to select you can click on the x86 version first. It will either install or you’ll get a message warning you that your computer has a 64bit architecture and that you should install the 64bit version. In that case double click the x64 version to install the driver. After installation the <code>Port</code> item on the <code>Tools</code> menu should not be greyed anymore and you should be able to click on it to select a COM port.</p>
+</section><section id="upload-our-first-sketch"><h2 class="section-heading">Upload our first sketch<a class="anchor" aria-label="anchor" href="#upload-our-first-sketch"></a>
+</h2>
+<hr class="half-width"><p>If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -445,7 +451,7 @@ any links that you are not going to use.
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.9.5" class="external-link">sandpaper (0.9.5)</a>,
-        <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.3.1)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.3.1" class="external-link">pegboard (0.3.1)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.4" class="external-link">varnish (0.2.4)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
@@ -466,9 +472,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/02-ArduinoIDE.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/02-ArduinoIDE.html",
-  "dateCreated": "2022-09-06",
-  "dateModified": "2022-08-24",
-  "datePublished": "2022-09-06"
+  "dateCreated": "2022-09-11",
+  "dateModified": "2022-09-11",
+  "datePublished": "2022-09-11"
 }
 
   </script><script>
