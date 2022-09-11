@@ -119,7 +119,21 @@ You can now use the cable to connect the motorcontroller board to the computer. 
 
 You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on `Tools` and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc. Figuring out which port is being used is sometimes a bit messy. Your instructor or workshop helpers might be able to assist you with this.
 
- ## Upload our first sketch
+On Windows it might also be necessary for you to install the serial drivers required for the ESP32. If you notice the `Port` item on the `Tools` menu is greyed out then this is probably required. To download the drivers go to:
+ 
+[CP210x USB to UART Bridge](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+ 
+Select:
+ ```
+CP210x Windows Drivers
+v6.7.6
+9/3/2020
+```
+ 
+When you click on the link it should download a file called `CP210x_Windows_Drivers.zip`, to your computer. Right click and extract the contents from the zip file. There should be two `.exe` files extracted. Depending on your computer you have to double click on one of these to install the driver. If you are not sure which one to select you can click on the x86 version first. It will either install or you'll get a message warning you that your computer has a 64bit architecture and that you should install the 64bit version. In that case double click the x64 version to install the driver. After installation the `Port` item on the `Tools` menu should not be greyed anymore and you should be able to click on it to select a COM port.
+ 
+ 
+## Upload our first sketch
  
  If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:
  
