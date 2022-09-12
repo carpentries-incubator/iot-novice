@@ -6,13 +6,18 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Question
+- Can you identify a DHT11 and DHT22 temperature/humidity sensor?
+- Can you identify the pins on the DHT sensor?
+- Can you identify the pins on the ESP that we will need to use?
+- Can you explain what the code will do?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Objective
+- Connect a DHT11 or DHT22 to the microcontroller using a breadboard and connectors
+- Write the code required to read the temperature and print it to the serial monitor
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Connecting the temperature sensor
@@ -78,7 +83,11 @@ Explanation of the code
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Keypoint
+- Identified the DHT11/22 humidity and temperature sensor
+- Identified the three pins on the sensor
+- Identified the three required pins on the ESP32
+- Connected the DHT sensor to the ESP32
+- Added the required code to the Arduino IDE to read the temperature from the sensor and display it in the serial monitor.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
