@@ -13,6 +13,8 @@ jobs:
     if: >
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success'
+    permissions:
+      contents: write
     steps:
       - name: 'Download artifact'
         uses: carpentries/actions/download-workflow-artifact@main
@@ -23,7 +25,7 @@ jobs:
         id: get-pr
         run: |
           unzip pr.zip
-          echo "::set-output name=NUM::$(<./NUM)"
+          echo "NUM=$(<./NUM)" >> $GITHUB_OUTPUT
       - name: 'Remove branch'
         uses: carpentries/actions/remove-branch@main
         with:

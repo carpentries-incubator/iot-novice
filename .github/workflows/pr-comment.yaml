@@ -8,6 +8,11 @@ on:
     types:
       - completed
 
+concurrency:
+  group: pr-${{ github.event.workflow_run.pull_requests[0].number }}
+  cancel-in-progress: true
+
+
 jobs:
   # Pull requests are valid if:
   #  - they match the sha of the workflow run head commit
@@ -16,8 +21,8 @@ jobs:
   test-pr:
     name: "Test if pull request is valid"
     runs-on: ubuntu-latest
-    if: > 
-      github.event.workflow_run.event == 'pull_request' && 
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success'
     outputs:
       is_valid: ${{ steps.check-pr.outputs.VALID }}
@@ -37,7 +42,7 @@ jobs:
         id: get-pr
         run: |
           unzip pr.zip
-          echo "::set-output name=NUM::$(<./NR)"
+          echo "NUM=$(<./NR)" >> $GITHUB_OUTPUT
 
       - name: "Fail if PR number was not present"
         id: bad-pr
@@ -48,7 +53,9 @@ jobs:
       - name: "Get Invalid Hashes File"
         id: hash
         run: |
-          echo "::set-output name=json::"$(curl -sL https://files.carpentries.org/invalid-hashes.json)
+          echo "json<<EOF
+          $(curl -sL https://files.carpentries.org/invalid-hashes.json)
+          EOF" >> $GITHUB_OUTPUT
       - name: "Check PR"
         id: check-pr
         if: ${{ steps.dl.outputs.success == 'true' }}
@@ -56,6 +63,7 @@ jobs:
         with:
           pr: ${{ steps.get-pr.outputs.NUM }}
           sha: ${{ github.event.workflow_run.head_sha }}
+          headroom: 3 # if it's within the last three commits, we can keep going, because it's likely rapid-fire
           invalid: ${{ fromJSON(steps.hash.outputs.json)[github.repository] }}
           fail_on_error: true
 
@@ -70,9 +78,11 @@ jobs:
     if: ${{ needs.test-pr.outputs.is_valid == 'true' }}
     env:
       NR: ${{ needs.test-pr.outputs.number }}
+    permissions:
+      contents: write
     steps:
       - name: 'Checkout md outputs'
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
         with:
           ref: md-outputs
           path: built
@@ -96,11 +106,11 @@ jobs:
           git config --local user.name "GitHub Actions"
           CURR_HEAD=$(git rev-parse HEAD)
           git checkout --orphan md-outputs-PR-${NR}
-          git add -A 
+          git add -A
           git commit -m "source commit: ${CURR_HEAD}"
-          ls -A | grep -v '^.git' | xargs rm -r
+          ls -A | grep -v '^.git$' | xargs -I _ rm -r '_'
           cd ..
-          unzip -d built built.zip
+          unzip -o -d built built.zip
           cd built
           git add -A
           git commit --allow-empty -m "differences for PR #${NR}"
@@ -114,6 +124,8 @@ jobs:
     if: ${{ needs.test-pr.outputs.is_valid == 'true' }}
     env:
       NR: ${{ needs.test-pr.outputs.number }}
+    permissions:
+      pull-requests: write
     steps:
       - name: 'Download comment artifact'
         id: dl
@@ -121,7 +133,7 @@ jobs:
         with:
           run: ${{ github.event.workflow_run.id }}
           name: 'diff'
-          
+
       - if: ${{ steps.dl.outputs.success == 'true' }}
         run: unzip ${{ github.workspace }}/diff.zip
 
@@ -130,7 +142,7 @@ jobs:
         if: ${{ steps.dl.outputs.success == 'true' }}
         uses: carpentries/actions/comment-diff@main
         with:
-          pr: ${{ env.NR }} 
+          pr: ${{ env.NR }}
           path: ${{ github.workspace }}/diff.md
 
   # Comment if the PR is open and matches the SHA, but the workflow files have
@@ -143,6 +155,8 @@ jobs:
     env:
       NR: ${{ github.event.workflow_run.pull_requests[0].number }}
       body: ${{ needs.test-pr.outputs.msg }}
+    permissions:
+      pull-requests: write
     steps:
       - name: 'Check for spoofing'
         id: dl
