@@ -454,7 +454,7 @@ programmers.</p>
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Notes for the instructor</p>
 </div>
@@ -827,7 +827,7 @@ Guide</a></li>
 component downloads</a></li>
 </ul></section></section><section id="aio-03-Understanding"><p>Content from <a href="03-Understanding.html">Understanding the code</a></p>
 <hr>
-<p> Last updated on 2023-02-21 | 
+<p> Last updated on 2023-04-10 | 
         
         <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/03-Understanding.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
@@ -1025,7 +1025,7 @@ else:</p>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// use for communication with the computer via the USB port</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// The Serial library is included in the language by default</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">// so we don't have to import it.</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">)</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span></span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
@@ -1051,9 +1051,7 @@ else:</p>
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">5000</span><span class="op">);</span></span>
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">// After the delay the microcontroller will start at the </span></span>
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="co">// beginning of loop() and run all the code inside it again.</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <div id="challenge2" class="callout challenge">
 <div class="callout-square">
