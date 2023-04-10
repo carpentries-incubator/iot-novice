@@ -85,7 +85,7 @@ All functions have the following:
 All sketches **must** have a setup and a loop function. Any instructions that we put in the `setup` will be executed when the program starts. After completing the instructions in setup the microcontroller continues to the `loop` function where the microcontroller will execute all the instruction over and over again - in an infinite loop. As in the example, there can be other functions. Such functions are created as needed and can be called from any other function. Functions can even call themselves. There are many built-in functions, some of which we will be using. It is also possible to load `libraries` that will give us even more functions for more functionality. We will also be using some of those in this lesson.
 
 ## Variables and Constants
-Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a vlue can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what `type` of value will be stored in the variable. 
+Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a value can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what `type` of value will be stored in the variable. 
 
 ### An example sketch
 
