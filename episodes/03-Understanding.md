@@ -110,7 +110,7 @@ void setup() {
   // use for communication with the computer via the USB port
   // The Serial library is included in the language by default
   // so we don't have to import it.
-  Serial.begin(9600)
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -136,8 +136,6 @@ void loop() {
   delay(5000);
   // After the delay the microcontroller will start at the 
   // beginning of loop() and run all the code inside it again.
-  
-  }
 }
 ```
 
