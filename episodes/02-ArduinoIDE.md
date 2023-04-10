@@ -32,6 +32,12 @@ exercises: 2
 
 Just like computers, microcontrollers have memory into which we can load programs. To make things easier and to be more productive, programmers have developed software called Integrated Development Environments (IDE). The IDEs provide an editor into which one can type the programming instructions and they usually also make provision for ***syntax highlighting***. Syntax highlighting just means that certain keywords are coloured and that makes it much easier to read. The IDEs also provide ways of uploading code to devices and running the programs. The Arduino IDE was specifically developed for writing programs that uploaded and run on motorcontrollers. Originally it was aimed just at the Arduino but because it is such a convenient environment to work in, it has now been extended to also workwith other microcontrollers.
 
+::: instructor
+
+Remember: system (sudo) python version needs pyserial installed. 
+
+:::
+
 ## Running the Arduino IDE
 
 For this episode we have to assume that you were able to successfully install the Arduino IDE and that you are able to start the software from the start menu or the desktop of your computer. When you run the software you will first see the splash window:
