@@ -298,7 +298,8 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What does one need to get the information published by sensors on the IoT?</li>
+<ul><li>What does one need to get the information published by sensors on
+the IoT?</li>
 <li>What is meant by “topic” in terms of MQTT?</li>
 <li>How can I save the published data to file?</li>
 </ul></div>
@@ -319,27 +320,55 @@
 <section id="our-current-status"><h2 class="section-heading">Our current status<a class="anchor" aria-label="anchor" href="#our-current-status"></a>
 </h2>
 <hr class="half-width"><p>In the previous episodes we have:</p>
-<ol style="list-style-type: decimal"><li>Added the URL in the IDE’s preferences to detect the configurations for the ESP32 board</li>
+<ol style="list-style-type: decimal"><li>Added the URL in the IDE’s preferences to detect the configurations
+for the ESP32 board</li>
 <li>Installed the library required for the DHT sensors</li>
-<li>Connected a DHT11 or DHT22 sensor to an ESP32 microcontroller board</li>
-<li>Entered the code in a sketch to get temperature readings from the DHT sesions</li>
-<li>Connected a Light Dependent Resistor to the same ESP32 microcontroller board</li>
-<li>Entered the code in a sketch to get light level readings from the LDR</li>
-<li>Entered the code in the sketch to connect to our local network and publish the sensor readings to an MQTT broker</li>
+<li>Connected a DHT11 or DHT22 sensor to an ESP32 microcontroller
+board</li>
+<li>Entered the code in a sketch to get temperature readings from the
+DHT sesions</li>
+<li>Connected a Light Dependent Resistor to the same ESP32
+microcontroller board</li>
+<li>Entered the code in a sketch to get light level readings from the
+LDR</li>
+<li>Entered the code in the sketch to connect to our local network and
+publish the sensor readings to an MQTT broker</li>
 </ol></section><section id="subscribing-to-an-mqtt-topic"><h2 class="section-heading">Subscribing to an MQTT topic<a class="anchor" aria-label="anchor" href="#subscribing-to-an-mqtt-topic"></a>
 </h2>
-<hr class="half-width"><p>At this point your ESP microcontroller board should have a temperature and a light level sensor on it. It should have connected to your local network and to an MQTT broker and it is publishing the readings to a topic to the MQTT broker.</p>
-<p>We now need client software to connect to the MQTT broker and subscribe to the topic to which your sensor readings are published. There are quite a few clients available as well as libraries for several programming languages including Python. For this lesson we are going to use MQTTX, a cross platform, open source application. Hopefully you were able to install MQTTX as descripted on the <a href="index.html#setup">setup</a> page.</p>
-<p>Let’s start by running MQTTX. If it is the first time you are running it, a window similar to the image below should open:</p>
-<figure><img src="../fig/mqttx.png" alt="" class="figure mx-auto d-block"><figcaption>Running MQTTX</figcaption></figure><p>Click on the green <code>+ New Connection</code> button and then following window should appear:</p>
-<figure><img src="../fig/new_connection.png" alt="" class="figure mx-auto d-block"><figcaption>New connection in MQTTX</figcaption></figure><p>You now need the information of the MQTT broker that you want to subscribe to. Your instructor should provide you with the correct information. If you are using a local MQTT broker and Raspberry Pi access point your information will be something along the following lines:</p>
+<hr class="half-width"><p>At this point your ESP microcontroller board should have a
+temperature and a light level sensor on it. It should have connected to
+your local network and to an MQTT broker and it is publishing the
+readings to a topic to the MQTT broker.</p>
+<p>We now need client software to connect to the MQTT broker and
+subscribe to the topic to which your sensor readings are published.
+There are quite a few clients available as well as libraries for several
+programming languages including Python. For this lesson we are going to
+use MQTTX, a cross platform, open source application. Hopefully you were
+able to install MQTTX as descripted on the <a href="index.html#setup">setup</a> page.</p>
+<p>Let’s start by running MQTTX. If it is the first time you are running
+it, a window similar to the image below should open:</p>
+<figure><img src="../fig/mqttx.png" alt="" class="figure mx-auto d-block"><figcaption>Running MQTTX</figcaption></figure><p>Click on the green <code>+ New Connection</code> button and then
+following window should appear:</p>
+<figure><img src="../fig/new_connection.png" alt="" class="figure mx-auto d-block"><figcaption>New connection in MQTTX</figcaption></figure><p>You now need the information of the MQTT broker that you want to
+subscribe to. Your instructor should provide you with the correct
+information. If you are using a local MQTT broker and Raspberry Pi
+access point your information will be something along the following
+lines:</p>
 <ol style="list-style-type: decimal"><li>Name: raspi-webgui (this can be any name of your choosing)</li>
-<li>Client ID: mqttx_46a41312 (this will be different for everyone. You can leave it as is, or change it if you want.)</li>
+<li>Client ID: mqttx_46a41312 (this will be different for everyone. You
+can leave it as is, or change it if you want.)</li>
 <li>Host mqtt:// raspap.local</li>
 <li>Port: 1883</li>
-</ol><p>Click on <code>Connect</code> in the top right hand corner of the window. A small box should appear for a short while, saying <code>CONNECTED</code>, after which the screen should look as follows:</p>
-<figure><img src="../fig/connected.png" alt="" class="figure mx-auto d-block"><figcaption>MQTTX connected to broker</figcaption></figure><p>We are now connected to the MQTT broker and we can now subscribe to a topic.</p>
-<p>Click on th <code>+New Subscription</code> button. Enter <code>/JohnSmith/dht22/temperature</code> (replacing JohnSmith with your name as you entered it into the sketch) in the <code>*Topic</code> field and click the <code>Confirm button</code>.</p>
+</ol><p>Click on <code>Connect</code> in the top right hand corner of the
+window. A small box should appear for a short while, saying
+<code>CONNECTED</code>, after which the screen should look as
+follows:</p>
+<figure><img src="../fig/connected.png" alt="" class="figure mx-auto d-block"><figcaption>MQTTX connected to broker</figcaption></figure><p>We are now connected to the MQTT broker and we can now subscribe to a
+topic.</p>
+<p>Click on th <code>+New Subscription</code> button. Enter
+<code>/JohnSmith/dht22/temperature</code> (replacing JohnSmith with your
+name as you entered it into the sketch) in the <code>*Topic</code> field
+and click the <code>Confirm button</code>.</p>
 <figure><img src="../fig/new_subscription.png" alt="" class="figure mx-auto d-block"><figcaption>New Subscription</figcaption></figure><p>You should now see messages pop up showing the top and a value.</p>
 <figure><img src="../fig/subscribed.png" alt="" class="figure mx-auto d-block"><figcaption>Subscribed</figcaption></figure><div id="discussion1" class="callout discussion">
 <div class="callout-square">
@@ -349,13 +378,19 @@
 <h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
 </h3>
 <div class="callout-content">
-<p>Can you add a new subscription to subscribe to the light level that is being published from your ESP32?</p>
+<p>Can you add a new subscription to subscribe to the light level that
+is being published from your ESP32?</p>
 </div>
 </div>
 </div>
 </section><section id="exporting-data"><h2 class="section-heading">Exporting data<a class="anchor" aria-label="anchor" href="#exporting-data"></a>
 </h2>
-<hr class="half-width"><p>MQTTX allows us to export the data that it receives to various formats. Allow MQTTX to run for a while to accumulate some data and then export the data to a JSON file. It is possible to export the data to a CSV but the format appears to be in a somewhat obscure format. It is possible to use convert the JSON to CSV using a converter such as the online converter that is available at <a href="https://www.convertcsv.com/json-to-csv.htm" class="external-link">www.convertcsv.com/json-to-csv.htm</a></p>
+<hr class="half-width"><p>MQTTX allows us to export the data that it receives to various
+formats. Allow MQTTX to run for a while to accumulate some data and then
+export the data to a JSON file. It is possible to export the data to a
+CSV but the format appears to be in a somewhat obscure format. It is
+possible to use convert the JSON to CSV using a converter such as the
+online converter that is available at <a href="https://www.convertcsv.com/json-to-csv.htm" class="external-link">www.convertcsv.com/json-to-csv.htm</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -374,9 +409,12 @@
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/07-mqtt-code.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -407,9 +445,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.13" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.5.1" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.15" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.15" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.5.2" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -429,9 +467,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/08-subscribe.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/08-subscribe.html",
-  "dateCreated": "2023-02-21",
+  "dateCreated": "2023-04-10",
   "dateModified": "2022-08-30",
-  "datePublished": "2023-04-04"
+  "datePublished": "2023-04-10"
 }
 
   </script><script>

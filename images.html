@@ -326,137 +326,52 @@
 <section id="01-introduction"><h2 class="section-heading"><a href="01-introduction.html">An Introduction to the Internet of Things</a></h2>
 <hr class="half-width">
 <h3 id="01-introduction-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 2: ‘Computers connected to form a network’</p>
-<p aria-hidden="true">Image 2 of 2: ‘When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.’</p>
-<figure id="the-internet-of-things"><h2 class="section-heading">The Internet of Things<a class="anchor" aria-label="anchor" href="#the-internet-of-things"></a>
-</h2>
-<hr class="half-width">
-<p>You might hear “Internet of Things” (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of “Things” that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet.</p>
-<p>Before we continue we should clarify some key terminology used in networking. When two or more computers are connected such that they can communicate it is called a <strong>network</strong>.</p>
-<img src="fig/Network.svg" title="fig:" alt="Computers connected to form a network" class="figure mx-auto d-block"><figcaption align="center"><b>Computers connected to form a network</b><br></figcaption><p>It is also worth mentioning that one should distinguish between the words “internet” (with a lower case i) and “Internet” (with an upper case I). With an upper case I, <strong><em>Internet</em></strong> refers to <em>the</em> Internet that we connect to view web pages such as Google, Amazon etc, or to which we connect to to make Zoom or Skype calls. The Internet is a worldwide collection of networks that we are able to connect to via our Internet Service Providers. The Internet is also sometimes referred to as <strong><em>The Cloud</em></strong>. With a lower case i, <strong><em>internet</em></strong> refers to a collection of networks that are connected. If university A has a network on campus and university B has a network and they decide to connect the two networks then they would have an internet. However they might not necessarily be connected to The Internet. Another term that you might hear is <strong><em>intranet</em></strong>. If and instution connects their network to the Internet, they will refer to their internal network as the intranet. So university A can refer to their network as their intranet. If university A connects their intranet to that of University B, they created an internet.</p>
-<img src="fig/Internet.svg" title="fig:" alt="When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet." class="figure mx-auto d-block"><figcaption align="center"><b>When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.</b><br></figcaption></figure><hr>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/Network.svg" alt="" class="figure mx-auto d-block"><figcaption>Computers connected to form a network</figcaption></figure><hr>
 <h3 id="01-introduction-figure-2">Figure 2</h3>
-<p aria-hidden="true">Image 1 of 3: ‘The original and most basic Arduino - the Arduino Uno’</p>
-<p aria-hidden="true">Image 2 of 3: ‘A WiFi shield for the Arduino Uno’</p>
-<p aria-hidden="true">Image 3 of 3: ‘An ESP32 WROOM 32’</p>
-<figure id="microcontrollers"><h2 class="section-heading">Microcontrollers<a class="anchor" aria-label="anchor" href="#microcontrollers"></a>
-</h2>
-<hr class="half-width">
-<p>“So what is this Arduino thing then?”, you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet’s sensing. The main component on an Arduino is a microcontroller which is an “integrated circuit” (or you might know it as a chip) that can be used in conjunction with other electronic components to control things such as motors and sensors. It is, in actual fact, a very small computer and can also be programmed. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.</p>
-<img src="fig/Arduino_Uno_-_R3.jpg" title="fig:" alt="The original and most basic Arduino - the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>The original and most basic Arduino - the Arduino Uno</b>SparkFun Electronics from Boulder, USA, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0" class="external-link uri">https://creativecommons.org/licenses/by/2.0</a>, via Wikimedia Commons
-</figcaption><p>The main thing to notice about the Arduino in the image above is that it has no connectivity to the Internet. So even if we connect sensors to the Arduino it cannot make part of the Internet of Things without being connected to the Internet. However, one can purchase (or build it yourself) a WiFi shield that fits on top of the Arduino and with the shield in place you can program the Arduino to connect to the Internet and publish all the data it retrieves, via the sensors that you connect to it, to the Internet.</p>
-<p>Below is an image of the WiFi shield and you might be able to see how its pins allows it to be fitted onto the Arduino Uno.</p>
-<img src="fig/WiFi_Shield_for_Arduino.jpg" title="fig:" alt="A WiFi shield for the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>A WiFi shield for the Arduino Uno</b><br> Attribution: oomlout, CC BY-SA 2.0 <a href="https://creativecommons.org/licenses/by-sa/2.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/2.0</a>, via Wikimedia Commons
-</figcaption><p>There are now several models of Arduinos available, some with onboard WiFi or BlueTooth to allow connectivity to a network. Follow this <a href="https://www.arduino.cc/en/hardware" class="external-link">link to the Arduino site</a> if you would like to see the whole range of Arduino models that are available.</p>
-<p>For the purposes of this workshop your instructor might choose to not use an Arduino but rather one of the other options that are available. It doesn’t really matter which one you use because for the projects covered in this lesson, any of them will do. Often, one of the ESP32 or ESP8266 series are chosen because they have onboard WiFi and are also significantly cheaper than Arduinos.</p>
-<img src="fig/ESP32.jpg" title="fig:" alt="An ESP32 WROOM 32" class="figure mx-auto d-block"><figcaption align="center"><b>An ESP32 WROOM 32</b><br> Attribution: Ubahnverleih, CC0, via Wikimedia Commons
-</figcaption><p>The two main requirements for the device selected would be that it is 1) WiFi enabled and 2) can be programmed using the Arduino Integrated Development Environment (IDE). An IDE is just a computer program that provides a programming environment that makes things easier for programmers.</p>
-
-<div id="discussion1" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<div id="challenge-1-which-of-the-following-are-part-of-the-internet-of-things" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Which of the following are part of the Internet of things?<a class="anchor" aria-label="anchor" href="#discussion1"></a>
-</h3>
-<div class="callout-content">
-<p>With the person next to you, discuss whether you think the following devices are part of the Internet and why? What other devices do you think would make part of the Internet of Things.</p>
-<ol style="list-style-type: decimal">
-<li>A computer</li>
-<li>An Arduino</li>
-<li>A traffic camera</li>
-<li>A device publishing current temperature to the Internet</li>
-<li>A smart phone</li>
-</ol>
-</div>
-</div>
-</div>
-<p>Links:</p>
-<p>-<a href="https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html" class="external-link">Microcontrollers vs Microprocessors</a> -<a href="https://bridgera.com/smartphones-in-the-iot-era/" class="external-link">Smartphone in the IoT Era</a></p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
-<div class="callout-content">
-<ul>
-<li>Explain the difference between the terms: network, internet, intranet and The Internet</li>
-<li>Identify devices that can be connected to the Internet of Things</li>
-<li>Explain how things can be connected to the Internet of Things.</li>
-<li>Explain what a microcontroller is.</li>
-<li>Explain what an Arduino or and ESP32/8266 is.</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- 
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
- -->
-<ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
-</ul></figure><hr></section><section id="02-ArduinoIDE"><h2 class="section-heading"><a href="02-ArduinoIDE.html">The Arduino IDE</a></h2>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/Internet.svg" alt="" class="figure mx-auto d-block"><figcaption>When two networks are connected they form an
+internet. These networks can connect to the worldwide internet known as
+The Internet.</figcaption></figure><hr>
+<h3 id="01-introduction-figure-3">Figure 3</h3>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/Arduino_Uno_-_R3.jpg" alt="" class="figure mx-auto d-block"><figcaption>The original and most basic Arduino - the Arduino
+Uno</figcaption></figure><hr>
+<h3 id="01-introduction-figure-4">Figure 4</h3>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/WiFi_Shield_for_Arduino.jpg" alt="" class="figure mx-auto d-block"><figcaption>A WiFi shield for the Arduino Uno</figcaption></figure><hr>
+<h3 id="01-introduction-figure-5">Figure 5</h3>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/ESP32.jpg" alt="" class="figure mx-auto d-block"><figcaption>An ESP32 WROOM 32</figcaption></figure><hr></section><section id="02-ArduinoIDE"><h2 class="section-heading"><a href="02-ArduinoIDE.html">The Arduino IDE</a></h2>
 <hr class="half-width">
 <h3 id="02-ArduinoIDE-figure-1">Figure 1</h3>
-<p aria-hidden="true">Image 1 of 2: ‘Arduino Splash Window’</p>
-<p aria-hidden="true">Image 2 of 2: ‘Arduino IDE’</p>
-<figure id="running-the-arduino-ide"><h2 class="section-heading">Running the Arduino IDE<a class="anchor" aria-label="anchor" href="#running-the-arduino-ide"></a>
-</h2>
-<hr class="half-width">
-<p>For this episode we have to assume that you were able to successfully install the Arduino IDE and that you are able to start the software from the start menu or the desktop of your computer. When you run the software you will first see the splash window:</p>
-<img src="fig/ArduinoIDE_startup.png" title="fig:" alt="Arduino Splash Window" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
-</figcaption><p>After a while the IDE will open. It is actually quite a simple interface. At the top you should see the File, Edit, Sketch, Tools and Help menu items. Just below the menu there are five icons to the left and one on the far right. Below the icons you should see a tab with a filename and a white editing area. Below the editor is a black terminal:</p>
-<img src="fig/ArduinoIDE.png" title="fig:" alt="Arduino IDE" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino IDE main window</b>
-</figcaption><p>The white area is where you will be typing the code that will be uploaded to the microcontroller. In the black area you will see messages about the <em>compilation</em> of the code and the uploading process. Right at the bottom is a status bar where you will eventually be able to see whether the IDE could connect to your motorcontroller.</p>
-<p>The first time you run the IDE the status bar will show the string <code>Arduino Uno on /dev/ttyAM0</code> and in the editor you will see some skeleton code. Note the syntax highlighting:</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
-</div>
-</figure><hr>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/ArduinoIDE_startup.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino Splash Window</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-2">Figure 2</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><hr>
+<figure><img src="fig/ArduinoIDE.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino IDE</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-3">Figure 3</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/addURL.png" alt="" class="figure mx-auto d-block"><figcaption>Enter additional boards manager URLs</figcaption></figure><hr>
+<figure><img src="fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-4">Figure 4</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><hr>
+<figure><img src="fig/addURL.png" alt="" class="figure mx-auto d-block"><figcaption>Enter additional boards manager URLs</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-5">Figure 5</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><hr>
+<figure><img src="fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-6">Figure 6</h3>
-<p aria-hidden="true">Image 1 of 1: ‘USB connectors’</p>
-<figure id="connecting-the-board-to-the-computer"><h2 class="section-heading">Connecting the board to the computer<a class="anchor" aria-label="anchor" href="#connecting-the-board-to-the-computer"></a>
-</h2>
-<hr class="half-width">
-<p>To connect the motorcontroller board to the computer we need a USB cable. USB cables come in different flavours. You might know this from experience with your mobile/cell phone. The image below shows the names and shapes of the different types of USB connectors:</p>
-<img src="fig/USBConnectors.png" title="fig:" alt="USB connectors" class="figure mx-auto d-block"><figcaption align="center">
-Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons
-</figcaption><p>Most computers still have USB type A ports. The latest laptops might have USB C. An Arduino Uno usually has a type B USB port. So for an Uno you will need a cable that has a type A connector on the one side and a type b connector on the other. If your laptop has a type C port you will need type A to type C converter to make the cable fit. An Arduino nano will probably need a type A to type Mini-B cable and an ESP32 will need a type A to Micro-B cable. Chances are that, if you are using devices provided by your host, that they will have the correct cables. Just be aware that if your laptop has a type C port you might need an adapter.</p>
-<p>You can now use the cable to connect the motorcontroller board to the computer. Windows computers usually play a sound when you connect a USB device.</p>
-</figure><hr>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-7">Figure 7</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><hr>
+<figure><img src="fig/USBConnectors.png" alt="" class="figure mx-auto d-block"><figcaption>USB connectors</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-8">Figure 8</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><hr>
+<figure><img src="fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><hr>
 <h3 id="02-ArduinoIDE-figure-9">Figure 9</h3>
+<p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
+<figure><img src="fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><hr>
+<h3 id="02-ArduinoIDE-figure-10">Figure 10</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
 <figure><img src="fig/monitor.png" alt="" class="figure mx-auto d-block"><figcaption>Serial Monitor</figcaption></figure><hr></section><section id="03-Understanding"><h2 class="section-heading"><a href="03-Understanding.html">Understanding the code</a></h2>
 <hr class="half-width"></section><section id="04-connecting_sensor1"><h2 class="section-heading"><a href="04-connecting_sensor1.html">Connecting the first sensor</a></h2>
@@ -466,7 +381,8 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 <figure><img src="fig/DHT22.png" alt="" class="figure mx-auto d-block"><figcaption>Temperature Sensor module (DHT22)</figcaption></figure><hr>
 <h3 id="04-connecting_sensor1-figure-2">Figure 2</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/DHT22_parts.svg" alt="" class="figure mx-auto d-block"><figcaption>Wiring the DHT11 Temperature Sensor when it is not part of a module</figcaption></figure><hr>
+<figure><img src="fig/DHT22_parts.svg" alt="" class="figure mx-auto d-block"><figcaption>Wiring the DHT11 Temperature Sensor when it is not
+part of a module</figcaption></figure><hr>
 <h3 id="04-connecting_sensor1-figure-3">Figure 3</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
 <figure><img src="fig/librarymanager.png" alt="" class="figure mx-auto d-block"><figcaption>Library Manager</figcaption></figure><hr></section><section id="05-connecting_sensor2"><h2 class="section-heading"><a href="05-connecting_sensor2.html">Connecting the second sensor</a></h2>
@@ -477,20 +393,22 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 <hr class="half-width">
 <h3 id="06-combine-sensors-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/DHT22_LDR.png" alt="" class="figure mx-auto d-block"><figcaption>Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity</figcaption></figure><hr></section><section id="07-mqtt-code"><h2 class="section-heading"><a href="07-mqtt-code.html">Using MQTT for the Internet of Things</a></h2>
+<figure><img src="fig/DHT22_LDR.png" alt="" class="figure mx-auto d-block"><figcaption>Circuit with the DHT22 temperature sensor and and LDR
+light for measuring light intensity</figcaption></figure><hr></section><section id="07-mqtt-code"><h2 class="section-heading"><a href="07-mqtt-code.html">Using MQTT for the Internet of Things</a></h2>
 <hr class="half-width">
 <h3 id="07-mqtt-code-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘MQTT Architecture’</p>
-<figure><img src="fig/mqtt_architecture.png" alt="MQTT Architecture" style="width:50.0%" class="figure mx-auto d-block"><figcaption>MQTT Architecture</figcaption></figure><hr>
+<figure><img src="fig/mqtt_architecture.png" style="width:50.0%" alt="MQTT Architecture" class="figure mx-auto d-block"><figcaption>MQTT Architecture</figcaption></figure><hr>
 <h3 id="07-mqtt-code-figure-2">Figure 2</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT messaging</figcaption></figure><hr>
+<figure><img src="fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT
+messaging</figcaption></figure><hr>
 <h3 id="07-mqtt-code-figure-3">Figure 3</h3>
 <p aria-hidden="true">Image 1 of 1: ‘An MQTT broker on the Internet’</p>
-<figure><img src="fig/mqtt_internet.png" alt="An MQTT broker on the Internet" style="width:50.0%" class="figure mx-auto d-block"><figcaption>An MQTT broker on the Internet</figcaption></figure><hr>
+<figure><img src="fig/mqtt_internet.png" style="width:50.0%" alt="An MQTT broker on the Internet" class="figure mx-auto d-block"><figcaption>An MQTT broker on the Internet</figcaption></figure><hr>
 <h3 id="07-mqtt-code-figure-4">Figure 4</h3>
 <p aria-hidden="true">Image 1 of 1: ‘An MQTT broker on a private network’</p>
-<figure><img src="fig/mqtt_local_network.png" alt="An MQTT broker on a private network" style="width:50.0%" class="figure mx-auto d-block"><figcaption>An MQTT broker on a private network</figcaption></figure><hr></section><section id="08-subscribe"><h2 class="section-heading"><a href="08-subscribe.html">Subscribing to an MQTT topic</a></h2>
+<figure><img src="fig/mqtt_local_network.png" style="width:50.0%" alt="An MQTT broker on a private network" class="figure mx-auto d-block"><figcaption>An MQTT broker on a private network</figcaption></figure><hr></section><section id="08-subscribe"><h2 class="section-heading"><a href="08-subscribe.html">Subscribing to an MQTT topic</a></h2>
 <hr class="half-width">
 <h3 id="08-subscribe-figure-1">Figure 1</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
@@ -531,9 +449,9 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.13" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.5.1" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.15" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.15" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.5.2" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -554,9 +472,9 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/images.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/images.html",
-  "dateCreated": "2023-02-21",
-  "dateModified": "2023-04-04",
-  "datePublished": "2023-04-04"
+  "dateCreated": "2023-04-10",
+  "dateModified": "2023-04-10",
+  "datePublished": "2023-04-10"
 }
 
   </script><script>

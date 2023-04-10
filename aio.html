@@ -353,7 +353,8 @@
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Explain what the Internet of Things is.</li>
-<li>Explain what kind of things can be found on the Internet of Things.</li>
+<li>Explain what kind of things can be found on the Internet of
+Things.</li>
 <li>Explain how things are connected to the Internet of Things.</li>
 </ul>
 </div>
@@ -361,34 +362,102 @@
 </div>
 </div>
 </div>
-<figure id="the-internet-of-things"><h2 class="section-heading">The Internet of Things<a class="anchor" aria-label="anchor" href="#the-internet-of-things"></a>
+<section id="the-internet-of-things"><h2 class="section-heading">The Internet of Things<a class="anchor" aria-label="anchor" href="#the-internet-of-things"></a>
 </h2>
 <hr class="half-width">
-<p>You might hear “Internet of Things” (IoT) and Arduino mentioned together and quite often those terms are used as if the one implies the other. However, this is not the case. The Internet of Things refers to all kinds of “Things” that have been connected to the Internet to sense the environment. You can almost think of IoT as the five senses of the Internet.</p>
-<p>Before we continue we should clarify some key terminology used in networking. When two or more computers are connected such that they can communicate it is called a <strong>network</strong>.</p>
-<img src="fig/Network.svg" title="fig:" alt="Computers connected to form a network" class="figure mx-auto d-block"><figcaption align="center"><b>Computers connected to form a network</b><br></figcaption><p>It is also worth mentioning that one should distinguish between the words “internet” (with a lower case i) and “Internet” (with an upper case I). With an upper case I, <strong><em>Internet</em></strong> refers to <em>the</em> Internet that we connect to view web pages such as Google, Amazon etc, or to which we connect to to make Zoom or Skype calls. The Internet is a worldwide collection of networks that we are able to connect to via our Internet Service Providers. The Internet is also sometimes referred to as <strong><em>The Cloud</em></strong>. With a lower case i, <strong><em>internet</em></strong> refers to a collection of networks that are connected. If university A has a network on campus and university B has a network and they decide to connect the two networks then they would have an internet. However they might not necessarily be connected to The Internet. Another term that you might hear is <strong><em>intranet</em></strong>. If and instution connects their network to the Internet, they will refer to their internal network as the intranet. So university A can refer to their network as their intranet. If university A connects their intranet to that of University B, they created an internet.</p>
-<img src="fig/Internet.svg" title="fig:" alt="When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet." class="figure mx-auto d-block"><figcaption align="center"><b>When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.</b><br></figcaption></figure><figure id="microcontrollers"><h2 class="section-heading">Microcontrollers<a class="anchor" aria-label="anchor" href="#microcontrollers"></a>
+<p>You might hear “Internet of Things” (IoT) and Arduino mentioned
+together and quite often those terms are used as if the one implies the
+other. However, this is not the case. The Internet of Things refers to
+all kinds of “Things” that have been connected to the Internet to sense
+the environment. You can almost think of IoT as the five senses of the
+Internet.</p>
+<p>Before we continue we should clarify some key terminology used in
+networking. When two or more computers are connected such that they can
+communicate it is called a <strong>network</strong>.</p>
+<figure><img src="fig/Network.svg" alt="" class="figure mx-auto d-block"><figcaption>Computers connected to form a network</figcaption></figure><figcaption align="center"><b>Computers connected to form a network</b><br></figcaption><p>It is also worth mentioning that one should distinguish between the
+words “internet” (with a lower case i) and “Internet” (with an upper
+case I). With an upper case I, <strong><em>Internet</em></strong> refers
+to <em>the</em> Internet that we connect to view web pages such as
+Google, Amazon etc, or to which we connect to to make Zoom or Skype
+calls. The Internet is a worldwide collection of networks that we are
+able to connect to via our Internet Service Providers. The Internet is
+also sometimes referred to as <strong><em>The Cloud</em></strong>. With
+a lower case i, <strong><em>internet</em></strong> refers to a
+collection of networks that are connected. If university A has a network
+on campus and university B has a network and they decide to connect the
+two networks then they would have an internet. However they might not
+necessarily be connected to The Internet. Another term that you might
+hear is <strong><em>intranet</em></strong>. If and instution connects
+their network to the Internet, they will refer to their internal network
+as the intranet. So university A can refer to their network as their
+intranet. If university A connects their intranet to that of University
+B, they created an internet.</p>
+<figure><img src="fig/Internet.svg" alt="" class="figure mx-auto d-block"><figcaption>When two networks are connected they form an
+internet. These networks can connect to the worldwide internet known as
+The Internet.</figcaption></figure><figcaption align="center"><b>When two networks are connected they form an internet. These networks
+can connect to the worldwide internet known as The Internet.</b><br></figcaption></section><section id="microcontrollers"><h2 class="section-heading">Microcontrollers<a class="anchor" aria-label="anchor" href="#microcontrollers"></a>
 </h2>
 <hr class="half-width">
-<p>“So what is this Arduino thing then?”, you may ask. Well, Arduinos are little devices (open-source electronics platform) that were designed to teach people about electronics and they can be used to build electronic circuits that can be connected to the Internet to serve as part of the Internet’s sensing. The main component on an Arduino is a microcontroller which is an “integrated circuit” (or you might know it as a chip) that can be used in conjunction with other electronic components to control things such as motors and sensors. It is, in actual fact, a very small computer and can also be programmed. However, the Arduino is not the only such device, some other popular devices are the ESP32 and ESP8266 boards. To complicate things somewhat, each of these boards come in different flavours - or, at least, different models.</p>
-<img src="fig/Arduino_Uno_-_R3.jpg" title="fig:" alt="The original and most basic Arduino - the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>The original and most basic Arduino - the Arduino Uno</b>SparkFun Electronics from Boulder, USA, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0" class="external-link uri">https://creativecommons.org/licenses/by/2.0</a>, via Wikimedia Commons
-</figcaption><p>The main thing to notice about the Arduino in the image above is that it has no connectivity to the Internet. So even if we connect sensors to the Arduino it cannot make part of the Internet of Things without being connected to the Internet. However, one can purchase (or build it yourself) a WiFi shield that fits on top of the Arduino and with the shield in place you can program the Arduino to connect to the Internet and publish all the data it retrieves, via the sensors that you connect to it, to the Internet.</p>
-<p>Below is an image of the WiFi shield and you might be able to see how its pins allows it to be fitted onto the Arduino Uno.</p>
-<img src="fig/WiFi_Shield_for_Arduino.jpg" title="fig:" alt="A WiFi shield for the Arduino Uno" class="figure mx-auto d-block"><figcaption align="center"><b>A WiFi shield for the Arduino Uno</b><br> Attribution: oomlout, CC BY-SA 2.0 <a href="https://creativecommons.org/licenses/by-sa/2.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/2.0</a>, via Wikimedia Commons
-</figcaption><p>There are now several models of Arduinos available, some with onboard WiFi or BlueTooth to allow connectivity to a network. Follow this <a href="https://www.arduino.cc/en/hardware" class="external-link">link to the Arduino site</a> if you would like to see the whole range of Arduino models that are available.</p>
-<p>For the purposes of this workshop your instructor might choose to not use an Arduino but rather one of the other options that are available. It doesn’t really matter which one you use because for the projects covered in this lesson, any of them will do. Often, one of the ESP32 or ESP8266 series are chosen because they have onboard WiFi and are also significantly cheaper than Arduinos.</p>
-<img src="fig/ESP32.jpg" title="fig:" alt="An ESP32 WROOM 32" class="figure mx-auto d-block"><figcaption align="center"><b>An ESP32 WROOM 32</b><br> Attribution: Ubahnverleih, CC0, via Wikimedia Commons
-</figcaption><p>The two main requirements for the device selected would be that it is 1) WiFi enabled and 2) can be programmed using the Arduino Integrated Development Environment (IDE). An IDE is just a computer program that provides a programming environment that makes things easier for programmers.</p>
+<p>“So what is this Arduino thing then?”, you may ask. Well, Arduinos
+are little devices (open-source electronics platform) that were designed
+to teach people about electronics and they can be used to build
+electronic circuits that can be connected to the Internet to serve as
+part of the Internet’s sensing. The main component on an Arduino is a
+microcontroller which is an “integrated circuit” (or you might know it
+as a chip) that can be used in conjunction with other electronic
+components to control things such as motors and sensors. It is, in
+actual fact, a very small computer and can also be programmed. However,
+the Arduino is not the only such device, some other popular devices are
+the ESP32 and ESP8266 boards. To complicate things somewhat, each of
+these boards come in different flavours - or, at least, different
+models.</p>
+<figure><img src="fig/Arduino_Uno_-_R3.jpg" alt="" class="figure mx-auto d-block"><figcaption>The original and most basic Arduino - the Arduino
+Uno</figcaption></figure><figcaption align="center"><b>The original and most basic Arduino - the Arduino
+Uno</b>SparkFun Electronics from Boulder, USA, CC BY 2.0 <a href="https://creativecommons.org/licenses/by/2.0" class="external-link uri">https://creativecommons.org/licenses/by/2.0</a>, via
+Wikimedia Commons
+</figcaption><p>The main thing to notice about the Arduino in the image above is that
+it has no connectivity to the Internet. So even if we connect sensors to
+the Arduino it cannot make part of the Internet of Things without being
+connected to the Internet. However, one can purchase (or build it
+yourself) a WiFi shield that fits on top of the Arduino and with the
+shield in place you can program the Arduino to connect to the Internet
+and publish all the data it retrieves, via the sensors that you connect
+to it, to the Internet.</p>
+<p>Below is an image of the WiFi shield and you might be able to see how
+its pins allows it to be fitted onto the Arduino Uno.</p>
+<figure><img src="fig/WiFi_Shield_for_Arduino.jpg" alt="" class="figure mx-auto d-block"><figcaption>A WiFi shield for the Arduino Uno</figcaption></figure><figcaption align="center"><b>A WiFi shield for the Arduino Uno</b><br> Attribution: oomlout, CC
+BY-SA 2.0 <a href="https://creativecommons.org/licenses/by-sa/2.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/2.0</a>, via
+Wikimedia Commons
+</figcaption><p>There are now several models of Arduinos available, some with onboard
+WiFi or BlueTooth to allow connectivity to a network. Follow this <a href="https://www.arduino.cc/en/hardware" class="external-link">link to the Arduino site</a>
+if you would like to see the whole range of Arduino models that are
+available.</p>
+<p>For the purposes of this workshop your instructor might choose to not
+use an Arduino but rather one of the other options that are available.
+It doesn’t really matter which one you use because for the projects
+covered in this lesson, any of them will do. Often, one of the ESP32 or
+ESP8266 series are chosen because they have onboard WiFi and are also
+significantly cheaper than Arduinos.</p>
+<figure><img src="fig/ESP32.jpg" alt="" class="figure mx-auto d-block"><figcaption>An ESP32 WROOM 32</figcaption></figure><figcaption align="center"><b>An ESP32 WROOM 32</b><br> Attribution: Ubahnverleih, CC0, via
+Wikimedia Commons
+</figcaption><p>The two main requirements for the device selected would be that it is
+1) WiFi enabled and 2) can be programmed using the Arduino Integrated
+Development Environment (IDE). An IDE is just a computer program that
+provides a programming environment that makes things easier for
+programmers.</p>
 
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="challenge-1-which-of-the-following-are-part-of-the-internet-of-things" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Which of the following are part of the Internet of things?<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+<h3 class="callout-title">Challenge 1: Which of the following are part
+of the Internet of things?<a class="anchor" aria-label="anchor" href="#discussion1"></a>
 </h3>
 <div class="callout-content">
-<p>With the person next to you, discuss whether you think the following devices are part of the Internet and why? What other devices do you think would make part of the Internet of Things.</p>
+<p>With the person next to you, discuss whether you think the following
+devices are part of the Internet and why? What other devices do you
+think would make part of the Internet of Things.</p>
 <ol style="list-style-type: decimal">
 <li>A computer</li>
 <li>An Arduino</li>
@@ -400,7 +469,9 @@
 </div>
 </div>
 <p>Links:</p>
-<p>-<a href="https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html" class="external-link">Microcontrollers vs Microprocessors</a> -<a href="https://bridgera.com/smartphones-in-the-iot-era/" class="external-link">Smartphone in the IoT Era</a></p>
+<p>-<a href="https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html" class="external-link">Microcontrollers
+vs Microprocessors</a> -<a href="https://bridgera.com/smartphones-in-the-iot-era/" class="external-link">Smartphone in
+the IoT Era</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -410,8 +481,10 @@
 </h3>
 <div class="callout-content">
 <ul>
-<li>Explain the difference between the terms: network, internet, intranet and The Internet</li>
-<li>Identify devices that can be connected to the Internet of Things</li>
+<li>Explain the difference between the terms: network, internet,
+intranet and The Internet</li>
+<li>Identify devices that can be connected to the Internet of
+Things</li>
 <li>Explain how things can be connected to the Internet of Things.</li>
 <li>Explain what a microcontroller is.</li>
 <li>Explain what an Arduino or and ESP32/8266 is.</li>
@@ -424,10 +497,13 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
-</ul></figure></section><section id="aio-02-ArduinoIDE"><p>Content from <a href="02-ArduinoIDE.html">The Arduino IDE</a></p>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
+</ul></section></section><section id="aio-02-ArduinoIDE"><p>Content from <a href="02-ArduinoIDE.html">The Arduino IDE</a></p>
 <hr>
 <p> Last updated on 2022-09-11 | 
         
@@ -461,7 +537,8 @@ any links that you are not going to use.
 <ul>
 <li>Explain what an IDE is.</li>
 <li>Explain what the Arduino IDE is used for.</li>
-<li>Identify microcontrollers that can be programmed with the Arduino IDE.</li>
+<li>Identify microcontrollers that can be programmed with the Arduino
+IDE.</li>
 <li>Run the Arduino IDE.</li>
 <li>Connect the microcontroller board to the computer.</li>
 <li>Connect the microcontroller to the Arduino IDE.</li>
@@ -475,88 +552,229 @@ any links that you are not going to use.
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
-<p>Just like computers, microcontrollers have memory into which we can load programs. To make things easier and to be more productive, programmers have developed software called Integrated Development Environments (IDE). The IDEs provide an editor into which one can type the programming instructions and they usually also make provision for <strong><em>syntax highlighting</em></strong>. Syntax highlighting just means that certain keywords are coloured and that makes it much easier to read. The IDEs also provide ways of uploading code to devices and running the programs. The Arduino IDE was specifically developed for writing programs that uploaded and run on motorcontrollers. Originally it was aimed just at the Arduino but because it is such a convenient environment to work in, it has now been extended to also workwith other microcontrollers.</p>
-</section><figure id="running-the-arduino-ide"><h2 class="section-heading">Running the Arduino IDE<a class="anchor" aria-label="anchor" href="#running-the-arduino-ide"></a>
+<p>Just like computers, microcontrollers have memory into which we can
+load programs. To make things easier and to be more productive,
+programmers have developed software called Integrated Development
+Environments (IDE). The IDEs provide an editor into which one can type
+the programming instructions and they usually also make provision for
+<strong><em>syntax highlighting</em></strong>. Syntax highlighting just
+means that certain keywords are coloured and that makes it much easier
+to read. The IDEs also provide ways of uploading code to devices and
+running the programs. The Arduino IDE was specifically developed for
+writing programs that uploaded and run on motorcontrollers. Originally
+it was aimed just at the Arduino but because it is such a convenient
+environment to work in, it has now been extended to also workwith other
+microcontrollers.</p>
+</section><section id="running-the-arduino-ide"><h2 class="section-heading">Running the Arduino IDE<a class="anchor" aria-label="anchor" href="#running-the-arduino-ide"></a>
 </h2>
 <hr class="half-width">
-<p>For this episode we have to assume that you were able to successfully install the Arduino IDE and that you are able to start the software from the start menu or the desktop of your computer. When you run the software you will first see the splash window:</p>
-<img src="fig/ArduinoIDE_startup.png" title="fig:" alt="Arduino Splash Window" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
-</figcaption><p>After a while the IDE will open. It is actually quite a simple interface. At the top you should see the File, Edit, Sketch, Tools and Help menu items. Just below the menu there are five icons to the left and one on the far right. Below the icons you should see a tab with a filename and a white editing area. Below the editor is a black terminal:</p>
-<img src="fig/ArduinoIDE.png" title="fig:" alt="Arduino IDE" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino IDE main window</b>
-</figcaption><p>The white area is where you will be typing the code that will be uploaded to the microcontroller. In the black area you will see messages about the <em>compilation</em> of the code and the uploading process. Right at the bottom is a status bar where you will eventually be able to see whether the IDE could connect to your motorcontroller.</p>
-<p>The first time you run the IDE the status bar will show the string <code>Arduino Uno on /dev/ttyAM0</code> and in the editor you will see some skeleton code. Note the syntax highlighting:</p>
+<p>For this episode we have to assume that you were able to successfully
+install the Arduino IDE and that you are able to start the software from
+the start menu or the desktop of your computer. When you run the
+software you will first see the splash window:</p>
+<figure><img src="fig/ArduinoIDE_startup.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino Splash Window</figcaption></figure><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
+</figcaption><p>After a while the IDE will open. It is actually quite a simple
+interface. At the top you should see the File, Edit, Sketch, Tools and
+Help menu items. Just below the menu there are five icons to the left
+and one on the far right. Below the icons you should see a tab with a
+filename and a white editing area. Below the editor is a black
+terminal:</p>
+<figure><img src="fig/ArduinoIDE.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino IDE</figcaption></figure><figcaption align="center"><b>The Arduino IDE main window</b>
+</figcaption><p>The white area is where you will be typing the code that will be
+uploaded to the microcontroller. In the black area you will see messages
+about the <em>compilation</em> of the code and the uploading process.
+Right at the bottom is a status bar where you will eventually be able to
+see whether the IDE could connect to your motorcontroller.</p>
+<p>The first time you run the IDE the status bar will show the string
+<code>Arduino Uno on /dev/ttyAM0</code> and in the editor you will see
+some skeleton code. Note the syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
-</figure><section id="configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"><h2 class="section-heading">Configuring the IDE for use with boards other than an Arduino Uno<a class="anchor" aria-label="anchor" href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"></a>
+</section><section id="configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"><h2 class="section-heading">Configuring the IDE for use with boards other than an Arduino
+Uno<a class="anchor" aria-label="anchor" href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"></a>
 </h2>
 <hr class="half-width">
-<p>If you will be using an Arduino or an Arduino compatible device, you don’t have to complete the steps in this section and you can skip to the secion on <strong>compiling</strong>.</p>
-<p>By default the IDE is configured to program an Arduino Uno but we will be using an ESP32 WROOM 32 board so we first need to configure the IDE before we can start coding. Start by clicking on the <code>File</code> menu item and then on <code>Preferences</code>. Towards the bottom of the Preferences window you should find a text area with the label <code>Additional Boards Manager URLs:</code>:</p>
-<figure><img src="fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><p>To find the appropriate URL you need to open a web browser and navigate to: <code>https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls</code>. For the ESP32-WROOM-32 you have to find the line that reads:</p>
+<p>If you will be using an Arduino or an Arduino compatible device, you
+don’t have to complete the steps in this section and you can skip to the
+secion on <strong>compiling</strong>.</p>
+<p>By default the IDE is configured to program an Arduino Uno but we
+will be using an ESP32 WROOM 32 board so we first need to configure the
+IDE before we can start coding. Start by clicking on the
+<code>File</code> menu item and then on <code>Preferences</code>.
+Towards the bottom of the Preferences window you should find a text area
+with the label <code>Additional Boards Manager URLs:</code>:</p>
+<figure><img src="fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><p>To find the appropriate URL you need to open a web browser and
+navigate to:
+<code>https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls</code>.
+For the ESP32-WROOM-32 you have to find the line that reads:</p>
 <p><strong>Espressif ESP32:</strong> <a href="https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json" class="external-link uri">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</a></p>
-<p>Copy and paste the address into the text area of the preferences window:</p>
+<p>Copy and paste the address into the text area of the preferences
+window:</p>
 <figure><img src="fig/addURL.png" alt="" class="figure mx-auto d-block"><figcaption>Enter additional boards manager URLs</figcaption></figure><p>Click on <code>OK</code></p>
-<p>What we have just done is to tell the IDE where to find more information about the ESP32 boards. Because the ESP32 series use a different microcontrollers to the Arduino Uno our programs have to be <em>compiled</em> differently. By default all the Arduino boards are immediately available for selection in the IDE but for other boards we have to give the IDE a place where it can find the information for <em>compiling</em> the code for those other boards.</p>
+<p>What we have just done is to tell the IDE where to find more
+information about the ESP32 boards. Because the ESP32 series use a
+different microcontrollers to the Arduino Uno our programs have to be
+<em>compiled</em> differently. By default all the Arduino boards are
+immediately available for selection in the IDE but for other boards we
+have to give the IDE a place where it can find the information for
+<em>compiling</em> the code for those other boards.</p>
 </section><section id="what-is-compiling"><h2 class="section-heading">What is “compiling”?<a class="anchor" aria-label="anchor" href="#what-is-compiling"></a>
 </h2>
 <hr class="half-width">
-<p>We have used the term “compiling” a few times now. But what is that? You’ll notice, that once we start programming, the programming language uses English words. But, computers do not understand English. Computers understand only 0 and 1. A compiler takes the human readable programming language that we entered into the editor and “translates” it into instructions consisting of 0 and 1 that makes complete sense to the microcontroller. Although all microcontrollers understand 0 and 1, the instructions for different microcontrollers differ. The 0s and 1s are like sounds are to us humans. But different human languages combine the sounds differently. Similarly the 0s and 1s need to be arranged differently for microcontrollers designed by different manufacturers or even different models of microcontrollers manufactured by the same manufacturer. For this reason we have to tell the IDE which microcontroller board we are using so that the compiler can translate our English code into the correct <code>dialect</code> of microcontroller language.</p>
+<p>We have used the term “compiling” a few times now. But what is that?
+You’ll notice, that once we start programming, the programming language
+uses English words. But, computers do not understand English. Computers
+understand only 0 and 1. A compiler takes the human readable programming
+language that we entered into the editor and “translates” it into
+instructions consisting of 0 and 1 that makes complete sense to the
+microcontroller. Although all microcontrollers understand 0 and 1, the
+instructions for different microcontrollers differ. The 0s and 1s are
+like sounds are to us humans. But different human languages combine the
+sounds differently. Similarly the 0s and 1s need to be arranged
+differently for microcontrollers designed by different manufacturers or
+even different models of microcontrollers manufactured by the same
+manufacturer. For this reason we have to tell the IDE which
+microcontroller board we are using so that the compiler can translate
+our English code into the correct <code>dialect</code> of
+microcontroller language.</p>
 </section><section id="selecting-the-correct-board"><h2 class="section-heading">Selecting the correct board<a class="anchor" aria-label="anchor" href="#selecting-the-correct-board"></a>
 </h2>
 <hr class="half-width">
-<p>To select the board you want to compile for click on the <code>Tools</code> menu item, and then on <code>Board:</code>. On the dropdown menu, select the microcontroller board that you will be using. If it is not in the list, click on <code>Boards Manager</code> which is right at the top. The <code>Boards Manager</code> should pop up.</p>
-<figure><img src="fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><p>There will be several options available. If you will be using the ESP32 scroll down to find <strong>esp32</strong>. You can also type esp32 in the the text area right at the top of the window and then press enter. This will then perform a search and you should be able to find the esp32 option a little quicker. If you hover your mouse over the <strong>esp32</strong> secion, a box with a version and an <code>Install</code> button should appear. Leave the version, which should be the latest, as is and click on the <code>Install</code> button.</p>
-<figure><img src="fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><p>When the installation is completed click the <code>Close</code> button.</p>
-<p>If your Arduino is on the list to start with and you don’t need to install other boards, then just select the board you are using. If you had to install the <code>esp32</code> boards, you will have to now click on the <code>Tools</code> menu option again and then select <code>Boards</code>. There should now be options for <code>Arduino AVR boards</code> and <code>ESP Arduino</code>. Select the ESP option and then select the board you are using which, if you are using the <code>ESP32 WROOM 32</code>, should be <code>DOIT ESP32 DevKit V1</code></p>
-</section><figure id="connecting-the-board-to-the-computer"><h2 class="section-heading">Connecting the board to the computer<a class="anchor" aria-label="anchor" href="#connecting-the-board-to-the-computer"></a>
+<p>To select the board you want to compile for click on the
+<code>Tools</code> menu item, and then on <code>Board:</code>. On the
+dropdown menu, select the microcontroller board that you will be using.
+If it is not in the list, click on <code>Boards Manager</code> which is
+right at the top. The <code>Boards Manager</code> should pop up.</p>
+<figure><img src="fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><p>There will be several options available. If you will be using the
+ESP32 scroll down to find <strong>esp32</strong>. You can also type
+esp32 in the the text area right at the top of the window and then press
+enter. This will then perform a search and you should be able to find
+the esp32 option a little quicker. If you hover your mouse over the
+<strong>esp32</strong> secion, a box with a version and an
+<code>Install</code> button should appear. Leave the version, which
+should be the latest, as is and click on the <code>Install</code>
+button.</p>
+<figure><img src="fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><p>When the installation is completed click the <code>Close</code>
+button.</p>
+<p>If your Arduino is on the list to start with and you don’t need to
+install other boards, then just select the board you are using. If you
+had to install the <code>esp32</code> boards, you will have to now click
+on the <code>Tools</code> menu option again and then select
+<code>Boards</code>. There should now be options for
+<code>Arduino AVR boards</code> and <code>ESP Arduino</code>. Select the
+ESP option and then select the board you are using which, if you are
+using the <code>ESP32 WROOM 32</code>, should be
+<code>DOIT ESP32 DevKit V1</code></p>
+</section><section id="connecting-the-board-to-the-computer"><h2 class="section-heading">Connecting the board to the computer<a class="anchor" aria-label="anchor" href="#connecting-the-board-to-the-computer"></a>
 </h2>
 <hr class="half-width">
-<p>To connect the motorcontroller board to the computer we need a USB cable. USB cables come in different flavours. You might know this from experience with your mobile/cell phone. The image below shows the names and shapes of the different types of USB connectors:</p>
-<img src="fig/USBConnectors.png" title="fig:" alt="USB connectors" class="figure mx-auto d-block"><figcaption align="center">
-Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons
-</figcaption><p>Most computers still have USB type A ports. The latest laptops might have USB C. An Arduino Uno usually has a type B USB port. So for an Uno you will need a cable that has a type A connector on the one side and a type b connector on the other. If your laptop has a type C port you will need type A to type C converter to make the cable fit. An Arduino nano will probably need a type A to type Mini-B cable and an ESP32 will need a type A to Micro-B cable. Chances are that, if you are using devices provided by your host, that they will have the correct cables. Just be aware that if your laptop has a type C port you might need an adapter.</p>
-<p>You can now use the cable to connect the motorcontroller board to the computer. Windows computers usually play a sound when you connect a USB device.</p>
-</figure><section id="selecting-the-correct-serial-port-in-the-ide"><h2 class="section-heading">Selecting the correct serial port in the IDE<a class="anchor" aria-label="anchor" href="#selecting-the-correct-serial-port-in-the-ide"></a>
+<p>To connect the motorcontroller board to the computer we need a USB
+cable. USB cables come in different flavours. You might know this from
+experience with your mobile/cell phone. The image below shows the names
+and shapes of the different types of USB connectors:</p>
+<figure><img src="fig/USBConnectors.png" alt="" class="figure mx-auto d-block"><figcaption>USB connectors</figcaption></figure><figcaption align="center">
+Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/4.0</a>, via
+Wikimedia Commons
+</figcaption><p>Most computers still have USB type A ports. The latest laptops might
+have USB C. An Arduino Uno usually has a type B USB port. So for an Uno
+you will need a cable that has a type A connector on the one side and a
+type b connector on the other. If your laptop has a type C port you will
+need type A to type C converter to make the cable fit. An Arduino nano
+will probably need a type A to type Mini-B cable and an ESP32 will need
+a type A to Micro-B cable. Chances are that, if you are using devices
+provided by your host, that they will have the correct cables. Just be
+aware that if your laptop has a type C port you might need an
+adapter.</p>
+<p>You can now use the cable to connect the motorcontroller board to the
+computer. Windows computers usually play a sound when you connect a USB
+device.</p>
+</section><section id="selecting-the-correct-serial-port-in-the-ide"><h2 class="section-heading">Selecting the correct serial port in the IDE<a class="anchor" aria-label="anchor" href="#selecting-the-correct-serial-port-in-the-ide"></a>
 </h2>
 <hr class="half-width">
-<p>You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on <code>Tools</code> and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc. Figuring out which port is being used is sometimes a bit messy. Your instructor or workshop helpers might be able to assist you with this.</p>
-<p>On Windows it might also be necessary for you to install the serial drivers required for the ESP32. If you notice the <code>Port</code> item on the <code>Tools</code> menu is greyed out then this is probably required. To download the drivers go to:</p>
-<p><a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads" class="external-link">CP210x USB to UART Bridge</a></p>
+<p>You should now be able to get your Arduino IDE to recognise your
+motorcontroller board. In the IDE, click on <code>Tools</code> and then
+on Port. You should see at leat one but perhaps more ports listed. Your
+IDE might already have selected the port automatically when you
+connected the cable. On Windows the devices are usually named COM1,
+COM2, COM3 etc. Figuring out which port is being used is sometimes a bit
+messy. Your instructor or workshop helpers might be able to assist you
+with this.</p>
+<p>On Windows it might also be necessary for you to install the serial
+drivers required for the ESP32. If you notice the <code>Port</code> item
+on the <code>Tools</code> menu is greyed out then this is probably
+required. To download the drivers go to:</p>
+<p><a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads" class="external-link">CP210x
+USB to UART Bridge</a></p>
 <p>Select: <code>CP210x Windows Drivers v6.7.6 9/3/2020</code></p>
-<p>When you click on the link it should download a file called <code>CP210x_Windows_Drivers.zip</code>, to your computer. Right click and extract the contents from the zip file. There should be two <code>.exe</code> files extracted. Depending on your computer you have to double click on one of these to install the driver. If you are not sure which one to select you can click on the x86 version first. It will either install or you’ll get a message warning you that your computer has a 64bit architecture and that you should install the 64bit version. In that case double click the x64 version to install the driver. After installation the <code>Port</code> item on the <code>Tools</code> menu should not be greyed anymore and you should be able to click on it to select a COM port.</p>
+<p>When you click on the link it should download a file called
+<code>CP210x_Windows_Drivers.zip</code>, to your computer. Right click
+and extract the contents from the zip file. There should be two
+<code>.exe</code> files extracted. Depending on your computer you have
+to double click on one of these to install the driver. If you are not
+sure which one to select you can click on the x86 version first. It will
+either install or you’ll get a message warning you that your computer
+has a 64bit architecture and that you should install the 64bit version.
+In that case double click the x64 version to install the driver. After
+installation the <code>Port</code> item on the <code>Tools</code> menu
+should not be greyed anymore and you should be able to click on it to
+select a COM port.</p>
 </section><section id="upload-our-first-sketch"><h2 class="section-heading">Upload our first sketch<a class="anchor" aria-label="anchor" href="#upload-our-first-sketch"></a>
 </h2>
 <hr class="half-width">
-<p>If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:</p>
+<p>If all went well you should now be able to upload a program to the
+motorcontroller board. We are going to enter a very simple program just
+to make sure everything is working. En the editor part of the IDE,
+modify the code to read as follows:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> Serial.begin(<span class="dv">9600</span>);</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> Serial.println(<span class="st">"Hello"</span>);</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> delay(<span class="dv">5000</span>);</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Hello"</span><span class="op">);</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> delay<span class="op">(</span><span class="dv">5000</span><span class="op">);</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
-<p>We’ll go into more detail about programming the motorcontroller in the next episode. This little program is just for testing. All it is going to do is to print the word <code>Hello</code> in the <strong><em>monitor</em></strong>, which we will open after compiling and uploading the program. To compile and upload press the second button from the left with the arrow pointing to the right. See the image below:</p>
-<figure><img src="fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><p>If all goes well you should see messages displayed in the terminal section below the editor. The messages should be similar to what is shown in the image. The progress counter should say <code>(100%)</code>, indicating the all of the compiled code has been uploaded successfully:</p>
-<figure><img src="fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>If you are getting an error message similar to this, ``` Connecting……………………………….An error occurred while uploading the sketch .</p>
-<p>A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode. For troubleshooting steps visit: <a href="https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html" class="external-link uri">https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html</a> ```</p>
-<p>then you might have to download the <code>BOOT</code> button on your microcontroller board. If you wait for the message to say <code>Connecting ..</code> and start holding down the button when the dots appear, the code will suddenly start uploading.</p>
-<p>You can now open the serial monitor by clicking first on <code>Tools</code> and then on <code>Serial Monitor</code>. The word <code>Hello</code> should now be printed to the monitor every five seconds.</p>
+<p>We’ll go into more detail about programming the motorcontroller in
+the next episode. This little program is just for testing. All it is
+going to do is to print the word <code>Hello</code> in the
+<strong><em>monitor</em></strong>, which we will open after compiling
+and uploading the program. To compile and upload press the second button
+from the left with the arrow pointing to the right. See the image
+below:</p>
+<figure><img src="fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><p>If all goes well you should see messages displayed in the terminal
+section below the editor. The messages should be similar to what is
+shown in the image. The progress counter should say <code>(100%)</code>,
+indicating the all of the compiled code has been uploaded
+successfully:</p>
+<figure><img src="fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>If you are getting an error message similar to this, ```
+Connecting……………………………….An error occurred while uploading the sketch
+.</p>
+<p>A fatal error occurred: Failed to connect to ESP32: Wrong boot mode
+detected (0x13)! The chip needs to be in download mode. For
+troubleshooting steps visit: <a href="https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html" class="external-link uri">https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html</a>
+```</p>
+<p>then you might have to download the <code>BOOT</code> button on your
+microcontroller board. If you wait for the message to say
+<code>Connecting ..</code> and start holding down the button when the
+dots appear, the code will suddenly start uploading.</p>
+<p>You can now open the serial monitor by clicking first on
+<code>Tools</code> and then on <code>Serial Monitor</code>. The word
+<code>Hello</code> should now be printed to the monitor every five
+seconds.</p>
 <figure><img src="fig/monitor.png" alt="" class="figure mx-auto d-block"><figcaption>Serial Monitor</figcaption></figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -568,7 +786,8 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 <ul>
 <li>Explain what an IDE is.</li>
 <li>Explain what the Arduino IDE is used for.</li>
-<li>Identify microcontrollers that can be programmed with the Arduino IDE.</li>
+<li>Identify microcontrollers that can be programmed with the Arduino
+IDE.</li>
 <li>Run the Arduino IDE.</li>
 <li>Connect the microcontroller board to the computer.</li>
 <li>Connect the microcontroller to the Arduino IDE.</li>
@@ -584,9 +803,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></section></section><section id="aio-03-Understanding"><p>Content from <a href="03-Understanding.html">Understanding the code</a></p>
 <hr>
 <p> Last updated on 2023-02-21 | 
@@ -626,47 +848,61 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<p>The language that we use in the Arduino IDE is called <code>The Arduino Programming Language</code> which is based on a another programming language called C++. It would have been easy if we could abbreviate The Arduino Programming Language as APL, but we can’t because APL refers to a completely different language. The programs written in the Arduino IDE are also not called programs but rather sketches.</p>
-<p>The language consists of three parts: <strong>functions</strong>, <strong>values</strong> (variables and constants), and <strong>structures</strong>. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised some of these parts. All sketches require a setup and a loop as in the following code snippet:</p>
+<p>The language that we use in the Arduino IDE is called
+<code>The Arduino Programming Language</code> which is based on a
+another programming language called C++. It would have been easy if we
+could abbreviate The Arduino Programming Language as APL, but we can’t
+because APL refers to a completely different language. The programs
+written in the Arduino IDE are also not called programs but rather
+sketches.</p>
+<p>The language consists of three parts: <strong>functions</strong>,
+<strong>values</strong> (variables and constants), and
+<strong>structures</strong>. If you remember the template that was
+automatically generated when we opened the IDE in the previous episode,
+you might have recognised some of these parts. All sketches require a
+setup and a loop as in the following code snippet:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
-<p>You can find more information about functions, values and structures in the online reference manual at <a href="https://www.arduino.cc/reference/en/" class="external-link">https://www.arduino.cc/reference/en/</a>.</p>
+<p>You can find more information about functions, values and structures
+in the online reference manual at <a href="https://www.arduino.cc/reference/en/" class="external-link">https://www.arduino.cc/reference/en/</a>.</p>
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-1-the-parts-of-a-sketch-program" class="callout-inner">
-<h3 class="callout-title">Challenge 1: The Parts of a Sketch (Program)<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Challenge 1: The Parts of a Sketch
+(Program)<a class="anchor" aria-label="anchor" href="#challenge1"></a>
 </h3>
 <div class="callout-content">
-<p>Looking at the following code snippet, can you identify the above mentioned features?</p>
+<p>Looking at the following code snippet, can you identify the above
+mentioned features?</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> getMagicNumber() {</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">42</span>;</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> getMagicNumber<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">42</span><span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -681,11 +917,26 @@ any links that you are not going to use.
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
-<li>The keywords <code>void</code> and <code>int</code> are the return types. If a function does not have a value to return, the keyword <code>void</code> is used. <code>int</code> means that the function returns a value that is an integer. You can find a list of all the <code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference website</a>
+<li>The keywords <code>void</code> and <code>int</code> are the return
+types. If a function does not have a value to return, the keyword
+<code>void</code> is used. <code>int</code> means that the function
+returns a value that is an integer. You can find a list of all the
+<code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference
+website</a>
 </li>
-<li>The words <code>setup</code>, <code>loop</code> and <code>getMagicNumber</code> are the names of the functions.</li>
-<li>The names of the functions are followed by parenthesis. We will see later on how they are used.</li>
-<li>The curly brackets indicate the beginning and end of the function. The left curly bracket should appear after the parenthesis. The following lines are instructions that the micocontroller has to execute. The right curly bracket closes the function and indicates that the end has been reached. If the function does not have a return type of <code>void</code>, i.e. it has any of the other data type, then the last line in the function has to contain the keyword <code>return</code> followed by a value (or a variable containing a value) of the specified return type.</li>
+<li>The words <code>setup</code>, <code>loop</code> and
+<code>getMagicNumber</code> are the names of the functions.</li>
+<li>The names of the functions are followed by parenthesis. We will see
+later on how they are used.</li>
+<li>The curly brackets indicate the beginning and end of the function.
+The left curly bracket should appear after the parenthesis. The
+following lines are instructions that the micocontroller has to execute.
+The right curly bracket closes the function and indicates that the end
+has been reached. If the function does not have a return type of
+<code>void</code>, i.e. it has any of the other data type, then the last
+line in the function has to contain the keyword <code>return</code>
+followed by a value (or a variable containing a value) of the specified
+return type.</li>
 </ol>
 </div>
 </div>
@@ -701,15 +952,41 @@ any links that you are not going to use.
 <li>parenthesis</li>
 <li>curly brackets</li>
 </ol>
-<p>All sketches <strong>must</strong> have a setup and a loop function. Any instructions that we put in the <code>setup</code> will be executed when the program starts. After completing the instructions in setup the microcontroller continues to the <code>loop</code> function where the microcontroller will execute all the instruction over and over again - in an infinite loop. As in the example, there can be other functions. Such functions are created as needed and can be called from any other function. Functions can even call themselves. There are many built-in functions, some of which we will be using. It is also possible to load <code>libraries</code> that will give us even more functions for more functionality. We will also be using some of those in this lesson.</p>
+<p>All sketches <strong>must</strong> have a setup and a loop function.
+Any instructions that we put in the <code>setup</code> will be executed
+when the program starts. After completing the instructions in setup the
+microcontroller continues to the <code>loop</code> function where the
+microcontroller will execute all the instruction over and over again -
+in an infinite loop. As in the example, there can be other functions.
+Such functions are created as needed and can be called from any other
+function. Functions can even call themselves. There are many built-in
+functions, some of which we will be using. It is also possible to load
+<code>libraries</code> that will give us even more functions for more
+functionality. We will also be using some of those in this lesson.</p>
 </section><section id="variables-and-constants"><h2 class="section-heading">Variables and Constants<a class="anchor" aria-label="anchor" href="#variables-and-constants"></a>
 </h2>
 <hr class="half-width">
-<p>Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a value can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what <code>type</code> of value will be stored in the variable.</p>
+<p>Variables and constants are named memory positions in the
+motorcontroller in which one can store a value. The value of variables
+can be changed but the values of constants cannot be changed after they
+have been allocated a value for the first time. Before a value can be
+assigned to a variable, the variable has to be declared. The declaration
+tells the compiler of what <code>type</code> of value will be stored in
+the variable.</p>
 <div class="section level3">
 <h3 id="an-example-sketch">An example sketch<a class="anchor" aria-label="anchor" href="#an-example-sketch"></a>
 </h3>
-<p>Let’s start by creating a new sketch to experiment with the things we have mentioned so far. We will also introduce one <strong>structure</strong>, the for-loop. On the menu click <code>File</code> and then <code>New</code>. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions, just two comments. Comment lines start with <code>//</code> and are ignored by the compiler but allows the programmer to enter comments to document what the program does. Do use the comment feature. It makes it much easier when you come back to the code or when you have to pass the code onto someone else:</p>
+<p>Let’s start by creating a new sketch to experiment with the things we
+have mentioned so far. We will also introduce one
+<strong>structure</strong>, the for-loop. On the menu click
+<code>File</code> and then <code>New</code>. When you create a new
+sketch, the IDE will automatically add the setup and loop functions for
+you. There will be no code in the functions, just two comments. Comment
+lines start with <code>//</code> and are ignored by the compiler but
+allows the programmer to enter comments to document what the program
+does. Do use the comment feature. It makes it much easier when you come
+back to the code or when you have to pass the code onto someone
+else:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -717,49 +994,49 @@ any links that you are not going to use.
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">// variable `minimum` up to the variable called `maximum`</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// declare a constant of type integer called minimum</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> minimum = <span class="dv">0</span>;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> minimum <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">// declare a constant of type integer called maximum</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> maximum = <span class="dv">100</span>;</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> maximum <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">// delcare a variable of type float called pi</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">// a float type is a number that a decimal point.</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> pi = <span class="fl">3.14159265358979</span>;</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> pi <span class="op">=</span> <span class="fl">3.14159265358979</span><span class="op">;</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Initialise the `Serial` library and tell it what speed to </span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// use for communication with the computer via the USB port</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// The Serial library is included in the language by default</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">// so we don't have to import it.</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  Serial.begin(<span class="dv">9600</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">)</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Use a loop structure to count from minimum to maximum</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Notice the `int i` variable that is used as the counter</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="co">// To understand the for-loop structure, read it as:</span></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="co">// For i equals minimum to i less-than-or-equal-to maximum, </span></span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">// increment i by one (the ++ means increment by 1)</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="dt">int</span> i = minimum; i &lt;= maximum; i++) {</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> minimum<span class="op">;</span> i <span class="op">&lt;=</span> maximum<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// create a new value called multiply_pi and allocate</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// the value of `i * pi` to it</span></span>
 <span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> multiply_pi = i * pi;</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> multiply_pi <span class="op">=</span> i <span class="op">*</span> pi<span class="op">;</span></span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Use the print function in the Serial library to </span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">// print `i` to the Serial Monitor</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    Serial.println(multiply_pi);</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>multiply_pi<span class="op">);</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="co">// create a delay of 5000 milliseconds (5 seconds)</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  delay(<span class="dv">5000</span>);</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">5000</span><span class="op">);</span></span>
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">// After the delay the microcontroller will start at the </span></span>
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="co">// beginning of loop() and run all the code inside it again.</span></span>
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <div id="challenge2" class="callout challenge">
 <div class="callout-square">
@@ -795,7 +1072,8 @@ any links that you are not going to use.
 <div class="section level4">
 <h4 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a>
 </h4>
-<p>i - of type integer pi - of type float multiply_pi - of type float</p>
+<p>i - of type integer pi - of type float multiply_pi - of type
+float</p>
 </div>
 <div class="section level4">
 <h4 id="functions-1">Functions<a class="anchor" aria-label="anchor" href="#functions-1"></a>
@@ -806,18 +1084,34 @@ any links that you are not going to use.
 <h4 id="what-does-the-code-do">What does the code do?<a class="anchor" aria-label="anchor" href="#what-does-the-code-do"></a>
 </h4>
 <ol style="list-style-type: decimal">
-<li>Firstly we declare two constants of type integer, <code>minimum</code> and <code>maximum</code> and we give them values of 0 and 100.</li>
-<li>We declare on variable of type float called <code>pi</code> and we give it a value of 3.14159265358979.</li>
-<li>The code will first enter the <code>setup()</code> function and,</li>
-<li>initialise the serial communications from the ESP to the computer at a speed of 9600 <a href="https://en.wikipedia.org/wiki/Baud" class="external-link">baud</a>. Baud is the data transmission rate in bits per second.</li>
+<li>Firstly we declare two constants of type integer,
+<code>minimum</code> and <code>maximum</code> and we give them values of
+0 and 100.</li>
+<li>We declare on variable of type float called <code>pi</code> and we
+give it a value of 3.14159265358979.</li>
+<li>The code will first enter the <code>setup()</code> function
+and,</li>
+<li>initialise the serial communications from the ESP to the computer at
+a speed of 9600 <a href="https://en.wikipedia.org/wiki/Baud" class="external-link">baud</a>.
+Baud is the data transmission rate in bits per second.</li>
 <li>Next the code will enter the loop function.</li>
-<li>Inside the loop function we create another loop with the for-loop structure. This loop will use the variable <code>i</code> which will be of type <code>integer</code> and it will start with <code>i</code> equal to <code>minimum</code>. It will then increment <code>i</code> by one for each iteration of the loop while <code>i</code> is less than <code>maximum</code>, until it becomes equal to <code>maximum</code>.</li>
-<li>On each iteration of loop a variable of type float is declared that is called <code>multiply_pi</code>.</li>
+<li>Inside the loop function we create another loop with the for-loop
+structure. This loop will use the variable <code>i</code> which will be
+of type <code>integer</code> and it will start with <code>i</code> equal
+to <code>minimum</code>. It will then increment <code>i</code> by one
+for each iteration of the loop while <code>i</code> is less than
+<code>maximum</code>, until it becomes equal to
+<code>maximum</code>.</li>
+<li>On each iteration of loop a variable of type float is declared that
+is called <code>multiply_pi</code>.</li>
 <li>
 <code>multiply_pi' is given the value of whatever</code>i<code>is at the time multiplied by</code>pi`.</li>
-<li>The current value of <code>multiply_pi</code> is then sent and printed in the serial monitor</li>
-<li>When <code>i</code> reaches the value <code>maximum</code>, the loop will terminate and the program will pause for 5000 milliseconds.</li>
-<li>Because this happens in the <code>loop()</code> function the whole process will start all over again and this will go on indefinitely</li>
+<li>The current value of <code>multiply_pi</code> is then sent and
+printed in the serial monitor</li>
+<li>When <code>i</code> reaches the value <code>maximum</code>, the loop
+will terminate and the program will pause for 5000 milliseconds.</li>
+<li>Because this happens in the <code>loop()</code> function the whole
+process will start all over again and this will go on indefinitely</li>
 </ol>
 </div>
 </div>
@@ -836,7 +1130,8 @@ any links that you are not going to use.
 <ul>
 <li>Identify variables, constants, functions and structures</li>
 <li>Know how to identify a function</li>
-<li>Recognise the different types of values that variables and constants can have and what type of information each of these can hold.</li>
+<li>Recognise the different types of values that variables and constants
+can have and what type of information each of these can hold.</li>
 <li>Know where to find the Arduino Programming Language reference</li>
 </ul>
 </div>
@@ -847,9 +1142,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul>
 </div>
 </section></section><section id="aio-04-connecting_sensor1"><p>Content from <a href="04-connecting_sensor1.html">Connecting the first sensor</a></p>
@@ -881,8 +1179,10 @@ any links that you are not going to use.
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Connect a DHT11 or DHT22 to the microcontroller using a breadboard and connectors</li>
-<li>Write the code required to read the temperature and print it to the serial monitor</li>
+<li>Connect a DHT11 or DHT22 to the microcontroller using a breadboard
+and connectors</li>
+<li>Write the code required to read the temperature and print it to the
+serial monitor</li>
 </ul>
 </div>
 </div>
@@ -892,10 +1192,30 @@ any links that you are not going to use.
 <section id="connecting-the-temperature-sensor"><h2 class="section-heading">Connecting the temperature sensor<a class="anchor" aria-label="anchor" href="#connecting-the-temperature-sensor"></a>
 </h2>
 <hr class="half-width">
-<p>The sensor that we will be using is a DHT11 or a DHT22. The easiest is to use a “module” which is the sensor soldered to a little circuit board. The circuit board includes a resistor which is a tiny component that you might be able to see on the board. If you don’t have the module, but you have the sensor, then you need to obtain a 10K Ohm resister. The first diagram below show how to wire up the module. The second diagram shows how to wire up the sensor using a resistor.</p>
-<figure><img src="fig/DHT22.png" alt="" class="figure mx-auto d-block"><figcaption>Temperature Sensor module (DHT22)</figcaption></figure><figure><img src="fig/DHT22_parts.svg" alt="" class="figure mx-auto d-block"><figcaption>Wiring the DHT11 Temperature Sensor when it is not part of a module</figcaption></figure><p>Before entering our code we need to install a special library that is required for the temperature sensor. Without the library the code that we will need to write to get the sensor to work will be much more complicated. Fortunately there are many people around the world the write the difficult code and make it available as libraries for us to make our lives easier.</p>
-<p>To install the library click on the <code>Tools</code> menu item and then select <code>Manage libraries...</code>. The Library Manager window should pop up. In the text field type <code>dht sensor library</code> and press enter to search for the library. Look for the entry “<strong>DHT sensor library</strong> by <strong>Adafruit</strong>” and then click on the Install button.</p>
-<figure><img src="fig/librarymanager.png" alt="" class="figure mx-auto d-block"><figcaption>Library Manager</figcaption></figure><p>Close the library manager by clicking on the <code>Close</code> button. Next we want to create a new sketch. Click on <code>File</code> and then <code>New</code>. A new instance of the Arduino IDE should open. You can now enter the code below in the editor</p>
+<p>The sensor that we will be using is a DHT11 or a DHT22. The easiest
+is to use a “module” which is the sensor soldered to a little circuit
+board. The circuit board includes a resistor which is a tiny component
+that you might be able to see on the board. If you don’t have the
+module, but you have the sensor, then you need to obtain a 10K Ohm
+resister. The first diagram below show how to wire up the module. The
+second diagram shows how to wire up the sensor using a resistor.</p>
+<figure><img src="fig/DHT22.png" alt="" class="figure mx-auto d-block"><figcaption>Temperature Sensor module (DHT22)</figcaption></figure><figure><img src="fig/DHT22_parts.svg" alt="" class="figure mx-auto d-block"><figcaption>Wiring the DHT11 Temperature Sensor when it is not
+part of a module</figcaption></figure><p>Before entering our code we need to install a special library that is
+required for the temperature sensor. Without the library the code that
+we will need to write to get the sensor to work will be much more
+complicated. Fortunately there are many people around the world the
+write the difficult code and make it available as libraries for us to
+make our lives easier.</p>
+<p>To install the library click on the <code>Tools</code> menu item and
+then select <code>Manage libraries...</code>. The Library Manager window
+should pop up. In the text field type <code>dht sensor library</code>
+and press enter to search for the library. Look for the entry
+“<strong>DHT sensor library</strong> by <strong>Adafruit</strong>” and
+then click on the Install button.</p>
+<figure><img src="fig/librarymanager.png" alt="" class="figure mx-auto d-block"><figcaption>Library Manager</figcaption></figure><p>Close the library manager by clicking on the <code>Close</code>
+button. Next we want to create a new sketch. Click on <code>File</code>
+and then <code>New</code>. A new instance of the Arduino IDE should
+open. You can now enter the code below in the editor</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -904,35 +1224,38 @@ any links that you are not going to use.
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_TYPE DHT22</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_PIN 32 </span><span class="co">// ESP32 pin connected to DHT sensor</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay = <span class="dv">3000</span>;</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>DHT dht_sensor(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>DHT dht_sensor<span class="op">(</span>DHT_SENSOR_PIN<span class="op">,</span> DHT_SENSOR_TYPE<span class="op">);</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  Serial.begin(<span class="dv">9600</span>); <span class="co">// initialize serial</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  Serial.println(F(<span class="st">"Starting ..."</span>));</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  dht_sensor.begin(); <span class="co">// initialize the DHT sensor</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  dht_sensor<span class="op">.</span>begin<span class="op">();</span> <span class="co">// initialize the DHT sensor</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> temperature = dht_sensor.readTemperature();   <span class="co">// read temperature in Celsius</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> temperature <span class="op">=</span> dht_sensor<span class="op">.</span>readTemperature<span class="op">();</span>   <span class="co">// read temperature in Celsius</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (isnan(temperature)) {</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    Serial.println(<span class="st">"Failed to read from DHT sensor!"</span>);</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> tempString[<span class="dv">8</span>];</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    dtostrf(temperature, <span class="dv">1</span>, <span class="dv">2</span>, tempString);</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    Serial.print(<span class="st">"Temperature: "</span>);</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    Serial.println(temperature);</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>isnan<span class="op">(</span>temperature<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Failed to read from DHT sensor!"</span><span class="op">);</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> tempString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    dtostrf<span class="op">(</span>temperature<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> tempString<span class="op">);</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Temperature: "</span><span class="op">);</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>temperature<span class="op">);</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="co">// wait a 3 seconds between readings</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  delay(readingdelay);</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
-<p>Once you have entered the code you can press the <code>Upload</code> button again. The code should compile and then upload to the microcontroller board. Don’t forget to press and hold down the <code>BOOT</code> button until the uploading starts.</p>
+<p>Once you have entered the code you can press the <code>Upload</code>
+button again. The code should compile and then upload to the
+microcontroller board. Don’t forget to press and hold down the
+<code>BOOT</code> button until the uploading starts.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -958,7 +1281,8 @@ any links that you are not going to use.
 <li>Identified the three pins on the sensor</li>
 <li>Identified the three required pins on the ESP32</li>
 <li>Connected the DHT sensor to the ESP32</li>
-<li>Added the required code to the Arduino IDE to read the temperature from the sensor and display it in the serial monitor.</li>
+<li>Added the required code to the Arduino IDE to read the temperature
+from the sensor and display it in the serial monitor.</li>
 </ul>
 </div>
 </div>
@@ -968,9 +1292,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></section></section><section id="aio-05-connecting_sensor2"><p>Content from <a href="05-connecting_sensor2.html">Connecting the second sensor</a></p>
 <hr>
 <p> Last updated on 2022-08-27 | 
@@ -1016,22 +1343,22 @@ any links that you are not going to use.
 </h3>
 <pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN 32 </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay = <span class="dv">3000</span>;</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  Serial.begin(<span class="dv">9600</span>); <span class="co">// initialize serial</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  Serial.println(F(<span class="st">"Starting ..."</span>));</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel = analogRead(LIGHT_SENSOR_PIN);     <span class="co">// read light level</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  Serial.print(<span class="st">"Light: "</span>);</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  Serial.println(lightlevel)};</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel <span class="op">=</span> analogRead<span class="op">(</span>LIGHT_SENSOR_PIN<span class="op">);</span>     <span class="co">// read light level</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Light: "</span><span class="op">);</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>lightlevel<span class="op">)};</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// wait a 3 seconds between readings</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  delay(readingdelay);</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <div class="Discussion">
 <p>Explanation of the code</p>
@@ -1055,9 +1382,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul>
 </div>
 </section></section><section id="aio-06-combine-sensors"><p>Content from <a href="06-combine-sensors.html">Combining the two circuits</a></p>
@@ -1097,8 +1427,10 @@ any links that you are not going to use.
 <div class="section level3">
 <h3 id="todo">ToDo<a class="anchor" aria-label="anchor" href="#todo"></a>
 </h3>
-<p>Explain how to combine the two circuits according to the image below</p>
-<figure><img src="fig/DHT22_LDR.png" alt="" class="figure mx-auto d-block"><figcaption>Circuit with the DHT22 temperature sensor and and LDR light for measuring light intensity</figcaption></figure>
+<p>Explain how to combine the two circuits according to the image
+below</p>
+<figure><img src="fig/DHT22_LDR.png" alt="" class="figure mx-auto d-block"><figcaption>Circuit with the DHT22 temperature sensor and and LDR
+light for measuring light intensity</figcaption></figure>
 </div>
 </section><section id="combine-the-code-for-the-two-circuits"><h2 class="section-heading">Combine the code for the two circuits<a class="anchor" aria-label="anchor" href="#combine-the-code-for-the-two-circuits"></a>
 </h2>
@@ -1113,48 +1445,48 @@ any links that you are not going to use.
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_PIN 32 </span><span class="co">// ESP32 pin connected to DHT sensor</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN 36 </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay = <span class="dv">3000</span>;</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>DHT dht_sensor(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>DHT dht_sensor<span class="op">(</span>DHT_SENSOR_PIN<span class="op">,</span> DHT_SENSOR_TYPE<span class="op">);</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  Serial.begin(<span class="dv">9600</span>); <span class="co">// initialize serial</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  Serial.println(F(<span class="st">"Starting ..."</span>));</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  dht_sensor.begin(); <span class="co">// initialize the DHT sensor</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  dht_sensor<span class="op">.</span>begin<span class="op">();</span> <span class="co">// initialize the DHT sensor</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> temperature = dht_sensor.readTemperature();   <span class="co">// read temperature in Celsius</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel = analogRead(LIGHT_SENSOR_PIN);     <span class="co">// read light level</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> temperature <span class="op">=</span> dht_sensor<span class="op">.</span>readTemperature<span class="op">();</span>   <span class="co">// read temperature in Celsius</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel <span class="op">=</span> analogRead<span class="op">(</span>LIGHT_SENSOR_PIN<span class="op">);</span>     <span class="co">// read light level</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (isnan(temperature)) {</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>isnan<span class="op">(</span>temperature<span class="op">))</span> <span class="op">{</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    Serial.println(<span class="st">"Failed to read from DHT sensor!"</span>);</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Failed to read from DHT sensor!"</span><span class="op">);</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* When reading the temperature and light levels, we get the values</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">       as numbers, but when we send it to the MQTT broker the values</span></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">       have to be converted to strings. We therefore have to declare</span></span>
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">       variables of type char into which the number values can be transferred</span></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co">    */</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> tempString[<span class="dv">8</span>];</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> lightString[<span class="dv">8</span>];</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> tempString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> lightString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Print the temperature to the monitor</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    Serial.print(<span class="st">"Temperature: "</span>);</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    Serial.println(temperature);</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Temperature: "</span><span class="op">);</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>temperature<span class="op">);</span></span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Print the light level to the monitor</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    Serial.print(<span class="st">"Light: "</span>);</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    Serial.println(lightlevel);</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Light: "</span><span class="op">);</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>lightlevel<span class="op">);</span></span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="co">// wait a 3 seconds between readings</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    delay(readingdelay);</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span></code></pre>
 </div>
 <div class="Discussion">
@@ -1179,9 +1511,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></section></section><section id="aio-07-mqtt-code"><p>Content from <a href="07-mqtt-code.html">Using MQTT for the Internet of Things</a></p>
 <hr>
 <p> Last updated on 2022-08-30 | 
@@ -1227,10 +1562,19 @@ any links that you are not going to use.
 <div class="section level3">
 <h3 id="what-is-mqtt">What is MQTT?<a class="anchor" aria-label="anchor" href="#what-is-mqtt"></a>
 </h3>
-<p><a href="https://en.wikipedia.org/wiki/MQTT" class="external-link">Message Queuing Telemetry Transport</a></p>
-<p>MQTT (originally an initialism of MQ Telemetry Transport[a]) is a lightweight, publish-subscribe, machine to machine network protocol. It is designed for connections with remote locations that have devices with resource constraints or limited network bandwidth.</p>
-<p>There are three components to the MQTT architecture, publishers, subscribers and a broker. Publishers are devices on the Internet of Things that publish messages with a specific topic to a broker. Subscribers subscribe to specific topics on the broker. When a new value for a specific topic is published by a publisher, then all the subscribers to that topic will receive it.</p>
-<figure><img src="fig/mqtt_architecture.png" alt="MQTT Architecture" style="width:50.0%" class="figure mx-auto d-block"><figcaption>MQTT Architecture</figcaption></figure><div id="discussion1" class="callout discussion">
+<p><a href="https://en.wikipedia.org/wiki/MQTT" class="external-link">Message Queuing
+Telemetry Transport</a></p>
+<p>MQTT (originally an initialism of MQ Telemetry Transport[a]) is a
+lightweight, publish-subscribe, machine to machine network protocol. It
+is designed for connections with remote locations that have devices with
+resource constraints or limited network bandwidth.</p>
+<p>There are three components to the MQTT architecture, publishers,
+subscribers and a broker. Publishers are devices on the Internet of
+Things that publish messages with a specific topic to a broker.
+Subscribers subscribe to specific topics on the broker. When a new value
+for a specific topic is published by a publisher, then all the
+subscribers to that topic will receive it.</p>
+<figure><img src="fig/mqtt_architecture.png" style="width:50.0%" alt="MQTT Architecture" class="figure mx-auto d-block"><figcaption>MQTT Architecture</figcaption></figure><div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -1240,7 +1584,8 @@ any links that you are not going to use.
 <div class="callout-content">
 <p>Discuss, with the person next to you the following:</p>
 <ol style="list-style-type: decimal">
-<li>What kind of devices we are likely to find on the Internet of things?</li>
+<li>What kind of devices we are likely to find on the Internet of
+things?</li>
 <li>Who would typically publish information from such devices?</li>
 <li>Who would typically subscribe to the data?</li>
 </ol>
@@ -1251,17 +1596,40 @@ any links that you are not going to use.
 <div class="section level3">
 <h3 id="importing-the-mqtt-library-into-the-arduino-ide">Importing the MQTT library into the Arduino IDE<a class="anchor" aria-label="anchor" href="#importing-the-mqtt-library-into-the-arduino-ide"></a>
 </h3>
-<p>To be able to enable MQTT functionality we need to add yet another library to our Arduino IDE. As before select <code>Tools</code> on the menu and then <code>Manage Libraries</code>. Enter <code>PubSubClient</code> into the text box for searching. Scroll down until you find <code>PubSubClient by Nick O'Leary</code> and click the Install button:</p>
-<figure><img src="fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT messaging</figcaption></figure><p>There are three pieces of information that we will need before we enter the code for sending and messages via MQTT:</p>
+<p>To be able to enable MQTT functionality we need to add yet another
+library to our Arduino IDE. As before select <code>Tools</code> on the
+menu and then <code>Manage Libraries</code>. Enter
+<code>PubSubClient</code> into the text box for searching. Scroll down
+until you find <code>PubSubClient by Nick O'Leary</code> and click the
+Install button:</p>
+<figure><img src="fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT
+messaging</figcaption></figure><p>There are three pieces of information that we will need before we
+enter the code for sending and messages via MQTT:</p>
 <ol style="list-style-type: decimal">
 <li>The <code>ssid</code> of your Internet access point</li>
 <li>The password for the access point</li>
 <li>The IP address or hostname of your MQTT broker</li>
 </ol>
-<p>There are several free MQTT servers available on the Internet. Alternatively one can set up one’s own server running an MQTT broker. In the diagrams below two alternative setups are shown. In the first case there is an MQTT server on the Internet that devices can publish or subscribe to. In the second case a local MQTT broker is used which has the advantages that all network traffic can be private, it doesn’t have to be shared to the Internet. For the purposes of this workshop for instance we might want to set up our own server so that we are not dependent on the Internet.</p>
-<figure><img src="fig/mqtt_internet.png" alt="An MQTT broker on the Internet" style="width:50.0%" class="figure mx-auto d-block"><figcaption>An MQTT broker on the Internet</figcaption></figure><figure><img src="fig/mqtt_local_network.png" alt="An MQTT broker on a private network" style="width:50.0%" class="figure mx-auto d-block"><figcaption>An MQTT broker on a private network</figcaption></figure><p>In the sketch below you will have to replace the values assigned to the variables <code>ssid</code>, <code>password</code> and <code>mqtt_server</code>. Your instructor should provide you with the appropriate values which will depend on the MQTT broker you are going to use.</p>
+<p>There are several free MQTT servers available on the Internet.
+Alternatively one can set up one’s own server running an MQTT broker. In
+the diagrams below two alternative setups are shown. In the first case
+there is an MQTT server on the Internet that devices can publish or
+subscribe to. In the second case a local MQTT broker is used which has
+the advantages that all network traffic can be private, it doesn’t have
+to be shared to the Internet. For the purposes of this workshop for
+instance we might want to set up our own server so that we are not
+dependent on the Internet.</p>
+<figure><img src="fig/mqtt_internet.png" style="width:50.0%" alt="An MQTT broker on the Internet" class="figure mx-auto d-block"><figcaption>An MQTT broker on the Internet</figcaption></figure><figure><img src="fig/mqtt_local_network.png" style="width:50.0%" alt="An MQTT broker on a private network" class="figure mx-auto d-block"><figcaption>An MQTT broker on a private network</figcaption></figure><p>In the sketch below you will have to replace the values assigned to
+the variables <code>ssid</code>, <code>password</code> and
+<code>mqtt_server</code>. Your instructor should provide you with the
+appropriate values which will depend on the MQTT broker you are going to
+use.</p>
 
-<p>For now we will continue as if your instructor has set up a local network that includes an access point to which your computer has to connect and an MQTT broker. You might, or might not, be connected to the Internet once you connect to the access point, but that won’t matter.</p>
+<p>For now we will continue as if your instructor has set up a local
+network that includes an access point to which your computer has to
+connect and an MQTT broker. You might, or might not, be connected to the
+Internet once you connect to the access point, but that won’t
+matter.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1273,144 +1641,144 @@ any links that you are not going to use.
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_PIN 32 </span><span class="co">// ESP32 pin connected to DHT sensor</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN 36 </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay = <span class="dv">3000</span>;</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span>* ssid = <span class="st">"raspi-webgui"</span>;</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span>* password = <span class="st">"ChangeMe"</span>;</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span>* mqtt_server = <span class="st">"192.168.0.1"</span>;</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> String your_name = <span class="st">"/JohnSmith"</span>;</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> ssid <span class="op">=</span> <span class="st">"raspi-webgui"</span><span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> password <span class="op">=</span> <span class="st">"ChangeMe"</span><span class="op">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> mqtt_server <span class="op">=</span> <span class="st">"192.168.0.1"</span><span class="op">;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> String your_name <span class="op">=</span> <span class="st">"/JohnSmith"</span><span class="op">;</span></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>DHT dht_sensor(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>WiFiClient espClient;</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>PubSubClient client(espClient);</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>DHT dht_sensor<span class="op">(</span>DHT_SENSOR_PIN<span class="op">,</span> DHT_SENSOR_TYPE<span class="op">);</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>WiFiClient espClient<span class="op">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>PubSubClient client<span class="op">(</span>espClient<span class="op">);</span></span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>String topic_temperature = your_name + <span class="st">"/dht22/temperature"</span>;</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>String topic_light = your_name + <span class="st">"/ldr/light/"</span>;</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>String topic_temperature <span class="op">=</span> your_name <span class="op">+</span> <span class="st">"/dht22/temperature"</span><span class="op">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>String topic_light <span class="op">=</span> your_name <span class="op">+</span> <span class="st">"/ldr/light/"</span><span class="op">;</span></span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  Serial.begin(<span class="dv">9600</span>); <span class="co">// initialize serial</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  Serial.println(F(<span class="st">"Starting ..."</span>));</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  dht_sensor.begin(); <span class="co">// initialize the DHT sensor</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  setup_wifi();</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  client.setServer(mqtt_server, <span class="dv">1883</span>);</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  client.setCallback(callback);</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  dht_sensor<span class="op">.</span>begin<span class="op">();</span> <span class="co">// initialize the DHT sensor</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  setup_wifi<span class="op">();</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>setServer<span class="op">(</span>mqtt_server<span class="op">,</span> <span class="dv">1883</span><span class="op">);</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>setCallback<span class="op">(</span>callback<span class="op">);</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (!client.connected()) {</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    reconnect();</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  client.loop();</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(!</span>client<span class="op">.</span>connected<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    reconnect<span class="op">();</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>loop<span class="op">();</span></span>
 <span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> temperature = dht_sensor.readTemperature();   <span class="co">// read temperature in Celsius</span></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel = analogRead(LIGHT_SENSOR_PIN);     <span class="co">// read light level</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> temperature <span class="op">=</span> dht_sensor<span class="op">.</span>readTemperature<span class="op">();</span>   <span class="co">// read temperature in Celsius</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel <span class="op">=</span> analogRead<span class="op">(</span>LIGHT_SENSOR_PIN<span class="op">);</span>     <span class="co">// read light level</span></span>
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (isnan(temperature)) {</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>isnan<span class="op">(</span>temperature<span class="op">))</span> <span class="op">{</span></span>
 <span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    Serial.println(<span class="st">"Failed to read from DHT sensor!"</span>);</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Failed to read from DHT sensor!"</span><span class="op">);</span></span>
 <span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
 <span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* When reading the temperature and light levels, we get the values</span></span>
 <span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="co">       as numbers, but when we send it to the MQTT broker the values</span></span>
 <span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="co">       have to be converted to strings. We therefore have to declare</span></span>
 <span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="co">       variables of type char into which the number values can be transferred</span></span>
 <span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="co">    */</span></span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> tempString[<span class="dv">8</span>];</span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> lightString[<span class="dv">8</span>];</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> tempString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> lightString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
 <span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="co">/**</span></span>
 <span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="co">     * Transfer the number values into strings</span></span>
 <span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="co">     */</span></span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    dtostrf(temperature, <span class="dv">1</span>, <span class="dv">2</span>, tempString);</span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    dtostrf(lightlevel, <span class="dv">1</span>, <span class="dv">2</span>, lightString);</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    dtostrf<span class="op">(</span>temperature<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> tempString<span class="op">);</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    dtostrf<span class="op">(</span>lightlevel<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> lightString<span class="op">);</span></span>
 <span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Print the temperature to the monitor</span></span>
-<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    Serial.print(<span class="st">"Temperature: "</span>);</span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    Serial.println(temperature);</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Temperature: "</span><span class="op">);</span></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>temperature<span class="op">);</span></span>
 <span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Publish the temperature to the MQTT broker</span></span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    publishMQTT(topic_temperature, tempString);</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    publishMQTT<span class="op">(</span>topic_temperature<span class="op">,</span> tempString<span class="op">);</span></span>
 <span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Print the light level to the monitor</span></span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>    Serial.print(<span class="st">"Light: "</span>);</span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    Serial.println(lightlevel);</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Light: "</span><span class="op">);</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>lightlevel<span class="op">);</span></span>
 <span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Publish the light level to the MQTT broker</span></span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    publishMQTT(topic_light, lightString);</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    publishMQTT<span class="op">(</span>topic_light<span class="op">,</span> lightString<span class="op">);</span></span>
 <span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>    <span class="co">// wait a 3 seconds between readings</span></span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    delay(readingdelay);</span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup_wifi() {</span>
-<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>  delay(<span class="dv">10</span>);</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup_wifi<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">10</span><span class="op">);</span></span>
 <span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>  <span class="co">// We start by connecting to a WiFi network</span></span>
-<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>  Serial.println();</span>
-<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>  Serial.print(<span class="st">"Connecting to "</span>);</span>
-<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>  Serial.println(ssid);</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">();</span></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Connecting to "</span><span class="op">);</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>ssid<span class="op">);</span></span>
 <span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>  WiFi.begin(ssid, password);</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>  WiFi<span class="op">.</span>begin<span class="op">(</span>ssid<span class="op">,</span> password<span class="op">);</span></span>
 <span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (WiFi.status() != WL_CONNECTED) {</span>
-<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>    delay(<span class="dv">500</span>);</span>
-<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>    Serial.print(<span class="st">"."</span>);</span>
-<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(</span>WiFi<span class="op">.</span>status<span class="op">()</span> <span class="op">!=</span> WL_CONNECTED<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>    delay<span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"."</span><span class="op">);</span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>  Serial.println(<span class="st">""</span>);</span>
-<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>  Serial.println(<span class="st">"WiFi connected"</span>);</span>
-<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>  Serial.println(<span class="st">"IP address: "</span>);</span>
-<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>  Serial.println(WiFi.localIP());</span>
-<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">""</span><span class="op">);</span></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"WiFi connected"</span><span class="op">);</span></span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"IP address: "</span><span class="op">);</span></span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>WiFi<span class="op">.</span>localIP<span class="op">());</span></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> callback(<span class="dt">char</span>* topic, byte * message, <span class="dt">unsigned</span> <span class="dt">int</span> length) {</span>
-<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>  Serial.print(<span class="st">"Message arrived on topic: "</span>);</span>
-<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>  Serial.print(topic);</span>
-<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a>  Serial.print(<span class="st">". Message: "</span>);</span>
-<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a>  String messageTemp;</span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> callback<span class="op">(</span><span class="dt">char</span><span class="op">*</span> topic<span class="op">,</span> byte <span class="op">*</span> message<span class="op">,</span> <span class="dt">unsigned</span> <span class="dt">int</span> length<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Message arrived on topic: "</span><span class="op">);</span></span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span>topic<span class="op">);</span></span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">". Message: "</span><span class="op">);</span></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a>  String messageTemp<span class="op">;</span></span>
 <span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; length; i++) {</span>
-<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a>    Serial.print((<span class="dt">char</span>)message[i]);</span>
-<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a>    messageTemp += (<span class="dt">char</span>)message[i];</span>
-<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>  Serial.println();</span>
-<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">((</span><span class="dt">char</span><span class="op">)</span>message<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a>    messageTemp <span class="op">+=</span> <span class="op">(</span><span class="dt">char</span><span class="op">)</span>message<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">();</span></span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> reconnect() {</span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> reconnect<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Loop until we're reconnected</span></span>
-<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (!client.connected()) {</span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(!</span>client<span class="op">.</span>connected<span class="op">())</span> <span class="op">{</span></span>
 <span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Create a random client ID</span></span>
-<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>    String clientId = <span class="st">"ESP32Client-"</span>;</span>
-<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>    clientId += String(random(<span class="bn">0xffff</span>), HEX);</span>
-<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>    Serial.print(clientId + <span class="st">" attempting MQTT connection..."</span>);</span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>    String clientId <span class="op">=</span> <span class="st">"ESP32Client-"</span><span class="op">;</span></span>
+<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>    clientId <span class="op">+=</span> String<span class="op">(</span>random<span class="op">(</span><span class="bn">0xffff</span><span class="op">),</span> HEX<span class="op">);</span></span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span>clientId <span class="op">+</span> <span class="st">" attempting MQTT connection..."</span><span class="op">);</span></span>
 <span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Attempt to connect</span></span>
-<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (client.connect(clientId.c_str(), <span class="st">"jannetta"</span>, <span class="st">"f0r3v3rl1n8x"</span>)) {</span>
-<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a>      Serial.println(<span class="st">"connected"</span>);</span>
-<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a>      Serial.print(<span class="st">"failed, rc="</span>);</span>
-<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a>      Serial.print(client.state());</span>
-<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a>      Serial.println(<span class="st">" try again in 5 seconds"</span>);</span>
+<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>client<span class="op">.</span>connect<span class="op">(</span>clientId<span class="op">.</span>c_str<span class="op">(),</span> <span class="st">"jannetta"</span><span class="op">,</span> <span class="st">"f0r3v3rl1n8x"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"connected"</span><span class="op">);</span></span>
+<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"failed, rc="</span><span class="op">);</span></span>
+<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>print<span class="op">(</span>client<span class="op">.</span>state<span class="op">());</span></span>
+<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>println<span class="op">(</span><span class="st">" try again in 5 seconds"</span><span class="op">);</span></span>
 <span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Wait 5 seconds before retrying</span></span>
-<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a>      delay(<span class="dv">500</span>);</span>
-<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a>      delay<span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
+<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> publishMQTT(String topicString, <span class="dt">char</span> payload[<span class="dv">8</span>]) {</span>
-<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a>  <span class="dt">unsigned</span> <span class="dt">int</span> length = topicString.length() + <span class="dv">1</span>;</span>
-<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>  <span class="dt">char</span> topic[length];</span>
-<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a>  topicString.toCharArray(topic, length);</span>
-<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>  Serial.print(topic);</span>
-<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>  Serial.print(<span class="st">": "</span>);</span>
-<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>  Serial.println(payload);</span>
-<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a>  client.publish(topic, payload, true);</span>
-<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> publishMQTT<span class="op">(</span>String topicString<span class="op">,</span> <span class="dt">char</span> payload<span class="op">[</span><span class="dv">8</span><span class="op">])</span> <span class="op">{</span></span>
+<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a>  <span class="dt">unsigned</span> <span class="dt">int</span> length <span class="op">=</span> topicString<span class="op">.</span>length<span class="op">()</span> <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>  <span class="dt">char</span> topic<span class="op">[</span>length<span class="op">];</span></span>
+<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a>  topicString<span class="op">.</span>toCharArray<span class="op">(</span>topic<span class="op">,</span> length<span class="op">);</span></span>
+<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span>topic<span class="op">);</span></span>
+<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">": "</span><span class="op">);</span></span>
+<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>payload<span class="op">);</span></span>
+<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>publish<span class="op">(</span>topic<span class="op">,</span> payload<span class="op">,</span> true<span class="op">);</span></span>
+<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>String byteArrayToString(byte * byteArray, <span class="dt">unsigned</span> <span class="dt">int</span> length) {</span>
-<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a>  String messageTemp;</span>
-<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="dt">int</span> i = <span class="dv">0</span>; i &lt; length; i++) {</span>
-<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a>    messageTemp += (<span class="dt">char</span>)byteArray[i];</span>
-<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> messageTemp;</span>
-<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>String byteArrayToString<span class="op">(</span>byte <span class="op">*</span> byteArray<span class="op">,</span> <span class="dt">unsigned</span> <span class="dt">int</span> length<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a>  String messageTemp<span class="op">;</span></span>
+<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a>    messageTemp <span class="op">+=</span> <span class="op">(</span><span class="dt">char</span><span class="op">)</span>byteArray<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> messageTemp<span class="op">;</span></span>
+<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
@@ -1443,9 +1811,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul>
 </div>
 </section></section><section id="aio-08-subscribe"><p>Content from <a href="08-subscribe.html">Subscribing to an MQTT topic</a></p>
@@ -1464,7 +1835,8 @@ any links that you are not going to use.
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>What does one need to get the information published by sensors on the IoT?</li>
+<li>What does one need to get the information published by sensors on
+the IoT?</li>
 <li>What is meant by “topic” in terms of MQTT?</li>
 <li>How can I save the published data to file?</li>
 </ul>
@@ -1490,30 +1862,58 @@ any links that you are not going to use.
 <hr class="half-width">
 <p>In the previous episodes we have:</p>
 <ol style="list-style-type: decimal">
-<li>Added the URL in the IDE’s preferences to detect the configurations for the ESP32 board</li>
+<li>Added the URL in the IDE’s preferences to detect the configurations
+for the ESP32 board</li>
 <li>Installed the library required for the DHT sensors</li>
-<li>Connected a DHT11 or DHT22 sensor to an ESP32 microcontroller board</li>
-<li>Entered the code in a sketch to get temperature readings from the DHT sesions</li>
-<li>Connected a Light Dependent Resistor to the same ESP32 microcontroller board</li>
-<li>Entered the code in a sketch to get light level readings from the LDR</li>
-<li>Entered the code in the sketch to connect to our local network and publish the sensor readings to an MQTT broker</li>
+<li>Connected a DHT11 or DHT22 sensor to an ESP32 microcontroller
+board</li>
+<li>Entered the code in a sketch to get temperature readings from the
+DHT sesions</li>
+<li>Connected a Light Dependent Resistor to the same ESP32
+microcontroller board</li>
+<li>Entered the code in a sketch to get light level readings from the
+LDR</li>
+<li>Entered the code in the sketch to connect to our local network and
+publish the sensor readings to an MQTT broker</li>
 </ol></section><section id="subscribing-to-an-mqtt-topic"><h2 class="section-heading">Subscribing to an MQTT topic<a class="anchor" aria-label="anchor" href="#subscribing-to-an-mqtt-topic"></a>
 </h2>
 <hr class="half-width">
-<p>At this point your ESP microcontroller board should have a temperature and a light level sensor on it. It should have connected to your local network and to an MQTT broker and it is publishing the readings to a topic to the MQTT broker.</p>
-<p>We now need client software to connect to the MQTT broker and subscribe to the topic to which your sensor readings are published. There are quite a few clients available as well as libraries for several programming languages including Python. For this lesson we are going to use MQTTX, a cross platform, open source application. Hopefully you were able to install MQTTX as descripted on the <a href="index.html#setup">setup</a> page.</p>
-<p>Let’s start by running MQTTX. If it is the first time you are running it, a window similar to the image below should open:</p>
-<figure><img src="fig/mqttx.png" alt="" class="figure mx-auto d-block"><figcaption>Running MQTTX</figcaption></figure><p>Click on the green <code>+ New Connection</code> button and then following window should appear:</p>
-<figure><img src="fig/new_connection.png" alt="" class="figure mx-auto d-block"><figcaption>New connection in MQTTX</figcaption></figure><p>You now need the information of the MQTT broker that you want to subscribe to. Your instructor should provide you with the correct information. If you are using a local MQTT broker and Raspberry Pi access point your information will be something along the following lines:</p>
+<p>At this point your ESP microcontroller board should have a
+temperature and a light level sensor on it. It should have connected to
+your local network and to an MQTT broker and it is publishing the
+readings to a topic to the MQTT broker.</p>
+<p>We now need client software to connect to the MQTT broker and
+subscribe to the topic to which your sensor readings are published.
+There are quite a few clients available as well as libraries for several
+programming languages including Python. For this lesson we are going to
+use MQTTX, a cross platform, open source application. Hopefully you were
+able to install MQTTX as descripted on the <a href="index.html#setup">setup</a> page.</p>
+<p>Let’s start by running MQTTX. If it is the first time you are running
+it, a window similar to the image below should open:</p>
+<figure><img src="fig/mqttx.png" alt="" class="figure mx-auto d-block"><figcaption>Running MQTTX</figcaption></figure><p>Click on the green <code>+ New Connection</code> button and then
+following window should appear:</p>
+<figure><img src="fig/new_connection.png" alt="" class="figure mx-auto d-block"><figcaption>New connection in MQTTX</figcaption></figure><p>You now need the information of the MQTT broker that you want to
+subscribe to. Your instructor should provide you with the correct
+information. If you are using a local MQTT broker and Raspberry Pi
+access point your information will be something along the following
+lines:</p>
 <ol style="list-style-type: decimal">
 <li>Name: raspi-webgui (this can be any name of your choosing)</li>
-<li>Client ID: mqttx_46a41312 (this will be different for everyone. You can leave it as is, or change it if you want.)</li>
+<li>Client ID: mqttx_46a41312 (this will be different for everyone. You
+can leave it as is, or change it if you want.)</li>
 <li>Host mqtt:// raspap.local</li>
 <li>Port: 1883</li>
 </ol>
-<p>Click on <code>Connect</code> in the top right hand corner of the window. A small box should appear for a short while, saying <code>CONNECTED</code>, after which the screen should look as follows:</p>
-<figure><img src="fig/connected.png" alt="" class="figure mx-auto d-block"><figcaption>MQTTX connected to broker</figcaption></figure><p>We are now connected to the MQTT broker and we can now subscribe to a topic.</p>
-<p>Click on th <code>+New Subscription</code> button. Enter <code>/JohnSmith/dht22/temperature</code> (replacing JohnSmith with your name as you entered it into the sketch) in the <code>*Topic</code> field and click the <code>Confirm button</code>.</p>
+<p>Click on <code>Connect</code> in the top right hand corner of the
+window. A small box should appear for a short while, saying
+<code>CONNECTED</code>, after which the screen should look as
+follows:</p>
+<figure><img src="fig/connected.png" alt="" class="figure mx-auto d-block"><figcaption>MQTTX connected to broker</figcaption></figure><p>We are now connected to the MQTT broker and we can now subscribe to a
+topic.</p>
+<p>Click on th <code>+New Subscription</code> button. Enter
+<code>/JohnSmith/dht22/temperature</code> (replacing JohnSmith with your
+name as you entered it into the sketch) in the <code>*Topic</code> field
+and click the <code>Confirm button</code>.</p>
 <figure><img src="fig/new_subscription.png" alt="" class="figure mx-auto d-block"><figcaption>New Subscription</figcaption></figure><p>You should now see messages pop up showing the top and a value.</p>
 <figure><img src="fig/subscribed.png" alt="" class="figure mx-auto d-block"><figcaption>Subscribed</figcaption></figure><div id="discussion1" class="callout discussion">
 <div class="callout-square">
@@ -1523,14 +1923,20 @@ any links that you are not going to use.
 <h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
 </h3>
 <div class="callout-content">
-<p>Can you add a new subscription to subscribe to the light level that is being published from your ESP32?</p>
+<p>Can you add a new subscription to subscribe to the light level that
+is being published from your ESP32?</p>
 </div>
 </div>
 </div>
 </section><section id="exporting-data"><h2 class="section-heading">Exporting data<a class="anchor" aria-label="anchor" href="#exporting-data"></a>
 </h2>
 <hr class="half-width">
-<p>MQTTX allows us to export the data that it receives to various formats. Allow MQTTX to run for a while to accumulate some data and then export the data to a JSON file. It is possible to export the data to a CSV but the format appears to be in a somewhat obscure format. It is possible to use convert the JSON to CSV using a converter such as the online converter that is available at <a href="https://www.convertcsv.com/json-to-csv.htm" class="external-link">www.convertcsv.com/json-to-csv.htm</a></p>
+<p>MQTTX allows us to export the data that it receives to various
+formats. Allow MQTTX to run for a while to accumulate some data and then
+export the data to a JSON file. It is possible to export the data to a
+CSV but the format appears to be in a somewhat obscure format. It is
+possible to use convert the JSON to CSV using a converter such as the
+online converter that is available at <a href="https://www.convertcsv.com/json-to-csv.htm" class="external-link">www.convertcsv.com/json-to-csv.htm</a></p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1552,9 +1958,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></section></section>
 </div>
     </main>
@@ -1580,9 +1989,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.13" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.5.1" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.15" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.15" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.5.2" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -1603,9 +2012,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/aio.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/aio.html",
-  "dateCreated": "2023-02-21",
-  "dateModified": "2023-04-04",
-  "datePublished": "2023-04-04"
+  "dateCreated": "2023-04-10",
+  "dateModified": "2023-04-10",
+  "datePublished": "2023-04-10"
 }
 
   </script><script>

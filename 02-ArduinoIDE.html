@@ -164,9 +164,12 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
-<li><a href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno">Configuring the IDE for use with boards other than an Arduino Uno</a></li>
+<li><a href="#running-the-arduino-ide">Running the Arduino IDE</a></li>
+<li><a href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno">Configuring the IDE for use with boards other than an Arduino
+Uno</a></li>
 <li><a href="#what-is-compiling">What is “compiling”?</a></li>
 <li><a href="#selecting-the-correct-board">Selecting the correct board</a></li>
+<li><a href="#connecting-the-board-to-the-computer">Connecting the board to the computer</a></li>
 <li><a href="#selecting-the-correct-serial-port-in-the-ide">Selecting the correct serial port in the IDE</a></li>
 <li><a href="#upload-our-first-sketch">Upload our first sketch</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -315,7 +318,8 @@
 <h3 class="card-title">Objectives</h3>
 <ul><li>Explain what an IDE is.</li>
 <li>Explain what the Arduino IDE is used for.</li>
-<li>Identify microcontrollers that can be programmed with the Arduino IDE.</li>
+<li>Identify microcontrollers that can be programmed with the Arduino
+IDE.</li>
 <li>Run the Arduino IDE.</li>
 <li>Connect the microcontroller board to the computer.</li>
 <li>Connect the microcontroller to the Arduino IDE.</li>
@@ -327,81 +331,222 @@
 </div>
 <section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<hr class="half-width"><p>Just like computers, microcontrollers have memory into which we can load programs. To make things easier and to be more productive, programmers have developed software called Integrated Development Environments (IDE). The IDEs provide an editor into which one can type the programming instructions and they usually also make provision for <strong><em>syntax highlighting</em></strong>. Syntax highlighting just means that certain keywords are coloured and that makes it much easier to read. The IDEs also provide ways of uploading code to devices and running the programs. The Arduino IDE was specifically developed for writing programs that uploaded and run on motorcontrollers. Originally it was aimed just at the Arduino but because it is such a convenient environment to work in, it has now been extended to also workwith other microcontrollers.</p>
-</section><figure id="running-the-arduino-ide"><h2 class="section-heading">Running the Arduino IDE<a class="anchor" aria-label="anchor" href="#running-the-arduino-ide"></a>
+<hr class="half-width"><p>Just like computers, microcontrollers have memory into which we can
+load programs. To make things easier and to be more productive,
+programmers have developed software called Integrated Development
+Environments (IDE). The IDEs provide an editor into which one can type
+the programming instructions and they usually also make provision for
+<strong><em>syntax highlighting</em></strong>. Syntax highlighting just
+means that certain keywords are coloured and that makes it much easier
+to read. The IDEs also provide ways of uploading code to devices and
+running the programs. The Arduino IDE was specifically developed for
+writing programs that uploaded and run on motorcontrollers. Originally
+it was aimed just at the Arduino but because it is such a convenient
+environment to work in, it has now been extended to also workwith other
+microcontrollers.</p>
+</section><section id="running-the-arduino-ide"><h2 class="section-heading">Running the Arduino IDE<a class="anchor" aria-label="anchor" href="#running-the-arduino-ide"></a>
 </h2>
-<hr class="half-width"><p>For this episode we have to assume that you were able to successfully install the Arduino IDE and that you are able to start the software from the start menu or the desktop of your computer. When you run the software you will first see the splash window:</p>
-<img src="fig/ArduinoIDE_startup.png" title="fig:" alt="Arduino Splash Window" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
-</figcaption><p>After a while the IDE will open. It is actually quite a simple interface. At the top you should see the File, Edit, Sketch, Tools and Help menu items. Just below the menu there are five icons to the left and one on the far right. Below the icons you should see a tab with a filename and a white editing area. Below the editor is a black terminal:</p>
-<img src="fig/ArduinoIDE.png" title="fig:" alt="Arduino IDE" class="figure mx-auto d-block"><figcaption align="center"><b>The Arduino IDE main window</b>
-</figcaption><p>The white area is where you will be typing the code that will be uploaded to the microcontroller. In the black area you will see messages about the <em>compilation</em> of the code and the uploading process. Right at the bottom is a status bar where you will eventually be able to see whether the IDE could connect to your motorcontroller.</p>
-<p>The first time you run the IDE the status bar will show the string <code>Arduino Uno on /dev/ttyAM0</code> and in the editor you will see some skeleton code. Note the syntax highlighting:</p>
+<hr class="half-width"><p>For this episode we have to assume that you were able to successfully
+install the Arduino IDE and that you are able to start the software from
+the start menu or the desktop of your computer. When you run the
+software you will first see the splash window:</p>
+<figure><img src="fig/ArduinoIDE_startup.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino Splash Window</figcaption></figure><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
+</figcaption><p>After a while the IDE will open. It is actually quite a simple
+interface. At the top you should see the File, Edit, Sketch, Tools and
+Help menu items. Just below the menu there are five icons to the left
+and one on the far right. Below the icons you should see a tab with a
+filename and a white editing area. Below the editor is a black
+terminal:</p>
+<figure><img src="fig/ArduinoIDE.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino IDE</figcaption></figure><figcaption align="center"><b>The Arduino IDE main window</b>
+</figcaption><p>The white area is where you will be typing the code that will be
+uploaded to the microcontroller. In the black area you will see messages
+about the <em>compilation</em> of the code and the uploading process.
+Right at the bottom is a status bar where you will eventually be able to
+see whether the IDE could connect to your motorcontroller.</p>
+<p>The first time you run the IDE the status bar will show the string
+<code>Arduino Uno on /dev/ttyAM0</code> and in the editor you will see
+some skeleton code. Note the syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
-</figure><section id="configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"><h2 class="section-heading">Configuring the IDE for use with boards other than an Arduino Uno<a class="anchor" aria-label="anchor" href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"></a>
+</section><section id="configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"><h2 class="section-heading">Configuring the IDE for use with boards other than an Arduino
+Uno<a class="anchor" aria-label="anchor" href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"></a>
 </h2>
-<hr class="half-width"><p>If you will be using an Arduino or an Arduino compatible device, you don’t have to complete the steps in this section and you can skip to the secion on <strong>compiling</strong>.</p>
-<p>By default the IDE is configured to program an Arduino Uno but we will be using an ESP32 WROOM 32 board so we first need to configure the IDE before we can start coding. Start by clicking on the <code>File</code> menu item and then on <code>Preferences</code>. Towards the bottom of the Preferences window you should find a text area with the label <code>Additional Boards Manager URLs:</code>:</p>
-<figure><img src="fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><p>To find the appropriate URL you need to open a web browser and navigate to: <code>https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls</code>. For the ESP32-WROOM-32 you have to find the line that reads:</p>
+<hr class="half-width"><p>If you will be using an Arduino or an Arduino compatible device, you
+don’t have to complete the steps in this section and you can skip to the
+secion on <strong>compiling</strong>.</p>
+<p>By default the IDE is configured to program an Arduino Uno but we
+will be using an ESP32 WROOM 32 board so we first need to configure the
+IDE before we can start coding. Start by clicking on the
+<code>File</code> menu item and then on <code>Preferences</code>.
+Towards the bottom of the Preferences window you should find a text area
+with the label <code>Additional Boards Manager URLs:</code>:</p>
+<figure><img src="fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><p>To find the appropriate URL you need to open a web browser and
+navigate to:
+<code>https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls</code>.
+For the ESP32-WROOM-32 you have to find the line that reads:</p>
 <p><strong>Espressif ESP32:</strong> <a href="https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json" class="external-link uri">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</a></p>
-<p>Copy and paste the address into the text area of the preferences window:</p>
+<p>Copy and paste the address into the text area of the preferences
+window:</p>
 <figure><img src="fig/addURL.png" alt="" class="figure mx-auto d-block"><figcaption>Enter additional boards manager URLs</figcaption></figure><p>Click on <code>OK</code></p>
-<p>What we have just done is to tell the IDE where to find more information about the ESP32 boards. Because the ESP32 series use a different microcontrollers to the Arduino Uno our programs have to be <em>compiled</em> differently. By default all the Arduino boards are immediately available for selection in the IDE but for other boards we have to give the IDE a place where it can find the information for <em>compiling</em> the code for those other boards.</p>
+<p>What we have just done is to tell the IDE where to find more
+information about the ESP32 boards. Because the ESP32 series use a
+different microcontrollers to the Arduino Uno our programs have to be
+<em>compiled</em> differently. By default all the Arduino boards are
+immediately available for selection in the IDE but for other boards we
+have to give the IDE a place where it can find the information for
+<em>compiling</em> the code for those other boards.</p>
 </section><section id="what-is-compiling"><h2 class="section-heading">What is “compiling”?<a class="anchor" aria-label="anchor" href="#what-is-compiling"></a>
 </h2>
-<hr class="half-width"><p>We have used the term “compiling” a few times now. But what is that? You’ll notice, that once we start programming, the programming language uses English words. But, computers do not understand English. Computers understand only 0 and 1. A compiler takes the human readable programming language that we entered into the editor and “translates” it into instructions consisting of 0 and 1 that makes complete sense to the microcontroller. Although all microcontrollers understand 0 and 1, the instructions for different microcontrollers differ. The 0s and 1s are like sounds are to us humans. But different human languages combine the sounds differently. Similarly the 0s and 1s need to be arranged differently for microcontrollers designed by different manufacturers or even different models of microcontrollers manufactured by the same manufacturer. For this reason we have to tell the IDE which microcontroller board we are using so that the compiler can translate our English code into the correct <code>dialect</code> of microcontroller language.</p>
+<hr class="half-width"><p>We have used the term “compiling” a few times now. But what is that?
+You’ll notice, that once we start programming, the programming language
+uses English words. But, computers do not understand English. Computers
+understand only 0 and 1. A compiler takes the human readable programming
+language that we entered into the editor and “translates” it into
+instructions consisting of 0 and 1 that makes complete sense to the
+microcontroller. Although all microcontrollers understand 0 and 1, the
+instructions for different microcontrollers differ. The 0s and 1s are
+like sounds are to us humans. But different human languages combine the
+sounds differently. Similarly the 0s and 1s need to be arranged
+differently for microcontrollers designed by different manufacturers or
+even different models of microcontrollers manufactured by the same
+manufacturer. For this reason we have to tell the IDE which
+microcontroller board we are using so that the compiler can translate
+our English code into the correct <code>dialect</code> of
+microcontroller language.</p>
 </section><section id="selecting-the-correct-board"><h2 class="section-heading">Selecting the correct board<a class="anchor" aria-label="anchor" href="#selecting-the-correct-board"></a>
 </h2>
-<hr class="half-width"><p>To select the board you want to compile for click on the <code>Tools</code> menu item, and then on <code>Board:</code>. On the dropdown menu, select the microcontroller board that you will be using. If it is not in the list, click on <code>Boards Manager</code> which is right at the top. The <code>Boards Manager</code> should pop up.</p>
-<figure><img src="fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><p>There will be several options available. If you will be using the ESP32 scroll down to find <strong>esp32</strong>. You can also type esp32 in the the text area right at the top of the window and then press enter. This will then perform a search and you should be able to find the esp32 option a little quicker. If you hover your mouse over the <strong>esp32</strong> secion, a box with a version and an <code>Install</code> button should appear. Leave the version, which should be the latest, as is and click on the <code>Install</code> button.</p>
-<figure><img src="fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><p>When the installation is completed click the <code>Close</code> button.</p>
-<p>If your Arduino is on the list to start with and you don’t need to install other boards, then just select the board you are using. If you had to install the <code>esp32</code> boards, you will have to now click on the <code>Tools</code> menu option again and then select <code>Boards</code>. There should now be options for <code>Arduino AVR boards</code> and <code>ESP Arduino</code>. Select the ESP option and then select the board you are using which, if you are using the <code>ESP32 WROOM 32</code>, should be <code>DOIT ESP32 DevKit V1</code></p>
-</section><figure id="connecting-the-board-to-the-computer"><h2 class="section-heading">Connecting the board to the computer<a class="anchor" aria-label="anchor" href="#connecting-the-board-to-the-computer"></a>
+<hr class="half-width"><p>To select the board you want to compile for click on the
+<code>Tools</code> menu item, and then on <code>Board:</code>. On the
+dropdown menu, select the microcontroller board that you will be using.
+If it is not in the list, click on <code>Boards Manager</code> which is
+right at the top. The <code>Boards Manager</code> should pop up.</p>
+<figure><img src="fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><p>There will be several options available. If you will be using the
+ESP32 scroll down to find <strong>esp32</strong>. You can also type
+esp32 in the the text area right at the top of the window and then press
+enter. This will then perform a search and you should be able to find
+the esp32 option a little quicker. If you hover your mouse over the
+<strong>esp32</strong> secion, a box with a version and an
+<code>Install</code> button should appear. Leave the version, which
+should be the latest, as is and click on the <code>Install</code>
+button.</p>
+<figure><img src="fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><p>When the installation is completed click the <code>Close</code>
+button.</p>
+<p>If your Arduino is on the list to start with and you don’t need to
+install other boards, then just select the board you are using. If you
+had to install the <code>esp32</code> boards, you will have to now click
+on the <code>Tools</code> menu option again and then select
+<code>Boards</code>. There should now be options for
+<code>Arduino AVR boards</code> and <code>ESP Arduino</code>. Select the
+ESP option and then select the board you are using which, if you are
+using the <code>ESP32 WROOM 32</code>, should be
+<code>DOIT ESP32 DevKit V1</code></p>
+</section><section id="connecting-the-board-to-the-computer"><h2 class="section-heading">Connecting the board to the computer<a class="anchor" aria-label="anchor" href="#connecting-the-board-to-the-computer"></a>
 </h2>
-<hr class="half-width"><p>To connect the motorcontroller board to the computer we need a USB cable. USB cables come in different flavours. You might know this from experience with your mobile/cell phone. The image below shows the names and shapes of the different types of USB connectors:</p>
-<img src="fig/USBConnectors.png" title="fig:" alt="USB connectors" class="figure mx-auto d-block"><figcaption align="center">
-Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons
-</figcaption><p>Most computers still have USB type A ports. The latest laptops might have USB C. An Arduino Uno usually has a type B USB port. So for an Uno you will need a cable that has a type A connector on the one side and a type b connector on the other. If your laptop has a type C port you will need type A to type C converter to make the cable fit. An Arduino nano will probably need a type A to type Mini-B cable and an ESP32 will need a type A to Micro-B cable. Chances are that, if you are using devices provided by your host, that they will have the correct cables. Just be aware that if your laptop has a type C port you might need an adapter.</p>
-<p>You can now use the cable to connect the motorcontroller board to the computer. Windows computers usually play a sound when you connect a USB device.</p>
-</figure><section id="selecting-the-correct-serial-port-in-the-ide"><h2 class="section-heading">Selecting the correct serial port in the IDE<a class="anchor" aria-label="anchor" href="#selecting-the-correct-serial-port-in-the-ide"></a>
+<hr class="half-width"><p>To connect the motorcontroller board to the computer we need a USB
+cable. USB cables come in different flavours. You might know this from
+experience with your mobile/cell phone. The image below shows the names
+and shapes of the different types of USB connectors:</p>
+<figure><img src="fig/USBConnectors.png" alt="" class="figure mx-auto d-block"><figcaption>USB connectors</figcaption></figure><figcaption align="center">
+Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/4.0</a>, via
+Wikimedia Commons
+</figcaption><p>Most computers still have USB type A ports. The latest laptops might
+have USB C. An Arduino Uno usually has a type B USB port. So for an Uno
+you will need a cable that has a type A connector on the one side and a
+type b connector on the other. If your laptop has a type C port you will
+need type A to type C converter to make the cable fit. An Arduino nano
+will probably need a type A to type Mini-B cable and an ESP32 will need
+a type A to Micro-B cable. Chances are that, if you are using devices
+provided by your host, that they will have the correct cables. Just be
+aware that if your laptop has a type C port you might need an
+adapter.</p>
+<p>You can now use the cable to connect the motorcontroller board to the
+computer. Windows computers usually play a sound when you connect a USB
+device.</p>
+</section><section id="selecting-the-correct-serial-port-in-the-ide"><h2 class="section-heading">Selecting the correct serial port in the IDE<a class="anchor" aria-label="anchor" href="#selecting-the-correct-serial-port-in-the-ide"></a>
 </h2>
-<hr class="half-width"><p>You should now be able to get your Arduino IDE to recognise your motorcontroller board. In the IDE, click on <code>Tools</code> and then on Port. You should see at leat one but perhaps more ports listed. Your IDE might already have selected the port automatically when you connected the cable. On Windows the devices are usually named COM1, COM2, COM3 etc. Figuring out which port is being used is sometimes a bit messy. Your instructor or workshop helpers might be able to assist you with this.</p>
-<p>On Windows it might also be necessary for you to install the serial drivers required for the ESP32. If you notice the <code>Port</code> item on the <code>Tools</code> menu is greyed out then this is probably required. To download the drivers go to:</p>
-<p><a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads" class="external-link">CP210x USB to UART Bridge</a></p>
+<hr class="half-width"><p>You should now be able to get your Arduino IDE to recognise your
+motorcontroller board. In the IDE, click on <code>Tools</code> and then
+on Port. You should see at leat one but perhaps more ports listed. Your
+IDE might already have selected the port automatically when you
+connected the cable. On Windows the devices are usually named COM1,
+COM2, COM3 etc. Figuring out which port is being used is sometimes a bit
+messy. Your instructor or workshop helpers might be able to assist you
+with this.</p>
+<p>On Windows it might also be necessary for you to install the serial
+drivers required for the ESP32. If you notice the <code>Port</code> item
+on the <code>Tools</code> menu is greyed out then this is probably
+required. To download the drivers go to:</p>
+<p><a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads" class="external-link">CP210x
+USB to UART Bridge</a></p>
 <p>Select: <code>CP210x Windows Drivers v6.7.6 9/3/2020</code></p>
-<p>When you click on the link it should download a file called <code>CP210x_Windows_Drivers.zip</code>, to your computer. Right click and extract the contents from the zip file. There should be two <code>.exe</code> files extracted. Depending on your computer you have to double click on one of these to install the driver. If you are not sure which one to select you can click on the x86 version first. It will either install or you’ll get a message warning you that your computer has a 64bit architecture and that you should install the 64bit version. In that case double click the x64 version to install the driver. After installation the <code>Port</code> item on the <code>Tools</code> menu should not be greyed anymore and you should be able to click on it to select a COM port.</p>
+<p>When you click on the link it should download a file called
+<code>CP210x_Windows_Drivers.zip</code>, to your computer. Right click
+and extract the contents from the zip file. There should be two
+<code>.exe</code> files extracted. Depending on your computer you have
+to double click on one of these to install the driver. If you are not
+sure which one to select you can click on the x86 version first. It will
+either install or you’ll get a message warning you that your computer
+has a 64bit architecture and that you should install the 64bit version.
+In that case double click the x64 version to install the driver. After
+installation the <code>Port</code> item on the <code>Tools</code> menu
+should not be greyed anymore and you should be able to click on it to
+select a COM port.</p>
 </section><section id="upload-our-first-sketch"><h2 class="section-heading">Upload our first sketch<a class="anchor" aria-label="anchor" href="#upload-our-first-sketch"></a>
 </h2>
-<hr class="half-width"><p>If all went well you should now be able to upload a program to the motorcontroller board. We are going to enter a very simple program just to make sure everything is working. En the editor part of the IDE, modify the code to read as follows:</p>
+<hr class="half-width"><p>If all went well you should now be able to upload a program to the
+motorcontroller board. We are going to enter a very simple program just
+to make sure everything is working. En the editor part of the IDE,
+modify the code to read as follows:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> Serial.begin(<span class="dv">9600</span>);</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> Serial.println(<span class="st">"Hello"</span>);</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> delay(<span class="dv">5000</span>);</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Hello"</span><span class="op">);</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> delay<span class="op">(</span><span class="dv">5000</span><span class="op">);</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
-<p>We’ll go into more detail about programming the motorcontroller in the next episode. This little program is just for testing. All it is going to do is to print the word <code>Hello</code> in the <strong><em>monitor</em></strong>, which we will open after compiling and uploading the program. To compile and upload press the second button from the left with the arrow pointing to the right. See the image below:</p>
-<figure><img src="fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><p>If all goes well you should see messages displayed in the terminal section below the editor. The messages should be similar to what is shown in the image. The progress counter should say <code>(100%)</code>, indicating the all of the compiled code has been uploaded successfully:</p>
-<figure><img src="fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>If you are getting an error message similar to this, ``` Connecting……………………………….An error occurred while uploading the sketch .</p>
-<p>A fatal error occurred: Failed to connect to ESP32: Wrong boot mode detected (0x13)! The chip needs to be in download mode. For troubleshooting steps visit: <a href="https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html" class="external-link uri">https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html</a> ```</p>
-<p>then you might have to download the <code>BOOT</code> button on your microcontroller board. If you wait for the message to say <code>Connecting ..</code> and start holding down the button when the dots appear, the code will suddenly start uploading.</p>
-<p>You can now open the serial monitor by clicking first on <code>Tools</code> and then on <code>Serial Monitor</code>. The word <code>Hello</code> should now be printed to the monitor every five seconds.</p>
+<p>We’ll go into more detail about programming the motorcontroller in
+the next episode. This little program is just for testing. All it is
+going to do is to print the word <code>Hello</code> in the
+<strong><em>monitor</em></strong>, which we will open after compiling
+and uploading the program. To compile and upload press the second button
+from the left with the arrow pointing to the right. See the image
+below:</p>
+<figure><img src="fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><p>If all goes well you should see messages displayed in the terminal
+section below the editor. The messages should be similar to what is
+shown in the image. The progress counter should say <code>(100%)</code>,
+indicating the all of the compiled code has been uploaded
+successfully:</p>
+<figure><img src="fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>If you are getting an error message similar to this, ```
+Connecting……………………………….An error occurred while uploading the sketch
+.</p>
+<p>A fatal error occurred: Failed to connect to ESP32: Wrong boot mode
+detected (0x13)! The chip needs to be in download mode. For
+troubleshooting steps visit: <a href="https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html" class="external-link uri">https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html</a>
+```</p>
+<p>then you might have to download the <code>BOOT</code> button on your
+microcontroller board. If you wait for the message to say
+<code>Connecting ..</code> and start holding down the button when the
+dots appear, the code will suddenly start uploading.</p>
+<p>You can now open the serial monitor by clicking first on
+<code>Tools</code> and then on <code>Serial Monitor</code>. The word
+<code>Hello</code> should now be printed to the monitor every five
+seconds.</p>
 <figure><img src="fig/monitor.png" alt="" class="figure mx-auto d-block"><figcaption>Serial Monitor</figcaption></figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -412,7 +557,8 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 <div class="callout-content">
 <ul><li>Explain what an IDE is.</li>
 <li>Explain what the Arduino IDE is used for.</li>
-<li>Identify microcontrollers that can be programmed with the Arduino IDE.</li>
+<li>Identify microcontrollers that can be programmed with the Arduino
+IDE.</li>
 <li>Run the Arduino IDE.</li>
 <li>Connect the microcontroller board to the computer.</li>
 <li>Connect the microcontroller to the Arduino IDE.</li>
@@ -426,9 +572,12 @@ Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/license
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="01-introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -459,9 +608,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.13" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.5.1" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.15" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.15" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.5.2" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -481,9 +630,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/02-ArduinoIDE.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/02-ArduinoIDE.html",
-  "dateCreated": "2023-02-21",
+  "dateCreated": "2023-04-10",
   "dateModified": "2022-09-11",
-  "datePublished": "2023-04-04"
+  "datePublished": "2023-04-10"
 }
 
   </script><script>

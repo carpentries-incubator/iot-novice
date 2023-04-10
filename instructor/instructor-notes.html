@@ -330,9 +330,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 <ul>
-<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul>
 <section id="aggregate-instructor-notes"><section id="01-introduction"><h2 class="section-heading"><a href="01-introduction.html">An Introduction to the Internet of Things</a></h2>
 <hr class="half-width">
@@ -344,13 +347,26 @@ any links that you are not going to use.
 <hr class="half-width"></section><section id="06-combine-sensors"><h2 class="section-heading"><a href="06-combine-sensors.html">Combining the two circuits</a></h2>
 <hr class="half-width"></section><section id="07-mqtt-code"><h2 class="section-heading"><a href="07-mqtt-code.html">Using MQTT for the Internet of Things</a></h2>
 <hr class="half-width">
-<p>To avoid the requirement of Internet access for this lesson it is possible to set up and access point and MQTT broker using a Raspberry Pi. It could be done with any available computer, really, but the RPi makes for a simple solution that one can prepare beforehand and keep just for this purpose. It is small and easy to take along to a workshop.</p>
-<p>This has only been tested with a RPi 4 with 2GB of RAM. Older RPis should work.</p>
+<p>To avoid the requirement of Internet access for this lesson it is
+possible to set up and access point and MQTT broker using a Raspberry
+Pi. It could be done with any available computer, really, but the RPi
+makes for a simple solution that one can prepare beforehand and keep
+just for this purpose. It is small and easy to take along to a
+workshop.</p>
+<p>This has only been tested with a RPi 4 with 2GB of RAM. Older RPis
+should work.</p>
 <ol style="list-style-type: decimal">
-<li>Using the Raspberry Pi Imager, select the Raspberry Pi OS Lite version of the operating system.</li>
-<li>Using the settinngs menu, enable SSH and configure the wireless LAN. The settings are very much determined by your Internet connectivity and network setup so it might be worth looking at documentation on the Internet for your specific circumstances. Make sure you set the Wireless LAN coutry and the locale settings.</li>
-<li>Write the operating system to a micro-SD card and start up the RPi. You should be able to ssh into the RPi at this point</li>
-<li>To create an access point we will use the software developed by the open-source project RaspAP (<a href="https://raspap.com/" class="external-link uri">https://raspap.com/</a>)</li>
+<li>Using the Raspberry Pi Imager, select the Raspberry Pi OS Lite
+version of the operating system.</li>
+<li>Using the settinngs menu, enable SSH and configure the wireless LAN.
+The settings are very much determined by your Internet connectivity and
+network setup so it might be worth looking at documentation on the
+Internet for your specific circumstances. Make sure you set the Wireless
+LAN coutry and the locale settings.</li>
+<li>Write the operating system to a micro-SD card and start up the RPi.
+You should be able to ssh into the RPi at this point</li>
+<li>To create an access point we will use the software developed by the
+open-source project RaspAP (<a href="https://raspap.com/" class="external-link uri">https://raspap.com/</a>)</li>
 <li>To install RaspAP:</li>
 </ol>
 <div class="codewrapper sourceCode" id="cb1">
@@ -367,7 +383,8 @@ any links that you are not going to use.
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-sL</span> https://install.raspap.com <span class="kw">|</span> <span class="fu">bash</span></span></code></pre>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>You should now be able to connect to the Access point with the following information:</li>
+<li>You should now be able to connect to the Access point with the
+following information:</li>
 </ol>
 <pre><code>    IP address: 10.3.141.1
     Username: admin
@@ -376,9 +393,15 @@ any links that you are not going to use.
     SSID: raspi-webgui
     Password: ChangeMe</code></pre>
 <ol start="7" style="list-style-type: decimal">
-<li>Using a browser navigate to 10.3.141.1 and log in using as user <code>admin</code> with password <code>secret</code>. Change the IP address to <code>192.168.0.1</code> and the DHCP range to <code>192.168.0.50 - 192.168.0.255</code>. You don’t have to do this but if you don’t you’ll have to adapt the IP address for the MQTT server in the lesson.</li>
+<li>Using a browser navigate to 10.3.141.1 and log in using as user
+<code>admin</code> with password <code>secret</code>. Change the IP
+address to <code>192.168.0.1</code> and the DHCP range to
+<code>192.168.0.50 - 192.168.0.255</code>. You don’t have to do this but
+if you don’t you’ll have to adapt the IP address for the MQTT server in
+the lesson.</li>
 <li>Reboot the RPi</li>
-<li>Log into the RPi again. We now have to install Mosquitto which is the MQTT broker and client</li>
+<li>Log into the RPi again. We now have to install Mosquitto which is
+the MQTT broker and client</li>
 <li>In the terminal type the following command:</li>
 </ol>
 <div class="codewrapper sourceCode" id="cb4">
@@ -388,7 +411,8 @@ any links that you are not going to use.
 </div>
 <ol start="11" style="list-style-type: decimal">
 <li>Reboot again just to be sure</li>
-<li>Your RPi should now be running RaspAP for students to connect to for an Access Point and it should be running the Mosquitto broker.</li>
+<li>Your RPi should now be running RaspAP for students to connect to for
+an Access Point and it should be running the Mosquitto broker.</li>
 </ol>
 <hr></section><section id="08-subscribe"><h2 class="section-heading"><a href="08-subscribe.html">Subscribing to an MQTT topic</a></h2>
 <hr class="half-width"></section></section>
@@ -416,9 +440,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.13" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.5.1" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.15" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.15" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.5.2" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer>
 </div> <!-- / div.container -->
@@ -439,9 +463,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/instructor-notes.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/instructor-notes.html",
-  "dateCreated": "2023-02-21",
-  "dateModified": "2023-04-04",
-  "datePublished": "2023-04-04"
+  "dateCreated": "2023-04-10",
+  "dateModified": "2023-04-10",
+  "datePublished": "2023-04-10"
 }
 
   </script><script>

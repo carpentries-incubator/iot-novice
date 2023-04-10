@@ -274,21 +274,41 @@
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Setup</h1>
       
 
-<p>This lesson introduces learners to the Internet of Things. A few things are required to take part in this lesson:</p>
-<ul><li>A laptop or a desktop computer with Linux, MacOS or Windows as an operating system. You can also use a Raspberry Pi with any of its available operating systems as a workstation - as long as the operating system can run the Arduino IDE.</li>
+<p>This lesson introduces learners to the Internet of Things. A few
+things are required to take part in this lesson:</p>
+<ul><li>A laptop or a desktop computer with Linux, MacOS or Windows as an
+operating system. You can also use a Raspberry Pi with any of its
+available operating systems as a workstation - as long as the operating
+system can run the Arduino IDE.</li>
 <li>The Arduino IDE</li>
 <li>MQTTX - an MQTT 5.0 desktop client</li>
-<li>A microcontroller board such as an Arduino, an ESP32 or an ESP8266. Each of these microcontroller boards come in quite a few flavours. Ideally the whole class will have the same version to work with. However, this will be determined by the way the workshop is organised. If the instructor provides all the hardware then it is likely that everyone will have the same devices. If learners bring their own devices there are likely to be differences and the instructor will have to deal with the slight differences that that might require when it comes to wiring the circuits and writing the code.</li>
-<li>A USB cable that connects the microcontroller board to the PC/laptop</li>
-<li>If you are using DHT11/12 and LDR modules you only need female to female connectors. However, if you are using the individual components it would be better to use a breadboard and some male to female connectors.</li>
-</ul><p>More information about the installation of the Arduino IDE and MQTTX can be found on the <a href="index.html#setup">setup</a> page.</p>
+<li>A microcontroller board such as an Arduino, an ESP32 or an ESP8266.
+Each of these microcontroller boards come in quite a few flavours.
+Ideally the whole class will have the same version to work with.
+However, this will be determined by the way the workshop is organised.
+If the instructor provides all the hardware then it is likely that
+everyone will have the same devices. If learners bring their own devices
+there are likely to be differences and the instructor will have to deal
+with the slight differences that that might require when it comes to
+wiring the circuits and writing the code.</li>
+<li>A USB cable that connects the microcontroller board to the
+PC/laptop</li>
+<li>If you are using DHT11/12 and LDR modules you only need female to
+female connectors. However, if you are using the individual components
+it would be better to use a breadboard and some male to female
+connectors.</li>
+</ul><p>More information about the installation of the Arduino IDE and MQTTX
+can be found on the <a href="index.html#setup">setup</a> page.</p>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul><section id="setup"><section id="software-setup"><h2 class="section-heading">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a>
 </h2>
 <hr class="half-width"><div id="discussion1" class="callout discussion">
@@ -299,15 +319,33 @@ any links that you are not going to use.
 <h3 class="callout-title">The Arduino IDE<a class="anchor" aria-label="anchor" href="#discussion1"></a>
 </h3>
 <div class="callout-content">
-<p>For this workshop we need to download and install the Arduino Integrated Development Environment (IDE). There are now quite few different options for doing this which are all available on the <a href="https://www.arduino.cc/en/software" class="external-link">Arduino website</a>.</p>
-<p>In the first instance there is an option for programming your microcontroller board from a web browser using the web editor. If you have a stable Internet connection this would be a good option. Although this version of the IDE runs in a web browser you still need to install a browser plugin and a small software component called the Create Agent. You will also need to create an account on the Arduino website. One of the advantages of making use of this option is that your sketches (the programs you write to upload to the microcontroller) are saved in The Cloud which makes it easy to retrieve if you have to work on another computer.</p>
-<p>For the Windows operating system you can download the IDE as a zip file, an exe file or you can get it from the Windows app store. There are also installation packages to be downloaded if you are using Linux or MacOS. Follow the instructions on the Arduino website for the option you decide to select. Your instructor should be able to guide you in your decision.</p>
+<p>For this workshop we need to download and install the Arduino
+Integrated Development Environment (IDE). There are now quite few
+different options for doing this which are all available on the <a href="https://www.arduino.cc/en/software" class="external-link">Arduino website</a>.</p>
+<p>In the first instance there is an option for programming your
+microcontroller board from a web browser using the web editor. If you
+have a stable Internet connection this would be a good option. Although
+this version of the IDE runs in a web browser you still need to install
+a browser plugin and a small software component called the Create Agent.
+You will also need to create an account on the Arduino website. One of
+the advantages of making use of this option is that your sketches (the
+programs you write to upload to the microcontroller) are saved in The
+Cloud which makes it easy to retrieve if you have to work on another
+computer.</p>
+<p>For the Windows operating system you can download the IDE as a zip
+file, an exe file or you can get it from the Windows app store. There
+are also installation packages to be downloaded if you are using Linux
+or MacOS. Follow the instructions on the Arduino website for the option
+you decide to select. Your instructor should be able to guide you in
+your decision.</p>
 <div class="section level3">
 <h3 id="mqttx">MQTTX<a class="anchor" aria-label="anchor" href="#mqttx"></a></h3>
-<p>We will also need to install an MQTT client and for this we’ll use MQTTX. You can download MQTTX from <a href="https://mqttx.app/" class="external-link">https://mqttx.app/</a>.</p>
+<p>We will also need to install an MQTT client and for this we’ll use
+MQTTX. You can download MQTTX from <a href="https://mqttx.app/" class="external-link">https://mqttx.app/</a>.</p>
 <div class="section level4">
 <h4 id="windows">Windows<a class="anchor" aria-label="anchor" href="#windows"></a></h4>
-<p>Download the approprate .exe file and then double click on the downloaded file to install the program.</p>
+<p>Download the approprate .exe file and then double click on the
+downloaded file to install the program.</p>
 </div>
 </div>
 </div>
@@ -317,9 +355,12 @@ any links that you are not going to use.
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="01-introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -347,9 +388,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.13" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.5.1" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.15" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.15" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.5.2" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -369,9 +410,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/index.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/index.html",
-  "dateCreated": "2023-02-21",
-  "dateModified": "2023-04-04",
-  "datePublished": "2023-04-04"
+  "dateCreated": "2023-04-10",
+  "dateModified": "2023-04-10",
+  "datePublished": "2023-04-10"
 }
 
   </script><script>

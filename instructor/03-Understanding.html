@@ -317,47 +317,61 @@
 </div>
 </div>
 </div>
-<p>The language that we use in the Arduino IDE is called <code>The Arduino Programming Language</code> which is based on a another programming language called C++. It would have been easy if we could abbreviate The Arduino Programming Language as APL, but we can’t because APL refers to a completely different language. The programs written in the Arduino IDE are also not called programs but rather sketches.</p>
-<p>The language consists of three parts: <strong>functions</strong>, <strong>values</strong> (variables and constants), and <strong>structures</strong>. If you remember the template that was automatically generated when we opened the IDE in the previous episode, you might have recognised some of these parts. All sketches require a setup and a loop as in the following code snippet:</p>
+<p>The language that we use in the Arduino IDE is called
+<code>The Arduino Programming Language</code> which is based on a
+another programming language called C++. It would have been easy if we
+could abbreviate The Arduino Programming Language as APL, but we can’t
+because APL refers to a completely different language. The programs
+written in the Arduino IDE are also not called programs but rather
+sketches.</p>
+<p>The language consists of three parts: <strong>functions</strong>,
+<strong>values</strong> (variables and constants), and
+<strong>structures</strong>. If you remember the template that was
+automatically generated when we opened the IDE in the previous episode,
+you might have recognised some of these parts. All sketches require a
+setup and a loop as in the following code snippet:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
-<p>You can find more information about functions, values and structures in the online reference manual at <a href="https://www.arduino.cc/reference/en/" class="external-link">https://www.arduino.cc/reference/en/</a>.</p>
+<p>You can find more information about functions, values and structures
+in the online reference manual at <a href="https://www.arduino.cc/reference/en/" class="external-link">https://www.arduino.cc/reference/en/</a>.</p>
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-1-the-parts-of-a-sketch-program" class="callout-inner">
-<h3 class="callout-title">Challenge 1: The Parts of a Sketch (Program)<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Challenge 1: The Parts of a Sketch
+(Program)<a class="anchor" aria-label="anchor" href="#challenge1"></a>
 </h3>
 <div class="callout-content">
-<p>Looking at the following code snippet, can you identify the above mentioned features?</p>
+<p>Looking at the following code snippet, can you identify the above
+mentioned features?</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> getMagicNumber() {</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">42</span>;</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> getMagicNumber<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">42</span><span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -371,11 +385,26 @@
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ol style="list-style-type: decimal"><li>The keywords <code>void</code> and <code>int</code> are the return types. If a function does not have a value to return, the keyword <code>void</code> is used. <code>int</code> means that the function returns a value that is an integer. You can find a list of all the <code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference website</a>
+<ol style="list-style-type: decimal"><li>The keywords <code>void</code> and <code>int</code> are the return
+types. If a function does not have a value to return, the keyword
+<code>void</code> is used. <code>int</code> means that the function
+returns a value that is an integer. You can find a list of all the
+<code>data types</code> that can be return on the <a href="https://www.arduino.cc/reference/en/" class="external-link">Language Reference
+website</a>
 </li>
-<li>The words <code>setup</code>, <code>loop</code> and <code>getMagicNumber</code> are the names of the functions.</li>
-<li>The names of the functions are followed by parenthesis. We will see later on how they are used.</li>
-<li>The curly brackets indicate the beginning and end of the function. The left curly bracket should appear after the parenthesis. The following lines are instructions that the micocontroller has to execute. The right curly bracket closes the function and indicates that the end has been reached. If the function does not have a return type of <code>void</code>, i.e. it has any of the other data type, then the last line in the function has to contain the keyword <code>return</code> followed by a value (or a variable containing a value) of the specified return type.</li>
+<li>The words <code>setup</code>, <code>loop</code> and
+<code>getMagicNumber</code> are the names of the functions.</li>
+<li>The names of the functions are followed by parenthesis. We will see
+later on how they are used.</li>
+<li>The curly brackets indicate the beginning and end of the function.
+The left curly bracket should appear after the parenthesis. The
+following lines are instructions that the micocontroller has to execute.
+The right curly bracket closes the function and indicates that the end
+has been reached. If the function does not have a return type of
+<code>void</code>, i.e. it has any of the other data type, then the last
+line in the function has to contain the keyword <code>return</code>
+followed by a value (or a variable containing a value) of the specified
+return type.</li>
 </ol></div>
 </div>
 </div>
@@ -387,13 +416,39 @@
 <li>a unique name</li>
 <li>parenthesis</li>
 <li>curly brackets</li>
-</ol><p>All sketches <strong>must</strong> have a setup and a loop function. Any instructions that we put in the <code>setup</code> will be executed when the program starts. After completing the instructions in setup the microcontroller continues to the <code>loop</code> function where the microcontroller will execute all the instruction over and over again - in an infinite loop. As in the example, there can be other functions. Such functions are created as needed and can be called from any other function. Functions can even call themselves. There are many built-in functions, some of which we will be using. It is also possible to load <code>libraries</code> that will give us even more functions for more functionality. We will also be using some of those in this lesson.</p>
+</ol><p>All sketches <strong>must</strong> have a setup and a loop function.
+Any instructions that we put in the <code>setup</code> will be executed
+when the program starts. After completing the instructions in setup the
+microcontroller continues to the <code>loop</code> function where the
+microcontroller will execute all the instruction over and over again -
+in an infinite loop. As in the example, there can be other functions.
+Such functions are created as needed and can be called from any other
+function. Functions can even call themselves. There are many built-in
+functions, some of which we will be using. It is also possible to load
+<code>libraries</code> that will give us even more functions for more
+functionality. We will also be using some of those in this lesson.</p>
 </section><section id="variables-and-constants"><h2 class="section-heading">Variables and Constants<a class="anchor" aria-label="anchor" href="#variables-and-constants"></a>
 </h2>
-<hr class="half-width"><p>Variables and constants are named memory positions in the motorcontroller in which one can store a value. The value of variables can be changed but the values of constants cannot be changed after they have been allocated a value for the first time. Before a value can be assigned to a variable, the variable has to be declared. The declaration tells the compiler of what <code>type</code> of value will be stored in the variable.</p>
+<hr class="half-width"><p>Variables and constants are named memory positions in the
+motorcontroller in which one can store a value. The value of variables
+can be changed but the values of constants cannot be changed after they
+have been allocated a value for the first time. Before a value can be
+assigned to a variable, the variable has to be declared. The declaration
+tells the compiler of what <code>type</code> of value will be stored in
+the variable.</p>
 <div class="section level3">
 <h3 id="an-example-sketch">An example sketch<a class="anchor" aria-label="anchor" href="#an-example-sketch"></a></h3>
-<p>Let’s start by creating a new sketch to experiment with the things we have mentioned so far. We will also introduce one <strong>structure</strong>, the for-loop. On the menu click <code>File</code> and then <code>New</code>. When you create a new sketch, the IDE will automatically add the setup and loop functions for you. There will be no code in the functions, just two comments. Comment lines start with <code>//</code> and are ignored by the compiler but allows the programmer to enter comments to document what the program does. Do use the comment feature. It makes it much easier when you come back to the code or when you have to pass the code onto someone else:</p>
+<p>Let’s start by creating a new sketch to experiment with the things we
+have mentioned so far. We will also introduce one
+<strong>structure</strong>, the for-loop. On the menu click
+<code>File</code> and then <code>New</code>. When you create a new
+sketch, the IDE will automatically add the setup and loop functions for
+you. There will be no code in the functions, just two comments. Comment
+lines start with <code>//</code> and are ignored by the compiler but
+allows the programmer to enter comments to document what the program
+does. Do use the comment feature. It makes it much easier when you come
+back to the code or when you have to pass the code onto someone
+else:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -401,49 +456,49 @@
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">// variable `minimum` up to the variable called `maximum`</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// declare a constant of type integer called minimum</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> minimum = <span class="dv">0</span>;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> minimum <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">// declare a constant of type integer called maximum</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> maximum = <span class="dv">100</span>;</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> maximum <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">// delcare a variable of type float called pi</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">// a float type is a number that a decimal point.</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> pi = <span class="fl">3.14159265358979</span>;</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> pi <span class="op">=</span> <span class="fl">3.14159265358979</span><span class="op">;</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup() {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Initialise the `Serial` library and tell it what speed to </span></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// use for communication with the computer via the USB port</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// The Serial library is included in the language by default</span></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">// so we don't have to import it.</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  Serial.begin(<span class="dv">9600</span>)</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">)</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop() {</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
 <span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Use a loop structure to count from minimum to maximum</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Notice the `int i` variable that is used as the counter</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="co">// To understand the for-loop structure, read it as:</span></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="co">// For i equals minimum to i less-than-or-equal-to maximum, </span></span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="co">// increment i by one (the ++ means increment by 1)</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>   </span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="dt">int</span> i = minimum; i &lt;= maximum; i++) {</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> minimum<span class="op">;</span> i <span class="op">&lt;=</span> maximum<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
 <span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// create a new value called multiply_pi and allocate</span></span>
 <span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// the value of `i * pi` to it</span></span>
 <span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> multiply_pi = i * pi;</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> multiply_pi <span class="op">=</span> i <span class="op">*</span> pi<span class="op">;</span></span>
 <span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Use the print function in the Serial library to </span></span>
 <span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">// print `i` to the Serial Monitor</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    Serial.println(multiply_pi);</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>multiply_pi<span class="op">);</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
 <span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  <span class="co">// create a delay of 5000 milliseconds (5 seconds)</span></span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  delay(<span class="dv">5000</span>);</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">5000</span><span class="op">);</span></span>
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  <span class="co">// After the delay the microcontroller will start at the </span></span>
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="co">// beginning of loop() and run all the code inside it again.</span></span>
 <span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>}</span></code></pre>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <div id="challenge2" class="callout challenge">
 <div class="callout-square">
@@ -475,7 +530,8 @@
 </div>
 <div class="section level4">
 <h4 id="variables">Variables<a class="anchor" aria-label="anchor" href="#variables"></a></h4>
-<p>i - of type integer pi - of type float multiply_pi - of type float</p>
+<p>i - of type integer pi - of type float multiply_pi - of type
+float</p>
 </div>
 <div class="section level4">
 <h4 id="functions-1">Functions<a class="anchor" aria-label="anchor" href="#functions-1"></a></h4>
@@ -483,18 +539,34 @@
 </div>
 <div class="section level4">
 <h4 id="what-does-the-code-do">What does the code do?<a class="anchor" aria-label="anchor" href="#what-does-the-code-do"></a></h4>
-<ol style="list-style-type: decimal"><li>Firstly we declare two constants of type integer, <code>minimum</code> and <code>maximum</code> and we give them values of 0 and 100.</li>
-<li>We declare on variable of type float called <code>pi</code> and we give it a value of 3.14159265358979.</li>
-<li>The code will first enter the <code>setup()</code> function and,</li>
-<li>initialise the serial communications from the ESP to the computer at a speed of 9600 <a href="https://en.wikipedia.org/wiki/Baud" class="external-link">baud</a>. Baud is the data transmission rate in bits per second.</li>
+<ol style="list-style-type: decimal"><li>Firstly we declare two constants of type integer,
+<code>minimum</code> and <code>maximum</code> and we give them values of
+0 and 100.</li>
+<li>We declare on variable of type float called <code>pi</code> and we
+give it a value of 3.14159265358979.</li>
+<li>The code will first enter the <code>setup()</code> function
+and,</li>
+<li>initialise the serial communications from the ESP to the computer at
+a speed of 9600 <a href="https://en.wikipedia.org/wiki/Baud" class="external-link">baud</a>.
+Baud is the data transmission rate in bits per second.</li>
 <li>Next the code will enter the loop function.</li>
-<li>Inside the loop function we create another loop with the for-loop structure. This loop will use the variable <code>i</code> which will be of type <code>integer</code> and it will start with <code>i</code> equal to <code>minimum</code>. It will then increment <code>i</code> by one for each iteration of the loop while <code>i</code> is less than <code>maximum</code>, until it becomes equal to <code>maximum</code>.</li>
-<li>On each iteration of loop a variable of type float is declared that is called <code>multiply_pi</code>.</li>
+<li>Inside the loop function we create another loop with the for-loop
+structure. This loop will use the variable <code>i</code> which will be
+of type <code>integer</code> and it will start with <code>i</code> equal
+to <code>minimum</code>. It will then increment <code>i</code> by one
+for each iteration of the loop while <code>i</code> is less than
+<code>maximum</code>, until it becomes equal to
+<code>maximum</code>.</li>
+<li>On each iteration of loop a variable of type float is declared that
+is called <code>multiply_pi</code>.</li>
 <li>
 <code>multiply_pi' is given the value of whatever</code>i<code>is at the time multiplied by</code>pi`.</li>
-<li>The current value of <code>multiply_pi</code> is then sent and printed in the serial monitor</li>
-<li>When <code>i</code> reaches the value <code>maximum</code>, the loop will terminate and the program will pause for 5000 milliseconds.</li>
-<li>Because this happens in the <code>loop()</code> function the whole process will start all over again and this will go on indefinitely</li>
+<li>The current value of <code>multiply_pi</code> is then sent and
+printed in the serial monitor</li>
+<li>When <code>i</code> reaches the value <code>maximum</code>, the loop
+will terminate and the program will pause for 5000 milliseconds.</li>
+<li>Because this happens in the <code>loop()</code> function the whole
+process will start all over again and this will go on indefinitely</li>
 </ol></div>
 </div>
 </div>
@@ -511,7 +583,8 @@
 <div class="callout-content">
 <ul><li>Identify variables, constants, functions and structures</li>
 <li>Know how to identify a function</li>
-<li>Recognise the different types of values that variables and constants can have and what type of information each of these can hold.</li>
+<li>Recognise the different types of values that variables and constants
+can have and what type of information each of these can hold.</li>
 <li>Know where to find the Arduino Programming Language reference</li>
 </ul></div>
 </div>
@@ -520,9 +593,12 @@
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and installing the Arduino IDE</a></li>
-<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12 Guide</a></li>
-<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing component downloads</a></li>
+<ul><li><a href="https://www.arduino.cc/en/software" class="external-link">Downloading and
+installing the Arduino IDE</a></li>
+<li><a href="https://randomnerdtutorials.com/complete-guide-for-dht11dht22-humidity-and-temperature-sensor-with-arduino/" class="external-link">DHT11/DHT12
+Guide</a></li>
+<li><a href="https://arduinomodules.info/" class="external-link">Specifications and Fritzing
+component downloads</a></li>
 </ul></div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
@@ -554,9 +630,9 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.13" class="external-link">sandpaper (0.11.13)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.5.1" class="external-link">pegboard (0.5.1)</a>,
-      and <a href="https://github.com/carpentries/varnish/tree/0.2.15" class="external-link">varnish (0.2.15)</a>.</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.15" class="external-link">sandpaper (0.11.15)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.5.2" class="external-link">pegboard (0.5.2)</a>,
+      and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -576,9 +652,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/03-Understanding.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/03-Understanding.html",
-  "dateCreated": "2023-02-21",
+  "dateCreated": "2023-04-10",
   "dateModified": "2023-02-21",
-  "datePublished": "2023-04-04"
+  "datePublished": "2023-04-10"
 }
 
   </script><script>
