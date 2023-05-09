@@ -109,7 +109,6 @@ jobs:
           git add -A
           git commit -m "source commit: ${CURR_HEAD}"
           ls -A | grep -v '^.git$' | xargs -I _ rm -r '_'
-
           cd ..
           unzip -o -d built built.zip
           cd built
