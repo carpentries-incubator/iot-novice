@@ -36,6 +36,10 @@ Just like computers, microcontrollers have memory into which we can load program
 
 Remember: system (sudo) python version needs pyserial installed. 
 
+To install you need `pip` (Linux): `sudo apt-get install python3-pip`
+
+To install pyserial: `sudo pip3 install pyserial`
+
 :::
 
 ## Running the Arduino IDE
