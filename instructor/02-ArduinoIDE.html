@@ -360,7 +360,7 @@ microcontrollers.</p>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Remember: system (sudo) python version needs pyserial installed.</p>
 <p>To install you need <code>pip</code> (Linux):
@@ -376,14 +376,16 @@ microcontrollers.</p>
 install the Arduino IDE and that you are able to start the software from
 the start menu or the desktop of your computer. When you run the
 software you will first see the splash window:</p>
-<figure><img src="../fig/ArduinoIDE_startup.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino Splash Window</figcaption></figure><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
+<figure><img src="../fig/ArduinoIDE_startup.png" alt="Arduino Splash Window" class="figure mx-auto d-block"><div class="figcaption">Arduino Splash Window</div>
+</figure><figcaption align="center"><b>The Arduino splash screen which is shown when the program starts</b>
 </figcaption><p>After a while the IDE will open. It is actually quite a simple
 interface. At the top you should see the File, Edit, Sketch, Tools and
 Help menu items. Just below the menu there are five icons to the left
 and one on the far right. Below the icons you should see a tab with a
 filename and a white editing area. Below the editor is a black
 terminal:</p>
-<figure><img src="../fig/ArduinoIDE.png" alt="" class="figure mx-auto d-block"><figcaption>Arduino IDE</figcaption></figure><figcaption align="center"><b>The Arduino IDE main window</b>
+<figure><img src="../fig/ArduinoIDE.png" alt="Arduino IDE" class="figure mx-auto d-block"><div class="figcaption">Arduino IDE</div>
+</figure><figcaption align="center"><b>The Arduino IDE main window</b>
 </figcaption><p>The white area is where you will be typing the code that will be
 uploaded to the microcontroller. In the black area you will see messages
 about the <em>compilation</em> of the code and the uploading process.
@@ -395,15 +397,15 @@ some skeleton code. Note the syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  <span class="co">// put your setup code here, to run once:</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>  <span class="co">// put your main code here, to run repeatedly:</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 </section><section id="configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"><h2 class="section-heading">Configuring the IDE for use with boards other than an Arduino
 Uno<a class="anchor" aria-label="anchor" href="#configuring-the-ide-for-use-with-boards-other-than-an-arduino-uno"></a>
@@ -417,14 +419,16 @@ IDE before we can start coding. Start by clicking on the
 <code>File</code> menu item and then on <code>Preferences</code>.
 Towards the bottom of the Preferences window you should find a text area
 with the label <code>Additional Boards Manager URLs:</code>:</p>
-<figure><img src="../fig/preferences.png" alt="" class="figure mx-auto d-block"><figcaption>Preferences Window</figcaption></figure><p>To find the appropriate URL you need to open a web browser and
+<figure><img src="../fig/preferences.png" alt="Preferences Window" class="figure mx-auto d-block"><div class="figcaption">Preferences Window</div>
+</figure><p>To find the appropriate URL you need to open a web browser and
 navigate to:
 <code>https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls</code>.
 For the ESP32-WROOM-32 you have to find the line that reads:</p>
 <p><strong>Espressif ESP32:</strong> <a href="https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json" class="external-link uri">https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</a></p>
 <p>Copy and paste the address into the text area of the preferences
 window:</p>
-<figure><img src="../fig/addURL.png" alt="" class="figure mx-auto d-block"><figcaption>Enter additional boards manager URLs</figcaption></figure><p>Click on <code>OK</code></p>
+<figure><img src="../fig/addURL.png" alt="Enter additional boards manager URLs" class="figure mx-auto d-block"><div class="figcaption">Enter additional boards manager URLs</div>
+</figure><p>Click on <code>OK</code></p>
 <p>What we have just done is to tell the IDE where to find more
 information about the ESP32 boards. Because the ESP32 series use a
 different microcontrollers to the Arduino Uno our programs have to be
@@ -457,7 +461,8 @@ microcontroller language.</p>
 dropdown menu, select the microcontroller board that you will be using.
 If it is not in the list, click on <code>Boards Manager</code> which is
 right at the top. The <code>Boards Manager</code> should pop up.</p>
-<figure><img src="../fig/boardsManager.png" alt="" class="figure mx-auto d-block"><figcaption>Boards Manager</figcaption></figure><p>There will be several options available. If you will be using the
+<figure><img src="../fig/boardsManager.png" alt="Boards Manager" class="figure mx-auto d-block"><div class="figcaption">Boards Manager</div>
+</figure><p>There will be several options available. If you will be using the
 ESP32 scroll down to find <strong>esp32</strong>. You can also type
 esp32 in the the text area right at the top of the window and then press
 enter. This will then perform a search and you should be able to find
@@ -466,7 +471,8 @@ the esp32 option a little quicker. If you hover your mouse over the
 <code>Install</code> button should appear. Leave the version, which
 should be the latest, as is and click on the <code>Install</code>
 button.</p>
-<figure><img src="../fig/esp32boards.png" alt="" class="figure mx-auto d-block"><figcaption>Select esp32 and Install</figcaption></figure><p>When the installation is completed click the <code>Close</code>
+<figure><img src="../fig/esp32boards.png" alt="Select esp32 and Install" class="figure mx-auto d-block"><div class="figcaption">Select esp32 and Install</div>
+</figure><p>When the installation is completed click the <code>Close</code>
 button.</p>
 <p>If your Arduino is on the list to start with and you don’t need to
 install other boards, then just select the board you are using. If you
@@ -483,7 +489,8 @@ using the <code>ESP32 WROOM 32</code>, should be
 cable. USB cables come in different flavours. You might know this from
 experience with your mobile/cell phone. The image below shows the names
 and shapes of the different types of USB connectors:</p>
-<figure><img src="../fig/USBConnectors.png" alt="" class="figure mx-auto d-block"><figcaption>USB connectors</figcaption></figure><figcaption align="center">
+<figure><img src="../fig/USBConnectors.png" alt="USB connectors" class="figure mx-auto d-block"><div class="figcaption">USB connectors</div>
+</figure><figcaption align="center">
 Attribution: Milos634, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0" class="external-link uri">https://creativecommons.org/licenses/by-sa/4.0</a>, via
 Wikimedia Commons
 </figcaption><p>Most computers still have USB type A ports. The latest laptops might
@@ -537,14 +544,14 @@ modify the code to read as follows:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Hello"</span><span class="op">);</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> delay<span class="op">(</span><span class="dv">5000</span><span class="op">);</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a> Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a> Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Hello"</span><span class="op">);</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a> delay<span class="op">(</span><span class="dv">5000</span><span class="op">);</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <p>We’ll go into more detail about programming the motorcontroller in
 the next episode. This little program is just for testing. All it is
@@ -553,12 +560,15 @@ going to do is to print the word <code>Hello</code> in the
 and uploading the program. To compile and upload press the second button
 from the left with the arrow pointing to the right. See the image
 below:</p>
-<figure><img src="../fig/compileCode.png" alt="" class="figure mx-auto d-block"><figcaption>Click the <code>compile and run</code> button</figcaption></figure><p>If all goes well you should see messages displayed in the terminal
+<figure><img src="../fig/compileCode.png" alt="Click the compile and run button" class="figure mx-auto d-block"><div class="figcaption">Click the <code>compile and run</code>
+button</div>
+</figure><p>If all goes well you should see messages displayed in the terminal
 section below the editor. The messages should be similar to what is
 shown in the image. The progress counter should say <code>(100%)</code>,
 indicating the all of the compiled code has been uploaded
 successfully:</p>
-<figure><img src="../fig/uploaded.png" alt="" class="figure mx-auto d-block"><figcaption>Code compiled and uploaded</figcaption></figure><p>If you are getting an error message similar to this, ```
+<figure><img src="../fig/uploaded.png" alt="Code compiled and uploaded" class="figure mx-auto d-block"><div class="figcaption">Code compiled and uploaded</div>
+</figure><p>If you are getting an error message similar to this, ```
 Connecting……………………………….An error occurred while uploading the sketch
 .</p>
 <p>A fatal error occurred: Failed to connect to ESP32: Wrong boot mode
@@ -573,7 +583,8 @@ dots appear, the code will suddenly start uploading.</p>
 <code>Tools</code> and then on <code>Serial Monitor</code>. The word
 <code>Hello</code> should now be printed to the monitor every five
 seconds.</p>
-<figure><img src="../fig/monitor.png" alt="" class="figure mx-auto d-block"><figcaption>Serial Monitor</figcaption></figure><div id="keypoints1" class="callout keypoints">
+<figure><img src="../fig/monitor.png" alt="Serial Monitor" class="figure mx-auto d-block"><div class="figcaption">Serial Monitor</div>
+</figure><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -663,7 +674,7 @@ component downloads</a></li>
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/02-ArduinoIDE.html",
   "dateCreated": "2023-11-12",
   "dateModified": "2023-07-04",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

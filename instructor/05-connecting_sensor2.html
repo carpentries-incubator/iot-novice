@@ -323,27 +323,29 @@
 <hr class="half-width"><div class="section level3">
 <h3 id="todo">ToDo<a class="anchor" aria-label="anchor" href="#todo"></a></h3>
 <p>Explain how to connect the resistors according to image below</p>
-<figure><img src="../fig/LDR.png" alt="" class="figure mx-auto d-block"><figcaption>Light Level with a Light Dependent Resistor (LDR)</figcaption></figure><div class="codewrapper sourceCode" id="cb1">
+<figure><img src="../fig/LDR.png" alt="Light Level with a Light Dependent Resistor (LDR)" class="figure mx-auto d-block"><div class="figcaption">Light Level with a Light Dependent Resistor
+(LDR)</div>
+</figure><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN 32 </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel <span class="op">=</span> analogRead<span class="op">(</span>LIGHT_SENSOR_PIN<span class="op">);</span>     <span class="co">// read light level</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Light: "</span><span class="op">);</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>lightlevel<span class="op">);</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">// wait a 3 seconds between readings</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN </span><span class="dv">32</span><span class="pp"> </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>  <span class="dt">int</span> lightlevel <span class="op">=</span> analogRead<span class="op">(</span>LIGHT_SENSOR_PIN<span class="op">);</span>     <span class="co">// read light level</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Light: "</span><span class="op">);</span></span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>lightlevel<span class="op">);</span></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>  <span class="co">// wait a 3 seconds between readings</span></span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>  delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <div class="Discussion">
 <p>Explanation of the code</p>
@@ -430,7 +432,7 @@ component downloads</a></li>
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/05-connecting_sensor2.html",
   "dateCreated": "2023-11-12",
   "dateModified": "2023-04-10",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>

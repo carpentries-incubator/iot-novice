@@ -339,7 +339,8 @@ Things that publish messages with a specific topic to a broker.
 Subscribers subscribe to specific topics on the broker. When a new value
 for a specific topic is published by a publisher, then all the
 subscribers to that topic will receive it.</p>
-<figure><img src="fig/mqtt_architecture.png" style="width:50.0%" alt="MQTT Architecture" class="figure mx-auto d-block"><figcaption>MQTT Architecture</figcaption></figure><div id="discussion1" class="callout discussion">
+<figure><img src="fig/mqtt_architecture.png" style="width:50.0%" alt="MQTT Architecture" class="figure mx-auto d-block"><div class="figcaption">MQTT Architecture</div>
+</figure><div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -364,8 +365,9 @@ menu and then <code>Manage Libraries</code>. Enter
 <code>PubSubClient</code> into the text box for searching. Scroll down
 until you find <code>PubSubClient by Nick O'Leary</code> and click the
 Install button:</p>
-<figure><img src="fig/PubSubClient.png" alt="" class="figure mx-auto d-block"><figcaption>Installing the PubSubClient library for MQTT
-messaging</figcaption></figure><p>There are three pieces of information that we will need before we
+<figure><img src="fig/PubSubClient.png" alt="Installing the PubSubClient library for MQTT messaging" class="figure mx-auto d-block"><div class="figcaption">Installing the PubSubClient library for MQTT
+messaging</div>
+</figure><p>There are three pieces of information that we will need before we
 enter the code for sending and messages via MQTT:</p>
 <ol style="list-style-type: decimal"><li>The <code>ssid</code> of your Internet access point</li>
 <li>The password for the access point</li>
@@ -379,7 +381,9 @@ the advantages that all network traffic can be private, it doesn’t have
 to be shared to the Internet. For the purposes of this workshop for
 instance we might want to set up our own server so that we are not
 dependent on the Internet.</p>
-<figure><img src="fig/mqtt_internet.png" style="width:50.0%" alt="An MQTT broker on the Internet" class="figure mx-auto d-block"><figcaption>An MQTT broker on the Internet</figcaption></figure><figure><img src="fig/mqtt_local_network.png" style="width:50.0%" alt="An MQTT broker on a private network" class="figure mx-auto d-block"><figcaption>An MQTT broker on a private network</figcaption></figure><p>In the sketch below you will have to replace the values assigned to
+<figure><img src="fig/mqtt_internet.png" style="width:50.0%" alt="An MQTT broker on the Internet" class="figure mx-auto d-block"><div class="figcaption">An MQTT broker on the Internet</div>
+</figure><figure><img src="fig/mqtt_local_network.png" style="width:50.0%" alt="An MQTT broker on a private network" class="figure mx-auto d-block"><div class="figcaption">An MQTT broker on a private network</div>
+</figure><p>In the sketch below you will have to replace the values assigned to
 the variables <code>ssid</code>, <code>password</code> and
 <code>mqtt_server</code>. Your instructor should provide you with the
 appropriate values which will depend on the MQTT broker you are going to
@@ -393,152 +397,152 @@ matter.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">C<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;DHT.h&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;WiFi.h&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;PubSubClient.h&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_TYPE DHT22</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_PIN 32 </span><span class="co">// ESP32 pin connected to DHT sensor</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN 36 </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> ssid <span class="op">=</span> <span class="st">"raspi-webgui"</span><span class="op">;</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> password <span class="op">=</span> <span class="st">"ChangeMe"</span><span class="op">;</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> mqtt_server <span class="op">=</span> <span class="st">"192.168.0.1"</span><span class="op">;</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="dt">const</span> String your_name <span class="op">=</span> <span class="st">"/JohnSmith"</span><span class="op">;</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>DHT dht_sensor<span class="op">(</span>DHT_SENSOR_PIN<span class="op">,</span> DHT_SENSOR_TYPE<span class="op">);</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>WiFiClient espClient<span class="op">;</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>PubSubClient client<span class="op">(</span>espClient<span class="op">);</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>String topic_temperature <span class="op">=</span> your_name <span class="op">+</span> <span class="st">"/dht22/temperature"</span><span class="op">;</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>String topic_light <span class="op">=</span> your_name <span class="op">+</span> <span class="st">"/ldr/light/"</span><span class="op">;</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  dht_sensor<span class="op">.</span>begin<span class="op">();</span> <span class="co">// initialize the DHT sensor</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  setup_wifi<span class="op">();</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>setServer<span class="op">(</span>mqtt_server<span class="op">,</span> <span class="dv">1883</span><span class="op">);</span></span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>setCallback<span class="op">(</span>callback<span class="op">);</span></span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(!</span>client<span class="op">.</span>connected<span class="op">())</span> <span class="op">{</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    reconnect<span class="op">();</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>loop<span class="op">();</span></span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> temperature <span class="op">=</span> dht_sensor<span class="op">.</span>readTemperature<span class="op">();</span>   <span class="co">// read temperature in Celsius</span></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> lightlevel <span class="op">=</span> analogRead<span class="op">(</span>LIGHT_SENSOR_PIN<span class="op">);</span>     <span class="co">// read light level</span></span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>isnan<span class="op">(</span>temperature<span class="op">))</span> <span class="op">{</span></span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Failed to read from DHT sensor!"</span><span class="op">);</span></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* When reading the temperature and light levels, we get the values</span></span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a><span class="co">       as numbers, but when we send it to the MQTT broker the values</span></span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="co">       have to be converted to strings. We therefore have to declare</span></span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="co">       variables of type char into which the number values can be transferred</span></span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="co">    */</span></span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> tempString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> lightString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="co">/**</span></span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="co">     * Transfer the number values into strings</span></span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="co">     */</span></span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    dtostrf<span class="op">(</span>temperature<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> tempString<span class="op">);</span></span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    dtostrf<span class="op">(</span>lightlevel<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> lightString<span class="op">);</span></span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Print the temperature to the monitor</span></span>
-<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Temperature: "</span><span class="op">);</span></span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>temperature<span class="op">);</span></span>
-<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Publish the temperature to the MQTT broker</span></span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    publishMQTT<span class="op">(</span>topic_temperature<span class="op">,</span> tempString<span class="op">);</span></span>
-<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Print the light level to the monitor</span></span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Light: "</span><span class="op">);</span></span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>lightlevel<span class="op">);</span></span>
-<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Publish the light level to the MQTT broker</span></span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    publishMQTT<span class="op">(</span>topic_light<span class="op">,</span> lightString<span class="op">);</span></span>
-<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>    <span class="co">// wait a 3 seconds between readings</span></span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>    delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> setup_wifi<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">10</span><span class="op">);</span></span>
-<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>  <span class="co">// We start by connecting to a WiFi network</span></span>
-<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">();</span></span>
-<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Connecting to "</span><span class="op">);</span></span>
-<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>ssid<span class="op">);</span></span>
-<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>  WiFi<span class="op">.</span>begin<span class="op">(</span>ssid<span class="op">,</span> password<span class="op">);</span></span>
-<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(</span>WiFi<span class="op">.</span>status<span class="op">()</span> <span class="op">!=</span> WL_CONNECTED<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>    delay<span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
-<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"."</span><span class="op">);</span></span>
-<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">""</span><span class="op">);</span></span>
-<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"WiFi connected"</span><span class="op">);</span></span>
-<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"IP address: "</span><span class="op">);</span></span>
-<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>WiFi<span class="op">.</span>localIP<span class="op">());</span></span>
-<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> callback<span class="op">(</span><span class="dt">char</span><span class="op">*</span> topic<span class="op">,</span> byte <span class="op">*</span> message<span class="op">,</span> <span class="dt">unsigned</span> <span class="dt">int</span> length<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Message arrived on topic: "</span><span class="op">);</span></span>
-<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span>topic<span class="op">);</span></span>
-<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">". Message: "</span><span class="op">);</span></span>
-<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a>  String messageTemp<span class="op">;</span></span>
-<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">((</span><span class="dt">char</span><span class="op">)</span>message<span class="op">[</span>i<span class="op">]);</span></span>
-<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a>    messageTemp <span class="op">+=</span> <span class="op">(</span><span class="dt">char</span><span class="op">)</span>message<span class="op">[</span>i<span class="op">];</span></span>
-<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">();</span></span>
-<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> reconnect<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Loop until we're reconnected</span></span>
-<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(!</span>client<span class="op">.</span>connected<span class="op">())</span> <span class="op">{</span></span>
-<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Create a random client ID</span></span>
-<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>    String clientId <span class="op">=</span> <span class="st">"ESP32Client-"</span><span class="op">;</span></span>
-<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>    clientId <span class="op">+=</span> String<span class="op">(</span>random<span class="op">(</span><span class="bn">0xffff</span><span class="op">),</span> HEX<span class="op">);</span></span>
-<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span>clientId <span class="op">+</span> <span class="st">" attempting MQTT connection..."</span><span class="op">);</span></span>
-<span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Attempt to connect</span></span>
-<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>client<span class="op">.</span>connect<span class="op">(</span>clientId<span class="op">.</span>c_str<span class="op">(),</span> <span class="st">"jannetta"</span><span class="op">,</span> <span class="st">"f0r3v3rl1n8x"</span><span class="op">))</span> <span class="op">{</span></span>
-<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"connected"</span><span class="op">);</span></span>
-<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"failed, rc="</span><span class="op">);</span></span>
-<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>print<span class="op">(</span>client<span class="op">.</span>state<span class="op">());</span></span>
-<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a>      Serial<span class="op">.</span>println<span class="op">(</span><span class="st">" try again in 5 seconds"</span><span class="op">);</span></span>
-<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Wait 5 seconds before retrying</span></span>
-<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a>      delay<span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
-<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> publishMQTT<span class="op">(</span>String topicString<span class="op">,</span> <span class="dt">char</span> payload<span class="op">[</span><span class="dv">8</span><span class="op">])</span> <span class="op">{</span></span>
-<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a>  <span class="dt">unsigned</span> <span class="dt">int</span> length <span class="op">=</span> topicString<span class="op">.</span>length<span class="op">()</span> <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>  <span class="dt">char</span> topic<span class="op">[</span>length<span class="op">];</span></span>
-<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a>  topicString<span class="op">.</span>toCharArray<span class="op">(</span>topic<span class="op">,</span> length<span class="op">);</span></span>
-<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span>topic<span class="op">);</span></span>
-<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">": "</span><span class="op">);</span></span>
-<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>payload<span class="op">);</span></span>
-<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a>  client<span class="op">.</span>publish<span class="op">(</span>topic<span class="op">,</span> payload<span class="op">,</span> true<span class="op">);</span></span>
-<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>String byteArrayToString<span class="op">(</span>byte <span class="op">*</span> byteArray<span class="op">,</span> <span class="dt">unsigned</span> <span class="dt">int</span> length<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a>  String messageTemp<span class="op">;</span></span>
-<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
-<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a>    messageTemp <span class="op">+=</span> <span class="op">(</span><span class="dt">char</span><span class="op">)</span>byteArray<span class="op">[</span>i<span class="op">];</span></span>
-<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> messageTemp<span class="op">;</span></span>
-<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre>
+<pre class="sourceCode c" tabindex="0"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;DHT.h&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;WiFi.h&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;PubSubClient.h&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_TYPE DHT22</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="pp">#define DHT_SENSOR_PIN </span><span class="dv">32</span><span class="pp"> </span><span class="co">// ESP32 pin connected to DHT sensor</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="pp">#define LIGHT_SENSOR_PIN </span><span class="dv">36</span><span class="pp"> </span><span class="co">// ESP32 pin GIOP36 (ADC0)</span></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="dt">const</span> <span class="dt">int</span> readingdelay <span class="op">=</span> <span class="dv">3000</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> ssid <span class="op">=</span> <span class="st">"raspi-webgui"</span><span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> password <span class="op">=</span> <span class="st">"ChangeMe"</span><span class="op">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="dt">const</span> <span class="dt">char</span><span class="op">*</span> mqtt_server <span class="op">=</span> <span class="st">"192.168.0.1"</span><span class="op">;</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="dt">const</span> String your_name <span class="op">=</span> <span class="st">"/JohnSmith"</span><span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>DHT dht_sensor<span class="op">(</span>DHT_SENSOR_PIN<span class="op">,</span> DHT_SENSOR_TYPE<span class="op">);</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>WiFiClient espClient<span class="op">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a>PubSubClient client<span class="op">(</span>espClient<span class="op">);</span></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>String topic_temperature <span class="op">=</span> your_name <span class="op">+</span> <span class="st">"/dht22/temperature"</span><span class="op">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>String topic_light <span class="op">=</span> your_name <span class="op">+</span> <span class="st">"/ldr/light/"</span><span class="op">;</span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>  Serial<span class="op">.</span>begin<span class="op">(</span><span class="dv">9600</span><span class="op">);</span> <span class="co">// initialize serial</span></span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>F<span class="op">(</span><span class="st">"Starting ..."</span><span class="op">));</span></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>  dht_sensor<span class="op">.</span>begin<span class="op">();</span> <span class="co">// initialize the DHT sensor</span></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a>  setup_wifi<span class="op">();</span></span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>  client<span class="op">.</span>setServer<span class="op">(</span>mqtt_server<span class="op">,</span> <span class="dv">1883</span><span class="op">);</span></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a>  client<span class="op">.</span>setCallback<span class="op">(</span>callback<span class="op">);</span></span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(!</span>client<span class="op">.</span>connected<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a>    reconnect<span class="op">();</span></span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>  client<span class="op">.</span>loop<span class="op">();</span></span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a>  <span class="dt">float</span> temperature <span class="op">=</span> dht_sensor<span class="op">.</span>readTemperature<span class="op">();</span>   <span class="co">// read temperature in Celsius</span></span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a>  <span class="dt">int</span> lightlevel <span class="op">=</span> analogRead<span class="op">(</span>LIGHT_SENSOR_PIN<span class="op">);</span>     <span class="co">// read light level</span></span>
+<span id="cb5-39"><a href="#cb5-39" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>isnan<span class="op">(</span>temperature<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-42"><a href="#cb5-42" tabindex="-1"></a></span>
+<span id="cb5-43"><a href="#cb5-43" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"Failed to read from DHT sensor!"</span><span class="op">);</span></span>
+<span id="cb5-44"><a href="#cb5-44" tabindex="-1"></a></span>
+<span id="cb5-45"><a href="#cb5-45" tabindex="-1"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-46"><a href="#cb5-46" tabindex="-1"></a>    <span class="co">/* When reading the temperature and light levels, we get the values</span></span>
+<span id="cb5-47"><a href="#cb5-47" tabindex="-1"></a><span class="co">       as numbers, but when we send it to the MQTT broker the values</span></span>
+<span id="cb5-48"><a href="#cb5-48" tabindex="-1"></a><span class="co">       have to be converted to strings. We therefore have to declare</span></span>
+<span id="cb5-49"><a href="#cb5-49" tabindex="-1"></a><span class="co">       variables of type char into which the number values can be transferred</span></span>
+<span id="cb5-50"><a href="#cb5-50" tabindex="-1"></a><span class="co">    */</span></span>
+<span id="cb5-51"><a href="#cb5-51" tabindex="-1"></a>    <span class="dt">char</span> tempString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
+<span id="cb5-52"><a href="#cb5-52" tabindex="-1"></a>    <span class="dt">char</span> lightString<span class="op">[</span><span class="dv">8</span><span class="op">];</span></span>
+<span id="cb5-53"><a href="#cb5-53" tabindex="-1"></a></span>
+<span id="cb5-54"><a href="#cb5-54" tabindex="-1"></a>    <span class="co">/**</span></span>
+<span id="cb5-55"><a href="#cb5-55" tabindex="-1"></a><span class="co">     * Transfer the number values into strings</span></span>
+<span id="cb5-56"><a href="#cb5-56" tabindex="-1"></a><span class="co">     */</span></span>
+<span id="cb5-57"><a href="#cb5-57" tabindex="-1"></a>    dtostrf<span class="op">(</span>temperature<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> tempString<span class="op">);</span></span>
+<span id="cb5-58"><a href="#cb5-58" tabindex="-1"></a>    dtostrf<span class="op">(</span>lightlevel<span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> lightString<span class="op">);</span></span>
+<span id="cb5-59"><a href="#cb5-59" tabindex="-1"></a></span>
+<span id="cb5-60"><a href="#cb5-60" tabindex="-1"></a>    <span class="co">// Print the temperature to the monitor</span></span>
+<span id="cb5-61"><a href="#cb5-61" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Temperature: "</span><span class="op">);</span></span>
+<span id="cb5-62"><a href="#cb5-62" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>temperature<span class="op">);</span></span>
+<span id="cb5-63"><a href="#cb5-63" tabindex="-1"></a>    <span class="co">// Publish the temperature to the MQTT broker</span></span>
+<span id="cb5-64"><a href="#cb5-64" tabindex="-1"></a>    publishMQTT<span class="op">(</span>topic_temperature<span class="op">,</span> tempString<span class="op">);</span></span>
+<span id="cb5-65"><a href="#cb5-65" tabindex="-1"></a></span>
+<span id="cb5-66"><a href="#cb5-66" tabindex="-1"></a>    <span class="co">// Print the light level to the monitor</span></span>
+<span id="cb5-67"><a href="#cb5-67" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Light: "</span><span class="op">);</span></span>
+<span id="cb5-68"><a href="#cb5-68" tabindex="-1"></a>    Serial<span class="op">.</span>println<span class="op">(</span>lightlevel<span class="op">);</span></span>
+<span id="cb5-69"><a href="#cb5-69" tabindex="-1"></a>    <span class="co">// Publish the light level to the MQTT broker</span></span>
+<span id="cb5-70"><a href="#cb5-70" tabindex="-1"></a>    publishMQTT<span class="op">(</span>topic_light<span class="op">,</span> lightString<span class="op">);</span></span>
+<span id="cb5-71"><a href="#cb5-71" tabindex="-1"></a></span>
+<span id="cb5-72"><a href="#cb5-72" tabindex="-1"></a>    <span class="co">// wait a 3 seconds between readings</span></span>
+<span id="cb5-73"><a href="#cb5-73" tabindex="-1"></a>    delay<span class="op">(</span>readingdelay<span class="op">);</span></span>
+<span id="cb5-74"><a href="#cb5-74" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-75"><a href="#cb5-75" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-76"><a href="#cb5-76" tabindex="-1"></a></span>
+<span id="cb5-77"><a href="#cb5-77" tabindex="-1"></a><span class="dt">void</span> setup_wifi<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-78"><a href="#cb5-78" tabindex="-1"></a>  delay<span class="op">(</span><span class="dv">10</span><span class="op">);</span></span>
+<span id="cb5-79"><a href="#cb5-79" tabindex="-1"></a>  <span class="co">// We start by connecting to a WiFi network</span></span>
+<span id="cb5-80"><a href="#cb5-80" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">();</span></span>
+<span id="cb5-81"><a href="#cb5-81" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Connecting to "</span><span class="op">);</span></span>
+<span id="cb5-82"><a href="#cb5-82" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>ssid<span class="op">);</span></span>
+<span id="cb5-83"><a href="#cb5-83" tabindex="-1"></a></span>
+<span id="cb5-84"><a href="#cb5-84" tabindex="-1"></a>  WiFi<span class="op">.</span>begin<span class="op">(</span>ssid<span class="op">,</span> password<span class="op">);</span></span>
+<span id="cb5-85"><a href="#cb5-85" tabindex="-1"></a></span>
+<span id="cb5-86"><a href="#cb5-86" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(</span>WiFi<span class="op">.</span>status<span class="op">()</span> <span class="op">!=</span> WL_CONNECTED<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-87"><a href="#cb5-87" tabindex="-1"></a>    delay<span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
+<span id="cb5-88"><a href="#cb5-88" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"."</span><span class="op">);</span></span>
+<span id="cb5-89"><a href="#cb5-89" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-90"><a href="#cb5-90" tabindex="-1"></a></span>
+<span id="cb5-91"><a href="#cb5-91" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">""</span><span class="op">);</span></span>
+<span id="cb5-92"><a href="#cb5-92" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"WiFi connected"</span><span class="op">);</span></span>
+<span id="cb5-93"><a href="#cb5-93" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"IP address: "</span><span class="op">);</span></span>
+<span id="cb5-94"><a href="#cb5-94" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>WiFi<span class="op">.</span>localIP<span class="op">());</span></span>
+<span id="cb5-95"><a href="#cb5-95" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-96"><a href="#cb5-96" tabindex="-1"></a></span>
+<span id="cb5-97"><a href="#cb5-97" tabindex="-1"></a><span class="dt">void</span> callback<span class="op">(</span><span class="dt">char</span><span class="op">*</span> topic<span class="op">,</span> byte <span class="op">*</span> message<span class="op">,</span> <span class="dt">unsigned</span> <span class="dt">int</span> length<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-98"><a href="#cb5-98" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"Message arrived on topic: "</span><span class="op">);</span></span>
+<span id="cb5-99"><a href="#cb5-99" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span>topic<span class="op">);</span></span>
+<span id="cb5-100"><a href="#cb5-100" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">". Message: "</span><span class="op">);</span></span>
+<span id="cb5-101"><a href="#cb5-101" tabindex="-1"></a>  String messageTemp<span class="op">;</span></span>
+<span id="cb5-102"><a href="#cb5-102" tabindex="-1"></a></span>
+<span id="cb5-103"><a href="#cb5-103" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb5-104"><a href="#cb5-104" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">((</span><span class="dt">char</span><span class="op">)</span>message<span class="op">[</span>i<span class="op">]);</span></span>
+<span id="cb5-105"><a href="#cb5-105" tabindex="-1"></a>    messageTemp <span class="op">+=</span> <span class="op">(</span><span class="dt">char</span><span class="op">)</span>message<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb5-106"><a href="#cb5-106" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-107"><a href="#cb5-107" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">();</span></span>
+<span id="cb5-108"><a href="#cb5-108" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-109"><a href="#cb5-109" tabindex="-1"></a></span>
+<span id="cb5-110"><a href="#cb5-110" tabindex="-1"></a><span class="dt">void</span> reconnect<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-111"><a href="#cb5-111" tabindex="-1"></a>  <span class="co">// Loop until we're reconnected</span></span>
+<span id="cb5-112"><a href="#cb5-112" tabindex="-1"></a>  <span class="cf">while</span> <span class="op">(!</span>client<span class="op">.</span>connected<span class="op">())</span> <span class="op">{</span></span>
+<span id="cb5-113"><a href="#cb5-113" tabindex="-1"></a>    <span class="co">// Create a random client ID</span></span>
+<span id="cb5-114"><a href="#cb5-114" tabindex="-1"></a>    String clientId <span class="op">=</span> <span class="st">"ESP32Client-"</span><span class="op">;</span></span>
+<span id="cb5-115"><a href="#cb5-115" tabindex="-1"></a>    clientId <span class="op">+=</span> String<span class="op">(</span>random<span class="op">(</span><span class="bn">0xffff</span><span class="op">),</span> HEX<span class="op">);</span></span>
+<span id="cb5-116"><a href="#cb5-116" tabindex="-1"></a>    Serial<span class="op">.</span>print<span class="op">(</span>clientId <span class="op">+</span> <span class="st">" attempting MQTT connection..."</span><span class="op">);</span></span>
+<span id="cb5-117"><a href="#cb5-117" tabindex="-1"></a>    <span class="co">// Attempt to connect</span></span>
+<span id="cb5-118"><a href="#cb5-118" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>client<span class="op">.</span>connect<span class="op">(</span>clientId<span class="op">.</span>c_str<span class="op">(),</span> <span class="st">"jannetta"</span><span class="op">,</span> <span class="st">"f0r3v3rl1n8x"</span><span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-119"><a href="#cb5-119" tabindex="-1"></a>      Serial<span class="op">.</span>println<span class="op">(</span><span class="st">"connected"</span><span class="op">);</span></span>
+<span id="cb5-120"><a href="#cb5-120" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-121"><a href="#cb5-121" tabindex="-1"></a>      Serial<span class="op">.</span>print<span class="op">(</span><span class="st">"failed, rc="</span><span class="op">);</span></span>
+<span id="cb5-122"><a href="#cb5-122" tabindex="-1"></a>      Serial<span class="op">.</span>print<span class="op">(</span>client<span class="op">.</span>state<span class="op">());</span></span>
+<span id="cb5-123"><a href="#cb5-123" tabindex="-1"></a>      Serial<span class="op">.</span>println<span class="op">(</span><span class="st">" try again in 5 seconds"</span><span class="op">);</span></span>
+<span id="cb5-124"><a href="#cb5-124" tabindex="-1"></a>      <span class="co">// Wait 5 seconds before retrying</span></span>
+<span id="cb5-125"><a href="#cb5-125" tabindex="-1"></a>      delay<span class="op">(</span><span class="dv">500</span><span class="op">);</span></span>
+<span id="cb5-126"><a href="#cb5-126" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-127"><a href="#cb5-127" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-128"><a href="#cb5-128" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-129"><a href="#cb5-129" tabindex="-1"></a></span>
+<span id="cb5-130"><a href="#cb5-130" tabindex="-1"></a><span class="dt">void</span> publishMQTT<span class="op">(</span>String topicString<span class="op">,</span> <span class="dt">char</span> payload<span class="op">[</span><span class="dv">8</span><span class="op">])</span> <span class="op">{</span></span>
+<span id="cb5-131"><a href="#cb5-131" tabindex="-1"></a>  <span class="dt">unsigned</span> <span class="dt">int</span> length <span class="op">=</span> topicString<span class="op">.</span>length<span class="op">()</span> <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-132"><a href="#cb5-132" tabindex="-1"></a>  <span class="dt">char</span> topic<span class="op">[</span>length<span class="op">];</span></span>
+<span id="cb5-133"><a href="#cb5-133" tabindex="-1"></a>  topicString<span class="op">.</span>toCharArray<span class="op">(</span>topic<span class="op">,</span> length<span class="op">);</span></span>
+<span id="cb5-134"><a href="#cb5-134" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span>topic<span class="op">);</span></span>
+<span id="cb5-135"><a href="#cb5-135" tabindex="-1"></a>  Serial<span class="op">.</span>print<span class="op">(</span><span class="st">": "</span><span class="op">);</span></span>
+<span id="cb5-136"><a href="#cb5-136" tabindex="-1"></a>  Serial<span class="op">.</span>println<span class="op">(</span>payload<span class="op">);</span></span>
+<span id="cb5-137"><a href="#cb5-137" tabindex="-1"></a>  client<span class="op">.</span>publish<span class="op">(</span>topic<span class="op">,</span> payload<span class="op">,</span> <span class="kw">true</span><span class="op">);</span></span>
+<span id="cb5-138"><a href="#cb5-138" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb5-139"><a href="#cb5-139" tabindex="-1"></a></span>
+<span id="cb5-140"><a href="#cb5-140" tabindex="-1"></a>String byteArrayToString<span class="op">(</span>byte <span class="op">*</span> byteArray<span class="op">,</span> <span class="dt">unsigned</span> <span class="dt">int</span> length<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-141"><a href="#cb5-141" tabindex="-1"></a>  String messageTemp<span class="op">;</span></span>
+<span id="cb5-142"><a href="#cb5-142" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb5-143"><a href="#cb5-143" tabindex="-1"></a>    messageTemp <span class="op">+=</span> <span class="op">(</span><span class="dt">char</span><span class="op">)</span>byteArray<span class="op">[</span>i<span class="op">];</span></span>
+<span id="cb5-144"><a href="#cb5-144" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb5-145"><a href="#cb5-145" tabindex="-1"></a>  <span class="cf">return</span> messageTemp<span class="op">;</span></span>
+<span id="cb5-146"><a href="#cb5-146" tabindex="-1"></a><span class="op">}</span></span></code></pre>
 </div>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
@@ -634,7 +638,7 @@ component downloads</a></li>
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/07-mqtt-code.html",
   "dateCreated": "2023-11-12",
   "dateModified": "2022-08-30",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
