@@ -27,18 +27,19 @@ You might hear "Internet of Things" (IoT) and Arduino mentioned together and oft
 
 Before we continue, we should clarify some key terminology used in networking. When two or more computers are connected such that they can communicate it is called a **network**.
 
-![Computers connected to form a network](fig/Network.svg)
-<figcaption align = "center">
- <b>Computers connected to form a network</b><br/>
- </figcaption>
-
 ### LAN
 
 When computers are connected together as in the above diagram, we call this a ***"Local Area Network"***, or LAN. This is how the computers within a university campus are connected. You may hear this referred to as the institution's ***intranet***. All the computers inside it can talk to each other, but computers outside the LAN cannot talk to them.
 
+
+![Computers connected to form a Local Area Network](fig/Network.svg)
+<figcaption align="center">
+ <b>Computers connected to form a Local Area Network</b><br/>
+</figcaption>
+
 ### WAN
 
-This university LAN can then be connected to other telecommunications networks. The network of university networks in the UK is called "Janet": this allows institutions to talk to each other. This forms a ***"Wide Area Network"*** or WAN, as it spans a much larger geographic distance. This network may also be referred to as **an internet**, but it is not the same as **The Internet**. 
+A LAN is often connected to other telecommunications networks. The network of university networks in the UK is called "[Janet](https://www.jisc.ac.uk/janet)": this allows institutions to talk to each other. This forms a ***"Wide Area Network"*** or WAN, as it spans a much larger geographic distance. This network may also be referred to as **an internet** but is not the same as **The Internet**. 
 
 ![When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet.](fig/Internet.svg)
 <figcaption align = "center">
@@ -48,24 +49,25 @@ This university LAN can then be connected to other telecommunications networks. 
 ### "The Internet" versus "an internet"
 An "internet" (with a lower case i) and "The Internet" (with an upper case I) are different! With an upper case I, ***The Internet*** refers to the wide area network that we connect to view web pages such as Google, Amazon etc, or to which we connect to to make Zoom or Skype calls. The Internet is a worldwide collection of networks that we are able to connect to via our Internet Service Providers. 
 
-With a lower case i, ***internet*** refers to a collection of networks that are connected. If university A has a network on campus, and university B has a network, and they decide to connect the two networks then they would have an internet. However they might not necessarily be connected to The Internet.
+With a lower case i, ***internet*** refers to a collection of networks that are connected: a contraction of the phrase "*interconnected network*". If university A has a network on campus, and university B has a network, and they decide to connect the two networks as a WAN, then they would have an internet. However they might not necessarily be connected to The Internet.
 
 
 ::::::::::::::::::::::::::::::::: callout
 
 ### The Cloud
 
-You may also have heard of ***The Cloud***. The cloud refers to a collection of many, many computers which provide services and resources on the Internet. These machines might be physically located in large datacentres all over the globe, but the network between them is designed to be as invisible as possible to you. We often don't care where the computer running a service in the cloud physically resides, as long as the service is reliable and can be accessed from the Internet. This ephemerality is why we talk about services as if they are in a "cloud": the computers and the services they run are like microdroplets of water, floating somewhere in the sky.
+You may also have heard of ***The Cloud***. The cloud refers to a collection of many, many computers which provide services and resources on the Internet. These machines might be physically located in datacentres all over the globe, but the network between them is designed to be as invisible as possible to you. We often don't care where the computer running a service in the cloud physically resides, as long as the service is reliable and can be accessed from the Internet. 
+
+This ephemerality is why we talk about services as if they are in a "cloud": the computers and the services they run are like droplets of water floating in the sky. There are also multiple clouds in the "sky": some operated by technology companies, others smaller, such as private clouds hosted by individual institutions or companies for reasons including cost and security.
 
 :::::::::::::::::::::::::::::::::::::::::
 
 
-
 :::::::::::::::::::::::::::::: challenge
 
-* Describe a network
-* Describe an intranet
-* Describe the Internet
+* What is a network?
+* What is an intranet?
+* What is the Internet?
 * What is the difference between a LAN and a WAN?
 
 :::::::::::::::::::::::::::::::::::::::::
@@ -74,11 +76,10 @@ You may also have heard of ***The Cloud***. The cloud refers to a collection of 
 :::::::::::::::::::::::::::::::: solution
 
 
-* Network: a group of computers connected together via copper wires (electrically); microwaves (radio); or fibre optic (light).
+* Network: a group of computers connected together. This can be via wires (electrically); microwaves (radio); or fibre optic (light).
 * Intranet: a network of computers, such as the one connecting machines within the University to each other.
 * The Internet: the network of networks, which connects computers across the globe together.
 * A Local Area Network is situated in a small geographic area. A Wide Area Network may span countries, or even the globe. We are even starting to have PANs (Planetary Area Networks)!
-
 
 :::::::::::::::::::::::::::::::::::::::::
 
@@ -142,8 +143,9 @@ With the person next to you, discuss whether you think the following devices are
  
  Links:
  
- -[Microcontrollers vs Microprocessors](https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html)
- -[Smartphone in the IoT Era](https://bridgera.com/smartphones-in-the-iot-era/)
+ - [Microcontrollers vs Microprocessors](https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html)
+ - [Smartphone in the IoT Era](https://bridgera.com/smartphones-in-the-iot-era/)
+ - [Capitalisation of Internet](https://en.wikipedia.org/wiki/Capitalization_of_Internet)
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
