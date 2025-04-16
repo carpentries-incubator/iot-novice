@@ -29,7 +29,7 @@ Before we continue, we should clarify some key terminology used in networking. W
 
 ### LAN
 
-When computers are connected together as in the above diagram, we call this a ***"Local Area Network"***, or LAN. This is how the computers within a university campus are connected. You may hear this referred to as the institution's ***intranet***. All the computers inside it can talk to each other, but computers outside the LAN cannot talk to them.
+When computers are connected together as in the below diagram, we call this a ***"Local Area Network"***, or LAN. This is how the computers within a university campus are connected. You may hear this referred to as the institution's ***intranet***. All the computers inside it can talk to each other, but computers outside the LAN cannot talk to them.
 
 
 ![Computers connected to form a Local Area Network](fig/Network.svg)
