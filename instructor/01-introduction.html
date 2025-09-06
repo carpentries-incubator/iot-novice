@@ -343,7 +343,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>An Introduction to the Internet of Things</h1>
-        <p>Last updated on 2022-08-24 |
+        <p>Last updated on 2025-09-06 |
 
         <a href="https://github.com/CarpentriesWorkshops/Internet_of_Things/edit/main/episodes/01-introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -386,38 +386,116 @@ Things.</li>
 </div>
 <section><h2 class="section-heading" id="the-internet-of-things">The Internet of Things<a class="anchor" aria-label="anchor" href="#the-internet-of-things"></a></h2>
 <hr class="half-width"><p>You might hear “Internet of Things” (IoT) and Arduino mentioned
-together and quite often those terms are used as if the one implies the
-other. However, this is not the case. The Internet of Things refers to
-all kinds of “Things” that have been connected to the Internet to sense
-the environment. You can almost think of IoT as the five senses of the
-Internet.</p>
-<p>Before we continue we should clarify some key terminology used in
+together and often those terms are used as if the one implies the other.
+However, this is not the case. The <strong><em>Internet of
+Things</em></strong> refers to all kinds of “Things” that have been
+connected to the Internet. Often, this includes sensing the environment.
+You can almost think of IoT as the five senses of the Internet.</p>
+<p>Before we continue, we should clarify some key terminology used in
 networking. When two or more computers are connected such that they can
 communicate it is called a <strong>network</strong>.</p>
-<figure><img src="../fig/Network.svg" alt="Computers connected to form a network" class="figure mx-auto d-block"><div class="figcaption">Computers connected to form a network</div>
-</figure><figcaption align="center"><b>Computers connected to form a network</b><br></figcaption><p>It is also worth mentioning that one should distinguish between the
-words “internet” (with a lower case i) and “Internet” (with an upper
-case I). With an upper case I, <strong><em>Internet</em></strong> refers
-to <em>the</em> Internet that we connect to view web pages such as
-Google, Amazon etc, or to which we connect to to make Zoom or Skype
-calls. The Internet is a worldwide collection of networks that we are
-able to connect to via our Internet Service Providers. The Internet is
-also sometimes referred to as <strong><em>The Cloud</em></strong>. With
-a lower case i, <strong><em>internet</em></strong> refers to a
-collection of networks that are connected. If university A has a network
-on campus and university B has a network and they decide to connect the
-two networks then they would have an internet. However they might not
-necessarily be connected to The Internet. Another term that you might
-hear is <strong><em>intranet</em></strong>. If and instution connects
-their network to the Internet, they will refer to their internal network
-as the intranet. So university A can refer to their network as their
-intranet. If university A connects their intranet to that of University
-B, they created an internet.</p>
+<div class="section level3">
+<h3 id="lan">LAN<a class="anchor" aria-label="anchor" href="#lan"></a></h3>
+<p>When computers are connected together as in the below diagram, we
+call this a <strong><em>“Local Area Network”</em></strong>, or LAN. This
+is how the computers within a university campus are connected. You may
+hear this referred to as the institution’s
+<strong><em>intranet</em></strong>. All the computers inside it can talk
+to each other, but computers outside the LAN cannot talk to them.</p>
+<figure><img src="../fig/Network.svg" alt="Computers connected to form a Local Area Network" class="figure mx-auto d-block"><div class="figcaption">Computers connected to form a Local Area
+Network</div>
+</figure><figcaption align="center"><b>Computers connected to form a Local Area Network</b><br></figcaption></div>
+<div class="section level3">
+<h3 id="wan">WAN<a class="anchor" aria-label="anchor" href="#wan"></a></h3>
+<p>A LAN is often connected to other telecommunications networks. The
+network of university networks in the UK is called “<a href="https://www.jisc.ac.uk/janet" class="external-link">Janet</a>”: this allows institutions
+to talk to each other. This forms a <strong><em>“Wide Area
+Network”</em></strong> or WAN, as it spans a much larger geographic
+distance. This network may also be referred to as <strong>an
+internet</strong> but is not the same as <strong>The
+Internet</strong>.</p>
 <figure><img src="../fig/Internet.svg" alt="When two networks are connected they form an internet. These networks can connect to the worldwide internet known as The Internet." class="figure mx-auto d-block"><div class="figcaption">When two networks are connected they form an
 internet. These networks can connect to the worldwide internet known as
 The Internet.</div>
 </figure><figcaption align="center"><b>When two networks are connected they form an internet. These networks
-can connect to the worldwide internet known as The Internet.</b><br></figcaption></section><section><h2 class="section-heading" id="microcontrollers">Microcontrollers<a class="anchor" aria-label="anchor" href="#microcontrollers"></a></h2>
+can connect to the worldwide internet known as The Internet.</b><br></figcaption></div>
+<div class="section level3">
+<h3 id="the-internet-versus-an-internet">“The Internet” versus “an internet”<a class="anchor" aria-label="anchor" href="#the-internet-versus-an-internet"></a></h3>
+<p>An “internet” (with a lower case i) and “The Internet” (with an upper
+case I) are different! With an upper case I, <strong><em>The
+Internet</em></strong> refers to the wide area network that we connect
+to view web pages such as Google, Amazon etc, or to which we connect to
+to make Zoom or Skype calls. The Internet is a worldwide collection of
+networks that we are able to connect to via our Internet Service
+Providers.</p>
+<p>With a lower case i, <strong><em>internet</em></strong> refers to a
+collection of networks that are connected: a contraction of the phrase
+“<em>interconnected network</em>”. If university A has a network on
+campus, and university B has a network, and they decide to connect the
+two networks as a WAN, then they would have an internet. However they
+might not necessarily be connected to The Internet.</p>
+<div id="the-cloud" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="the-cloud" class="callout-inner">
+<h3 class="callout-title">The Cloud</h3>
+<div class="callout-content">
+<p>You may also have heard of <strong><em>The Cloud</em></strong>. The
+cloud refers to a collection of many, many computers which provide
+services and resources on the Internet. These machines might be
+physically located in datacentres all over the globe, but the network
+between them is designed to be as invisible as possible to you. We often
+don’t care where the computer running a service in the cloud physically
+resides, as long as the service is reliable and can be accessed from the
+Internet.</p>
+<p>This ephemerality is why we talk about services as if they are in a
+“cloud”: the computers and the services they run are like droplets of
+water floating in the sky. There are also multiple clouds in the “sky”:
+some operated by technology companies, others smaller, such as private
+clouds hosted by individual institutions or companies for reasons
+including cost and security.</p>
+</div>
+</div>
+</div>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<ul><li>What is a network?</li>
+<li>What is an intranet?</li>
+<li>What is the Internet?</li>
+<li>What is the difference between a LAN and a WAN?</li>
+</ul></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ul><li>Network: a group of computers connected together. This can be via
+wires (electrically); microwaves (radio); or fibre optic (light).</li>
+<li>Intranet: a network of computers, such as the one connecting
+machines within the University to each other.</li>
+<li>The Internet: the network of networks, which connects computers
+across the globe together.</li>
+<li>A Local Area Network is situated in a small geographic area. A Wide
+Area Network may span countries, or even the globe. We are even starting
+to have PANs (Planetary Area Networks)!</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="microcontrollers">Microcontrollers<a class="anchor" aria-label="anchor" href="#microcontrollers"></a></h2>
 <hr class="half-width"><p>“So what is this Arduino thing then?”, you may ask. Well, Arduinos
 are little devices (open-source electronics platform) that were designed
 to teach people about electronics and they can be used to build
@@ -501,10 +579,13 @@ think would make part of the Internet of Things.</p>
 </div>
 </div>
 <p>Links:</p>
-<p>-<a href="https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html" class="external-link">Microcontrollers
-vs Microprocessors</a> -<a href="https://bridgera.com/smartphones-in-the-iot-era/" class="external-link">Smartphone in
-the IoT Era</a></p>
-<div id="keypoints1" class="callout keypoints">
+<ul><li><a href="https://www.guru99.com/difference-between-microprocessor-and-microcontroller.html" class="external-link">Microcontrollers
+vs Microprocessors</a></li>
+<li><a href="https://bridgera.com/smartphones-in-the-iot-era/" class="external-link">Smartphone in
+the IoT Era</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Capitalization_of_Internet" class="external-link">Capitalisation
+of Internet</a></li>
+</ul><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -589,7 +670,7 @@ component downloads</a></li>
   "url": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/01-introduction.html",
   "identifier": "https://CarpentriesWorkshops.github.io/Internet_of_Things/instructor/01-introduction.html",
   "dateCreated": "2025-09-06",
-  "dateModified": "2022-08-24",
+  "dateModified": "2025-09-06",
   "datePublished": "2025-09-06"
 }
 
